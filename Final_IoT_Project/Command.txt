@@ -1,0 +1,3 @@
+Runing program in background:
+
+python name.py > name.log &
