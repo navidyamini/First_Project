@@ -13,11 +13,11 @@ GPIO.setup(17,GPIO.OUT)
 def on(pin):
         print'trying to turn on'
         GPIO.output(pin,GPIO.HIGH)
-        return
+        return 'on'
 def off(pin):
         print'trying to turn off'
         GPIO.output(pin,GPIO.LOW)
-        return
+        return 'off'
 # to use Raspberry Pi board pin numbers
 #GPIO.setmode(GPIO.BOARD)
 # set up GPIO output channel

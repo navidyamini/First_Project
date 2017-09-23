@@ -1,4 +1,4 @@
-29
+
 import paho.mqtt.client as PahoMQTT
 
 class MySubscriber:
