@@ -35,6 +35,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="telegrambot1.py" />
+    <Compile Include="test folder\reading_DHT %281%29.py" />
+    <Compile Include="test folder\reading_DHT.py" />
+    <Compile Include="test folder\telegramBot %281%29.py" />
+    <Compile Include="test folder\telegramBot.py" />
+    <Compile Include="test folder\thingspeak %281%29.py" />
+    <Compile Include="test folder\thingspeak.py" />
     <Compile Include="test.py">
       <SubType>Code</SubType>
     </Compile>
@@ -50,6 +56,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
+    <Folder Include="doc\" />
+    <Folder Include="test folder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="doc\desktop.ini" />
+    <Content Include="doc\json format for telegram" />
+    <Content Include="doc\python-telegram-bot.pdf" />
+    <Content Include="test folder\desktop.ini" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
