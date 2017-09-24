@@ -4,6 +4,7 @@ import random
 import datetime
 import telepot
 from reading_DHT import Reading_DHT
+from LEDbyRelay import LEDbyRelay
 import json 
 #import RPi.GPIO as GPIO
 
@@ -15,8 +16,10 @@ class telegramBot(object):
     """by using this class we will handel the comminucation between our software and telegrambot"""
 
     def __init__(self):
+        self.pinNo = 17
         bot = telepot.Bot('371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY')
         self.dht = Reading_DHT()
+        self.led = LEDbyRelay(self.pinNo)
     
     def handler(self,msg):
 
@@ -24,10 +27,10 @@ class telegramBot(object):
         command = msg['text']
         
         if command == '/turnon':
-            bot.sendMessage(chat_id, self.turn_on(17))
+            bot.sendMessage(chat_id, self.turn_on(self.pinNo))
       
         elif command =='/turnoff':
-            bot.sendMessage(chat_id, self.turn_off(17))
+            bot.sendMessage(chat_id, self.turn_off(self.pinNo))
         
         elif command =='/gettemp':
             bot.sendMessage(chat_id, self.get_temp())
@@ -43,12 +46,14 @@ class telegramBot(object):
     
     def turn_on(self,pin):
         print'trying to turn it on'
-#        GPIO.output(pin,GPIO.HIGH)
+        self.led.setup()
+        self.led.connect()        
         return "on"
     
     def turn_off(self,pin):
         print'trying to turn it off'
-#        GPIO.output(pin,GPIO.LOW)
+        self.led.disconnect()
+        self.led.destroy()
         return "off"
     
     def get_temp(self):
