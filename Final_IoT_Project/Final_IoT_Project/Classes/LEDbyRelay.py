@@ -1,12 +1,19 @@
 import RPi.GPIO as GPIO
 import time
 
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(17,GPIO.OUT)
+
 class LEDbyRelay(object):
     "turnnig on and off the LED"""
 
     def __init__(self,relayPin):
 
         self.relayPin = relayPin
+        #GPIO.setmode(GPIO.BCM)
+        #GPIO.setwarnings(False)
+        #GPIO.setup(17,GPIO.OUT)
 
     #setup function for some setup---custom function
     def setup(self):
@@ -19,11 +26,11 @@ class LEDbyRelay(object):
 
     #Turn on
     def connect(self):
-        GPIO.output(self.relayPin,GPIO.HIGH)
+        GPIO.output(self.relayPin,GPIO.LOW)
 
     #Turn off
     def disconnect(self):
-        GPIO.output(self.relayPin,GPIO.LOW)
+        GPIO.output(self.relayPin,GPIO.HIGH)
 
     #define a destroy function for clean up everything after the script finished
     def destroy(self):
