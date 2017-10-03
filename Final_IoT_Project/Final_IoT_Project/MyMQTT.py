@@ -15,3 +15,24 @@ class MyMQTT:
     def myOnMessageReceived (self, paho_mqtt , userdata, msg):
 # A new message is received
         self.notifier.notify (msg.topic, msg.payload)
+
+    def myPublish(self, topic, msg, qos =2):
+#if needed, you can do some computation or error-check befor publishing
+# publish a message with a certain topic
+        self._paho_mqtt.publish(topic, msg, qos)
+    
+    def mySubscribe(self, topic, qos =2):
+#if needed, you can do some computation or error-check befor subscribing 
+#subscribe for a topic
+
+        self._paho_mqtt.subscribe(topic, qos)
+
+    def start(self):
+        #manage connection to broker
+        self._paho_mqtt.connect(self.broker, self.port)
+        self._paho_mqtt.loop_start()
+
+    def stop(self):
+        self._paho_mqtt.loop_stop()
+
+
