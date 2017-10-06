@@ -1,9 +1,9 @@
 from MyMQTT import MyMQTT
 
-class Publish_DHT(object):
+class Publish_Subscribe(object):
     def __init__(self):
         #create an instance of paho.mqtt.client
-        self.myMqtt = MyMQTT('192.168.1.110',1883,self)
+        self.myMqtt = MyMQTT('iot.eclipse.org',1883,self)
 
     def run(self):
         #if needed, perform some other actions befor ending the sofware
@@ -17,7 +17,7 @@ class Publish_DHT(object):
         print"received %s under topic %s" % (topic, msg)
 
 if __name__ == "__main__":
-    test = Publish_DHT()
+    test = Publish_Subscribe()
     test.run()
     test.myMqtt.mySubscribe("/my/topic",2)
     test.myMqtt.myPublish("/my/topic","my message",2)
