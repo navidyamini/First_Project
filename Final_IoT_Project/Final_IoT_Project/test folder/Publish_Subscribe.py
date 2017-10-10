@@ -6,7 +6,6 @@ class Publish_Subscribe(object):
         self.myMqtt = MyMQTT(broker, port,self)
 
     def run(self):
-        #if needed, perform some other actions befor ending the sofware
         self.myMqtt.start()
 
     def end(self):
