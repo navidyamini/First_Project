@@ -8,8 +8,8 @@ class MyMQTT(object):
         self._paho_mqtt = PahoMQTT.Client("clientid", False)
         self._paho_mqtt.on_connect = self.myOnConnect
         self._paho_mqtt.on_message = self.myOnMessageReceived
-        self._paho_mqtt.on_publish = self.myPublish
-        self._paho_mqtt.on_subscribe = self.mySubscribe        
+        #self._paho_mqtt.on_publish = self.on_publish
+        #self._paho_mqtt.on_subscribe = self.mySubscribe
 
     def myOnConnect (self, paho_mqtt, userdata, flags, rc):
         print ("Connected to message broker with result code: "+str(rc))
@@ -34,5 +34,8 @@ class MyMQTT(object):
 
     def stop(self):
         self._paho_mqtt.loop_stop()
+
+#    def on_publish(client, userdata, mid):
+#        print("mid: " + str(mid))
 #done
 
