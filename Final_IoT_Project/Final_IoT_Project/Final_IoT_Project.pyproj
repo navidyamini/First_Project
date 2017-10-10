@@ -43,11 +43,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="telegrambot1.py" />
+    <Compile Include="test folder\Publish.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test folder\Publish_Subscribe.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test folder\reading_DHT %281%29.py" />
     <Compile Include="test folder\reading_DHT.py" />
+    <Compile Include="test folder\Subscribe.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test folder\telegramBot %281%29.py" />
     <Compile Include="test folder\telegramBot.py" />
     <Compile Include="test folder\thingspeak %281%29.py" />
