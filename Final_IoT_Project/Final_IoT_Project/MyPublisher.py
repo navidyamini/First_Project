@@ -1,15 +1,26 @@
 import paho.mqtt.client as PahoMQTT
+import time
 
 class MyPublisher:
-    def __init__(self):
-# create an instance of paho.mqtt.client
-        self._paho_mqtt = PahoMQTT.Client(clientid, False)
-#register the callback
-        self._paho_mqtt.on_connect = self.myOnConnect
-#manage connection to broker
-        self. _paho_mqtt.connect('example.mqtt.com', 1883)
-        self._paho_mqtt.loop_start()
-# publish a message with a certain topic
-        self._paho_mqtt.publish('/this/is/my/topic', 'whatever message, also in JSON', 2)
-    def myOnConnect (self, paho_mqtt, userdata, flags, rc):
+
+    def __init__(self, broker, port, topic, msg, qos):
+
+        self.paho_mqtt_client = PahoMQTT.Client("clientId",False)
+        self.paho_mqtt_client.on_connect = self.onConnect
+        #time.sleep(5)
+        self.paho_mqtt_client.on_publish = self.onPublish
+        #time.sleep(5)
+        self.paho_mqtt_client.connect(broker, port)
+        #time.sleep(5)
+        self.paho_mqtt_client.loop_start()
+        self.paho_mqtt_client.publish(topic, msg, qos)
+        time.sleep(30)
+    def onConnect (self, paho_mqtt, userdata, flags, rc):
         print ("Connected to message broker with result code: "+str(rc))
+
+    def onPublish(client, userdata,flags, mid):
+        print("mid: " + str(mid))
+        #print "hi"
+
+    #def publish(self, topic, msg, qos ):
+        #self.paho_mqtt_client.publish(topic, msg, qos)

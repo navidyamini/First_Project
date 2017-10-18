@@ -19,7 +19,7 @@ class MyMQTT(object):
         self.notifier.notify (msg.topic, msg.payload)
         print "message recived"
 
-    def myPublish(self, topic, msg, qos =2):
+    def myPublish(self, topic, msg, qos =1):
         self._paho_mqtt.publish(topic, msg, qos)
         print topic +" " + msg
     
