@@ -11,7 +11,11 @@ class Bluetooth_Counter(object):
         return devices
 
     def count(self):
-        self.counter =+1
+        self.counter +=1
+        return
+
+    def reset(self):
+        self.counter = 0
         return
 
 if __name__=="__main__":
@@ -20,7 +24,7 @@ if __name__=="__main__":
         results = bluetooth_counter.search()
         if (results!=None):
             for addr, name in results:
-                #print the macc address and the name of the device
+                #print the mac address and the name of the device
                 print "{0} - {1}".format(addr, name)
                 #increse the counter
                 bluetooth_counter.count()
@@ -28,4 +32,4 @@ if __name__=="__main__":
         print bluetooth_counter.counter
         time.sleep(60)
         #reset the counter to zero for nexrt time
-        bluetooth_counter.counter = 0
+        bluetooth_counter.reset()
