@@ -30,6 +30,6 @@ if __name__=="__main__":
                 bluetooth_counter.count()
         # print the nuumber of devices
         print bluetooth_counter.counter
-        time.sleep(60)
+        time.sleep(5)
         #reset the counter to zero for nexrt time
         bluetooth_counter.reset()
