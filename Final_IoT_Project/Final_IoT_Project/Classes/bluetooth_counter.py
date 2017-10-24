@@ -1,3 +1,5 @@
+# this class is going to count the number of people
+
 import time
 import bluetooth
 
