@@ -25,7 +25,7 @@ if __name__=="__main__":
         if (results!=None):
             for addr, name in results:
                 #print the mac address and the name of the device
-                print "{0} - {1}".format(addr, name)
+                print ("{0} - {1}".format(addr, name))
                 #increse the counter
                 bluetooth_counter.count()
         # print the nuumber of devices
