@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Web Form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("input").on({
+                blur: fucntion(){
+                     $(this).css("background-color", "#ffffff");
+                }
+            });
+        });
+        </script>
+    </head>
+<body>
+
+<h1>Museum controlling settings</h1>
+<p>The museum humidity and temperature behaviour is going to work under the following values, or thresholds.
+    Those indicate the allowed temperature and humidity values per an specific art exhibition.</p>
+
+<h2>Current thresholds values: </h2>
+
+<p id="current_thresholds">
+                        <b id="label_max_temp">''' + "Max. temperature: " + str(obj["thresholds"]["max_temp"]) + '''</b><br>
+                        <b id="label_min_temp">''' + "Min. temperature: " + str(obj["thresholds"]["min_temp"]) + '''</b><br>
+                        <b id="label_max_hum">''' + "Max. humidity: " + str(obj["thresholds"]["max_hum"]) + '''</b><br>
+                        <b id="label_min_hum">''' + "Min. humidity: " + str(obj["thresholds"]["min_hum"]) + '''</b><br>
+                    </p>
+
+
+<form action="/reply" method="POST">
+    Min temperature: <input type="text" name="mint">
+    <br/>
+    Max temperature: <input type="text" name="maxt">
+    <br/>
+    Min humidity: <input type="text" name="minh">
+    <br/>
+    Max humidity: <input type="text" name="maxh">
+    <br/>
+    <button> Submit </button>
+    <!--input type="submit"-->
+</form>
+
+</body>
+</html>
