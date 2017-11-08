@@ -1,10 +1,9 @@
 import json
-import os
 
 class Checking_threshold(object):
     def __init__(self):
-        self.temperature = 0.00
-        self.humidity = 0.00
+        #self.temperature = temperature
+        #self.humidity = humidity
         self.max_temperature = 0.00
         self.max_humidity = 0.00
         self.min_temperature = 0.00
@@ -30,8 +29,10 @@ class Checking_threshold(object):
             print "ERROR: In reading file"
             return
 
-    def checking(self):
-        pass
+    def checking(self,temperature,humidity):
+        if temperature > self.max_temperature or temperature < self.min_temperature or humidity > self.max_humidity or humidity < self.min_humidity:
+            return "Turn_on"
+        return "Turn_off"
 
 if __name__ == '__main__':
 
