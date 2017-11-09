@@ -21,8 +21,8 @@ class Reading_DHT(object):
         self.humidity, self.temperature = Adafruit_DHT.read_retry(11, 4)
 
         if (self.humidity is not None and self.temperature is not None):
-            #print "From Sensor:"
-            #print 'Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(self.temperature, self.humidity)
+            print "From Sensor:"
+            print 'Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(self.temperature, self.humidity)
             json_format = json.dumps({"temperature": self.temperature, "humidity": self.humidity})
             # print json_format
             return json_format

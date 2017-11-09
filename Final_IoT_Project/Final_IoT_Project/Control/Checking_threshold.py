@@ -2,8 +2,6 @@ import json
 
 class Checking_threshold(object):
     def __init__(self):
-        #self.temperature = temperature
-        #self.humidity = humidity
         self.max_temperature = 0.00
         self.max_humidity = 0.00
         self.min_temperature = 0.00
@@ -20,10 +18,6 @@ class Checking_threshold(object):
             self.max_humidity = values["thresholds"]["max_hum"]
             self.min_temperature = values["thresholds"]["min_temp"]
             self.min_humidity = values["thresholds"]["min_hum"]
-            #print self.max_humidity
-            #print self.max_temperature
-            #print self.min_humidity
-            #print self.min_temperature
 
         except :
             print "ERROR: In reading file"
