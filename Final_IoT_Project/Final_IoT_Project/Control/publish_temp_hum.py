@@ -9,7 +9,7 @@ import paho.mqtt.client as mqttc
 import time
 import datetime
 
-class Publisher_DHT:
+class publish_temp_hum:
 
     def __init__(self, sensor_t_h, client):
         self.sensor_t_h = sensor_t_h
@@ -35,7 +35,6 @@ class Publisher_DHT:
 
     def publish_data(self):
         #This function will publishe the data related to temperature and humidity
-
         try:
             json_format = self.sensor_t_h.reading_sensor()
             msg_info = client.publish('sensors/data', str(json_format), qos=1)
@@ -44,27 +43,31 @@ class Publisher_DHT:
             # This call will block until the message is published
             msg_info.wait_for_publish()
             return ("CIAONE", json_format)
-            ########################
         except:
             get_time = datetime.datetime.now()
             current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
             print "Error in publishing data data"
             print ("at time: " + str(current_time))
-        #return ("CIAONE", data)
 
 if __name__ == '__main__':
 
-    sensor_data = Reading_DHT()
-
-    client = mqttc.Client()
-    client.on_connect = Publisher_DHT.on_connect
-    client.on_publish = Publisher_DHT.on_publish
-    client.connect('192.168.1.254', 1883)
-    client.loop_start()
-
-    sens = Publisher_DHT(sensor_data, client)
-
     while True:
+        try:
+            sensor_data = Reading_DHT()
+        except:
+            print "Problem in getting data from sensor in publish_temp_hum"
 
-        sens.publish_data()
-        time.sleep(5)
+        client = mqttc.Client()
+        try:
+            client.on_connect = publish_temp_hum.on_connect
+            client.on_publish = publish_temp_hum.on_publish
+            client.connect('192.168.1.254', 1883)
+            client.loop_start()
+        except:
+            print "Problem in connecting to broker"
+
+        sens = publish_temp_hum(sensor_data, client)
+
+        while True:
+            sens.publish_data()
+            time.sleep(5)

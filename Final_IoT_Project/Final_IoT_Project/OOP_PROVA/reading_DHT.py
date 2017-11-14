@@ -1,7 +1,6 @@
-import string
-import sys
 import Adafruit_DHT
 import json
+import datetime
 
 
 # print 'hello'
@@ -23,7 +22,9 @@ class Reading_DHT(object):
         if (self.humidity is not None and self.temperature is not None):
             print "From Sensor:"
             print 'Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(self.temperature, self.humidity)
-            json_format = json.dumps({"temperature": self.temperature, "humidity": self.humidity})
+            get_time = datetime.datetime.now()
+            current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
+            json_format = json.dumps({"temperature": self.temperature, "humidity": self.humidity,"time":current_time})
             # print json_format
             return json_format
         else:

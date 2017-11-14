@@ -4,43 +4,42 @@
 ##   to be placed in PC                              ##
 #######################################################
 
-### It's also the second client of lab4 ex4
-
 import paho.mqtt.client as paho
+from Checking_threshold import Checking_threshold
+import datetime
 
-class Subscriber_DHT():
+class Subscribe_data_DHT():
 
     @staticmethod
     def on_subscribe(client, userdata, mid, granted_qos):
+        get_time = datetime.datetime.now()
+        current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("Subscribed: " + str(mid) + " " + str(granted_qos))
+        print ("at time: " + str(current_time))
+
     @staticmethod
     def on_message(client, userdata, msg):
-        print(msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+        get_time = datetime.datetime.now()
+        current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))
-        print("message topic=", msg.topic)
-        #print("message qos=", msg.qos)
-        #print("message retain flag=", msg.retain)
+        print ("at time: " + str(current_time))
+        #sending the data to Checking_threshold for checking the tresholds.
+        check_data = Checking_threshold()
+        check_data.sensor_data(msg.payload)
+        check_data.load_file()
+        check_data.checking()
+
 
 if __name__ == '__main__':
+    # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
+    while True:
+        try:
+            client = paho.Client()
+            client.on_subscribe = Subscribe_data_DHT.on_subscribe
+            client.on_message = Subscribe_data_DHT.on_message
+            client.connect('192.168.1.254', 1883)
+            client.subscribe("sensors/data", qos=1)
+            client.loop_forever()
+        except:
+            print "Problem in connecting to broker in subscibe_data_DHT classT"
 
-    client = paho.Client()
-    client.on_subscribe = Subscriber_DHT.on_subscribe
-    client.on_message = Subscriber_DHT.on_message
-    client.connect('192.168.1.110', 1883)
-    client.subscribe("sensors/#", qos=1)
-    client.loop_forever()
-
-    # print("- VISUALIZE: \n1) Temperature \n2) Humidity \n3) Status of the LED")
-    # selection = input("-->")
-    #
-    # if selection == 1:
-    #     sens.publish_temp()
-    #
-    # elif selection == 2:
-    #     sens.publish_hum()
-    #
-    # elif selection == 3:
-    #     sens.change_status_led()
-    #
-    # else:
-    #     print ("Insert a valid option")
