@@ -11,13 +11,8 @@ class LEDbyRelay(object):
     def __init__(self,relayPin):
 
         self.relayPin = relayPin
-        #GPIO.setmode(GPIO.BCM)
-        #GPIO.setwarnings(False)
-        #GPIO.setup(17,GPIO.OUT)
-
     #setup function for some setup---custom function
     def setup(self):
-
         GPIO.setwarnings(False)
         #set the gpio modes to BCM numbering
         GPIO.setmode(GPIO.BCM)
@@ -35,7 +30,7 @@ class LEDbyRelay(object):
     #define a destroy function for clean up everything after the script finished
     def destroy(self):
         #turn off relay
-        GPIO.output(self.relayPin,GPIO.LOW)
+        GPIO.output(self.relayPin,GPIO.HIGH)
         #release resource
         GPIO.cleanup()
 
@@ -52,14 +47,14 @@ if __name__ == '__main__':
         
             #disconnect
             controling_LED.disconnect()
-            time.sleep(1)   
+            time.sleep(20)
             print ('|*****************|')
             print ('|  Relay open...  |')
             print ('|*****************|\n')
             print ('')
             #connect
             controling_LED.connect()
-            time.sleep(1)
+            time.sleep(20)
     #when 'Ctrl+C' is pressed,child program destroy() will be executed.
     except KeyboardInterrupt:
         controling_LED.destroy()

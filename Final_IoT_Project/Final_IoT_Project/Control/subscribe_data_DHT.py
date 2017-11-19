@@ -32,9 +32,10 @@ class Subscribe_data_DHT():
 
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
+    client = paho.Client()
     while True:
         try:
-            client = paho.Client()
+
             client.on_subscribe = Subscribe_data_DHT.on_subscribe
             client.on_message = Subscribe_data_DHT.on_message
             client.connect('192.168.1.254', 1883)

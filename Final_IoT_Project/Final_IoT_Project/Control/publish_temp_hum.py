@@ -46,27 +46,28 @@ class publish_temp_hum:
         except:
             get_time = datetime.datetime.now()
             current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
-            print "Error in publishing data data"
+            print "Error in publishing data data in class publish_temp_hum"
             print ("at time: " + str(current_time))
 
 if __name__ == '__main__':
 
-    while True:
-        try:
-            sensor_data = Reading_DHT()
-        except:
-            print "Problem in getting data from sensor in publish_temp_hum"
 
-        client = mqttc.Client()
+    try:
+        sensor_data = Reading_DHT()
+    except:
+        print "Problem in getting data from sensor in publish_temp_hum"
+
+    client = mqttc.Client()
+    sens = publish_temp_hum(sensor_data, client)
+
+    while True:
         try:
             client.on_connect = publish_temp_hum.on_connect
             client.on_publish = publish_temp_hum.on_publish
             client.connect('192.168.1.254', 1883)
             client.loop_start()
         except:
-            print "Problem in connecting to broker"
-
-        sens = publish_temp_hum(sensor_data, client)
+            print "Problem in connecting to broker in class publish_temp_hum"
 
         while True:
             sens.publish_data()
