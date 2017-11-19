@@ -9,7 +9,7 @@ import paho.mqtt.client as mqttc
 import time
 import datetime
 
-class publish_temp_hum:
+class publish_temp_hum(object):
 
     def __init__(self, sensor_t_h, client):
         self.sensor_t_h = sensor_t_h

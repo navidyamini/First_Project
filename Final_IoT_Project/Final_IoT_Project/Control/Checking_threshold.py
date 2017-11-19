@@ -1,4 +1,5 @@
 import json
+from publish_order_AC import publish_order_AC
 
 class Checking_threshold(object):
     def __init__(self):
@@ -35,11 +36,15 @@ class Checking_threshold(object):
             return
 
     def checking(self):
+        send_order = publish_order_AC()
         if self.temperature > self.max_temperature or self.temperature < self.min_temperature or self.humidity > self.max_humidity or self.humidity < self.min_humidity:
-            print "Turn_on"
+            order = "Turn_on"
+            print order
+            send_order.publish_data(order)
         else:
-            print "Turn_off"
-
+            order = "Turn_off"
+            print order
+            send_order.publish_data(order)
 
 if __name__ == '__main__':
 
