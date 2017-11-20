@@ -5,8 +5,9 @@
 #######################################################
 
 import paho.mqtt.client as paho
-#from Checking_threshold import Checking_threshold
+from LEDbyRelay import LEDbyRelay
 import datetime
+import json
 
 class Subscribe_order_AC(object):
 
@@ -19,21 +20,37 @@ class Subscribe_order_AC(object):
 
     @staticmethod
     def on_message(client, userdata, msg):
-        get_time = datetime.datetime.now()
-        current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
-        print("message received ", str(msg.payload.decode("utf-8")))
-        print ("at time: " + str(current_time))
-        #sending the data to Checking_threshold for checking the tresholds.
-        #check_data = Checking_threshold()
-        #check_data.sensor_data(msg.payload)
-        #check_data.load_file()
-        #check_data.checking()
+        try:
+            Subscribe_order_AC.flag = 0
+            get_time = datetime.datetime.now()
+            current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
+            print("message received ", str(msg.payload.decode("utf-8")))
+            print ("at time: " + str(current_time))
+            message = str(msg.payload.decode("utf-8"))
+        except:
+            print "Problem in subscribe a message Subscribe_order_AC classT"
+        #sending the data to chenging the status of the LED
+        try:
+            json_format = json.loads(message)
+            order = json_format["Order"]
+            print order
+            controling_LED = LEDbyRelay(17)
+            controling_LED.setup()
+            if order == "Turn_on" and Subscribe_order_AC.flag ==0:
+                Subscribe_order_AC.flag = 1
+                controling_LED.connect()
+            elif order == "Turn_off" and Subscribe_order_AC.flag == 1:
+                Subscribe_order_AC.flag = 0
+                controling_LED.disconnect()
+        except:
+            print" problem in connecting to LED in class Subscribe_order_AC"
 
 
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE order for AC
     client = paho.Client()
     while True:
+
         try:
             client.on_subscribe = Subscribe_order_AC.on_subscribe
             client.on_message = Subscribe_order_AC.on_message

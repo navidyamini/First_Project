@@ -36,6 +36,7 @@ if __name__ == '__main__':
     while True:
         try:
 
+
             client.on_subscribe = Subscribe_data_DHT.on_subscribe
             client.on_message = Subscribe_data_DHT.on_message
             client.connect('192.168.1.254', 1883)

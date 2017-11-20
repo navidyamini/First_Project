@@ -17,7 +17,7 @@ class LEDbyRelay(object):
         #set the gpio modes to BCM numbering
         GPIO.setmode(GPIO.BCM)
         #set RelayPin's mode to output,and initial level to LOW(0V)
-        GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.LOW)
+        GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.HIGH)
 
     #Turn on
     def connect(self):

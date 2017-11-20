@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d77e229-7671-45ff-b288-75ffd0f84209" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Ac_action.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py" />
     </list>
     <ignored path="First_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/First_Project$subscribe_data_DHT__1_.coverage" NAME="subscribe_data_DHT (1) Coverage Results" MODIFIED="1511106726387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control" />
+    <SUITE FILE_PATH="coverage/First_Project$subscribe_data_DHT__1_.coverage" NAME="subscribe_data_DHT (1) Coverage Results" MODIFIED="1511136059019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control" />
     <SUITE FILE_PATH="coverage/First_Project$Ac_action.coverage" NAME="Ac_action Coverage Results" MODIFIED="1510615215473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control" />
     <SUITE FILE_PATH="coverage/First_Project$subscribe_data_DHT.coverage" NAME="subscribe_data_DHT Coverage Results" MODIFIED="1510613382642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA" />
   </component>
@@ -36,44 +36,10 @@
       <file leaf-file-name="publish_temp_hum.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="572">
+              <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding>
                 <element signature="e#271#306#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Command.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscribe_data_DHT.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding>
-                <element signature="e#281#312#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Checking_threshold.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +48,8 @@
       <file leaf-file-name="publish_order_AC.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+            <state relative-caret-position="153">
+              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding>
                 <element signature="e#271#302#0" expanded="true" />
               </folding>
@@ -91,11 +57,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subscribe_order_AC.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="subscribe_data_DHT.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#281#312#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subscribe_order_AC.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="170">
+              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <folding>
+                <element signature="e#281#312#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reading_DHT.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/reading_DHT.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LEDbyRelay.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LEDbyRelay.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Checking_threshold.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telegramBot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/telegramBot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,23 +153,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_data_DHT.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_temp.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_hum.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/subscribe_data_DHT.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/reading_DHT.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/reading_DHT.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/RawWebpage/initial_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Ac_action.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/third_client.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_LED.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/RawWebpage/initial_data.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py" />
       </list>
     </option>
   </component>
@@ -168,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,28 +284,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="OOP_PROVA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Control" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -303,6 +312,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -315,10 +325,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\Control" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\Control" />
     </key>
   </component>
@@ -650,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511102038197</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="working on the control unit, pub and sub for turning on and of the ac in enabled.">
+      <created>1511106771502</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511106771502</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -663,7 +680,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43533123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43533123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -676,7 +693,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -688,7 +705,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43533123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43533123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -696,6 +713,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -719,15 +737,99 @@
     <MESSAGE value="writing the new code for publishing the data, adding the class publish_temp_hum to Control unit" />
     <MESSAGE value="working on the control unit, changed the json format in sensor data, i think now it is work" />
     <MESSAGE value="working on the control unit" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on the control unit" />
+    <MESSAGE value="working on the control unit, pub and sub for turning on and of the ac in enabled." />
+    <option name="LAST_COMMIT_MESSAGE" value="working on the control unit, pub and sub for turning on and of the ac in enabled." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/bluetooth_counter.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/telegramBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#271#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="e#281#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#271#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#281#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/bluetooth_counter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -752,7 +854,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-          <folding />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -780,17 +884,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-          <folding />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Ac_action.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Ac_action.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -809,7 +909,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,7 +919,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -887,60 +991,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/RawWebpage/initial_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/reading_DHT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="75" lean-forward="true" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/third_client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Ac_action.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Ac_action.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/subscribe_data_DHT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,17 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#282#313#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_data_DHT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,54 +1017,137 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_data_DHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/Documents/BlueJ Projects/LED-Button/Button.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="-193">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/json format for telegram">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/bluetooth_counter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/thingspeak.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#271#306#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/telegramBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#281#312#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        <state relative-caret-position="119">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/reading_DHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#281#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_order_AC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
             <element signature="e#271#302#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_temp_hum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#271#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/RawWebpage/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="true" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="170">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="e#281#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/LEDbyRelay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding />
         </state>
       </provider>

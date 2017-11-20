@@ -11,18 +11,13 @@ class LEDbyRelay(object):
     def __init__(self,relayPin):
 
         self.relayPin = relayPin
-        #GPIO.setmode(GPIO.BCM)
-        #GPIO.setwarnings(False)
-        #GPIO.setup(17,GPIO.OUT)
-
     #setup function for some setup---custom function
     def setup(self):
-
         GPIO.setwarnings(False)
         #set the gpio modes to BCM numbering
         GPIO.setmode(GPIO.BCM)
         #set RelayPin's mode to output,and initial level to LOW(0V)
-        GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.LOW)
+        GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.HIGH)
 
     #Turn on
     def connect(self):
@@ -35,7 +30,7 @@ class LEDbyRelay(object):
     #define a destroy function for clean up everything after the script finished
     def destroy(self):
         #turn off relay
-        GPIO.output(self.relayPin,GPIO.LOW)
+        GPIO.output(self.relayPin,GPIO.HIGH)
         #release resource
         GPIO.cleanup()
 

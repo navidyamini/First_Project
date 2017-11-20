@@ -7,6 +7,7 @@
 import paho.mqtt.client as paho
 import time
 import datetime
+import json
 
 class publish_order_AC(object):
 
@@ -40,7 +41,7 @@ class publish_order_AC(object):
     def publish_data(self,order):
         #This function will publishe the order to AC
         try:
-            json_format = "{'Order' : order}"
+            json_format = json.dumps({'Order' : str(order)})
             self.client.publish('Ac/Order', str(json_format), qos=1)
             return ("CIAONE", json_format)
         except:
