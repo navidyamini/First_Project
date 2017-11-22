@@ -1,6 +1,6 @@
 #######################################################
 ##   Third class that have to SUBSCRIBE data about   ##
-##   TEMPERATURE and HUMIDITY                        ##
+##   no of active bluetooth devices                  ##
 ##   to be placed in PC                              ##
 #######################################################
 
@@ -9,7 +9,8 @@ from Checking_threshold import Checking_threshold
 import datetime
 from thingspeak import thingspeak
 
-class Subscribe_data_DHT(object):
+
+class Subscribe_data_BT(object):
 
     @staticmethod
     def on_subscribe(client, userdata, mid, granted_qos):
@@ -25,24 +26,21 @@ class Subscribe_data_DHT(object):
         print("message received ", str(msg.payload.decode("utf-8")))
         print ("at time: " + str(current_time))
         #sending the data to Checking_threshold for checking the tresholds.
-        check_data = Checking_threshold()
-        check_data.sensor_data(msg.payload)
-        check_data.load_file()
-        check_data.checking()
         to_thingspeak = thingspeak()
-        to_thingspeak.sending_dht_data(msg.payload)
+        to_thingspeak.sending_noDevices(msg.payload)
 
 
 if __name__ == '__main__':
-    # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
+    # RUN THE SUBSCRIBE FOR GETTING THE no bluetooth devices
     client = paho.Client()
     while True:
         try:
-            client.on_subscribe = Subscribe_data_DHT.on_subscribe
-            client.on_message = Subscribe_data_DHT.on_message
+            client.on_subscribe = Subscribe_data_BT.on_subscribe
+            client.on_message = Subscribe_data_BT.on_message
             client.connect('192.168.1.254', 1883)
-            client.subscribe("sensors/data", qos=1)
+            client.subscribe("raspberry/noBluetooth", qos=1)
+            print "1"
             client.loop_forever()
         except:
-            print "Problem in connecting to broker in subscibe_data_DHT classT"
+            print "Problem in connecting to broker in Subscribe_data_BT classT"
 
