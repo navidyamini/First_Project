@@ -45,7 +45,7 @@ class ThingSpeak(object):
         try:
             publish.single(self.topic, payload, hostname = self.mqttHost, transport = self.tTransport, port = self.tPort)
         except:
-            print("ThingSpeak: THERE INS A ERROR IN PUBLISH THE HUM AND TEMP TO THINGSPEAK")
+            print("ThingSpeak: THERE IS A ERROR IN PUBLISH THE HUM AND TEMP TO THINGSPEAK")
         return
 
     def number_of_people(self):
