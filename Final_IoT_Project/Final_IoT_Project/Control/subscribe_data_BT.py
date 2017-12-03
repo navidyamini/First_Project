@@ -37,7 +37,7 @@ if __name__ == '__main__':
         try:
             client.on_subscribe = Subscribe_data_BT.on_subscribe
             client.on_message = Subscribe_data_BT.on_message
-            client.connect('192.168.1.254', 1883)
+            client.connect('192.168.1.110', 1883)
             client.subscribe("raspberry/noBluetooth", qos=1)
             print "1"
             client.loop_forever()

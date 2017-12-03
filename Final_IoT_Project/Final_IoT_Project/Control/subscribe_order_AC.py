@@ -54,7 +54,7 @@ if __name__ == '__main__':
         try:
             client.on_subscribe = Subscribe_order_AC.on_subscribe
             client.on_message = Subscribe_order_AC.on_message
-            client.connect('192.168.1.254', 1883)
+            client.connect('192.168.1.110', 1883)
             client.subscribe('Ac/Order', qos=1)
             client.loop_forever()
         except:

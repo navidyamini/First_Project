@@ -84,7 +84,7 @@ if __name__ == '__main__':
         try:
             client.on_connect = publish_data.on_connect
             client.on_publish = publish_data.on_publish
-            client.connect('192.168.1.254', 1883)
+            client.connect('192.168.1.110', 1883)
             client.loop_start()
         except:
             print "Problem in connecting to broker in class publish_data"

@@ -16,7 +16,7 @@ class publish_order_AC(object):
             self.client = paho.Client()
             self.client.on_connect = self.on_connect
             self.client.on_publish = self.on_publish
-            self.client.connect('192.168.1.254', 1883)
+            self.client.connect('192.168.1.110', 1883)
         except:
             print "problem in connecting to mqq broker in calss publish_order_AC"
 

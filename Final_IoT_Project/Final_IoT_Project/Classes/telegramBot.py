@@ -1,11 +1,12 @@
-import sys
+import json
 import time
-import random
-import datetime
+
 import telepot
-from reading_DHT import Reading_DHT
+
+from Final_IoT_Project.Final_IoT_Project.putting_everything_together.on_raspberry.reading_DHT import Reading_DHT
 from LEDbyRelay import LEDbyRelay
-import json 
+
+
 #import RPi.GPIO as GPIO
 
 #GPIO.setmode(GPIO.BCM)
