@@ -37,8 +37,8 @@ class telegramBot(object):
         elif command == '/gethum':
             bot.sendMessage(chat_id, self.get_hum())
 
-        elif command == '/getstatt':
-            bot.sendMessage(chat_id, self.get_statt())
+        elif command == '/getpeopleno':
+            bot.sendMessage(chat_id, self.getpeopleno())
 
         else:
             bot.sendMessage(chat_id, "Invalid Command")
@@ -83,7 +83,7 @@ class telegramBot(object):
                 print "ERROR IN READING HUMIDITY FROM THINGSPEAK"
         return 'Humidity is: {0:0.1f} %'.format(float(humidity))
 
-    def get_statt(self):
+    def getpeopleno(self):
         print'trying to send back number of people'
         try:
             TS = urllib2.urlopen(
@@ -95,7 +95,7 @@ class telegramBot(object):
             TS.close()
         except:
                 print "ERROR IN READING NUMBER OF PEOPLE FROM THINGSPEAK"
-        return 'number of people is: '+ number_of_people
+        return 'no.people in the museum : '+ number_of_people
 
 if __name__ == '__main__':
 
