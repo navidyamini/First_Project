@@ -4,9 +4,10 @@
 ##   to be placed in PC                              ##
 #######################################################
 
-import paho.mqtt.client as paho
-from Checking_threshold import Checking_threshold
 import datetime
+
+import paho.mqtt.client as paho
+
 from thingspeak import thingspeak
 
 

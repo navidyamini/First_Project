@@ -4,10 +4,13 @@
 ##   to be placed in PC                              ##
 #######################################################
 
-import paho.mqtt.client as paho
-from Checking_threshold import Checking_threshold
 import datetime
+
+import paho.mqtt.client as paho
+
+from Final_IoT_Project.Final_IoT_Project.putting_everything_together.on_pc.CheckingThreshold import CheckingThreshold
 from thingspeak import thingspeak
+
 
 class Subscribe_data_DHT(object):
 
@@ -25,7 +28,7 @@ class Subscribe_data_DHT(object):
         print("message received ", str(msg.payload.decode("utf-8")))
         print ("at time: " + str(current_time))
         #sending the data to Checking_threshold for checking the tresholds.
-        check_data = Checking_threshold()
+        check_data = CheckingThreshold()
         check_data.sensor_data(msg.payload)
         check_data.load_file()
         check_data.checking()
