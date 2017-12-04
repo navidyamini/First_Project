@@ -1,15 +1,23 @@
 import cherrypy
 import json
-
+""""
+THINGSPEAK_HOST = 'mqtt.thingspeak.com'
+ACCESS_TOKEN = 'DDNTX8BUX8A17YZG'
+channelID = "240810"
+tTransport = "websockets"
+tPort = 80
+mqttHost = "mqtt.thingspeak.com"
+READ_API_KEY="PN6SHE0RIBDLGS85"
+"""
 class ThingSpeakInfoWriter(object):
 
     exposed = True
 
     def GET(self, *uri, **params):
 
-        if len(uri) != 6:
+        if len(uri) != 7:
             raise KeyError(
-                " ***** WRONG INPUT!!! THE INPUT SHOULD BE LIKE 'http://localhost:8080/THINGSPEAK_HOST/ACCESS_TOKEN/channelID/tTransport/tPort/mqttHost.. *****")
+                " ***** WRONG INPUT!!! THE INPUT SHOULD BE LIKE 'http://localhost:8080/THINGSPEAK_HOST/ACCESS_TOKEN/channelID/tTransport/tPort/mqttHost/READ_API_KEY.. *****")
 
         try:
             THINGSPEAK_HOST = (uri[0])
@@ -18,11 +26,12 @@ class ThingSpeakInfoWriter(object):
             tTransport = (uri[3])
             tPort = (uri[4])
             mqttHost = (uri[5])
+            READ_API_KEY = uri[6]
         except:
             raise KeyError("***** THE INPUT'S SHOULD BE 6 variables 'THINGSPEAK_HOST',ACCESS_TOKEN,channelID,tTransport,tPortmqttHost. *****")
 
         json_string = json.dumps({"THINGSPEAK_HOST": THINGSPEAK_HOST, "ACCESS_TOKEN": ACCESS_TOKEN,"channelID":channelID,
-                       "tTransport": tTransport,"tPort":tPort,"mqttHost":mqttHost})
+                       "tTransport": tTransport,"tPort":tPort,"mqttHost":mqttHost,"READ_API_KEY":READ_API_KEY})
         try:
             file = open("thingSpeakConnectionInfo.json", "w")
             file.write(json_string)

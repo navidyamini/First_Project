@@ -14,7 +14,7 @@ class ThingSpeak(object):
         try:
             respond = requests.get(self.url+"ThingsSpeakInfoReader.py")
         except:
-            print "ERROR IN CONNECTING TO THE SERVER FOR READING THINGSPEAKCONNECTIONINFO.JSON"
+            print "ThingSpeak: ERROR IN CONNECTING TO THE SERVER FOR READING THINGSPEAKCONNECTIONINFO.JSON"
         json_format = json.loads(respond.text)
         self.THINGSPEAK_HOST = json_format["THINGSPEAK_HOST"]
         self.ACCESS_TOKEN = json_format["ACCESS_TOKEN"]
@@ -45,24 +45,21 @@ class ThingSpeak(object):
         try:
             publish.single(self.topic, payload, hostname = self.mqttHost, transport = self.tTransport, port = self.tPort)
         except:
-            print("ThingSpeak: THERE IS A ERROR IN PUBLISH THE HUM AND TEMP TO THINGSPEAK")
+            print("ThingSpeak: ERROR IN PUBLISHING THE HUM AND TEMP TO THINGSPEAK")
         return
 
     def number_of_people(self):
 
         result = self.counter.device_counter()
         print result
-
         # build the payload string
         payload = "field3=" + str(result)
-
         # attempt to publish this data to the topic
         try:
             publish.single(self.topic, payload, hostname=self.mqttHost, transport=self.tTransport, port=self.tPort)
         except:
-            print("ThingSpeak: THERE IS A ERROR IN PUBLISH THE NUMBER OF PEOPLE TO THINGSPEAK.")
+            print("ThingSpeak: ERROR IN PUBLISHING THE NUMBER OF PEOPLE TO THINGSPEAK.")
         return
-
 
 if __name__ == '__main__':
 
