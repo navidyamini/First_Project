@@ -43,6 +43,9 @@ class BrokerSetting(object):
                                     AC_Topic:<br>
                                     <input type="text" name="AC_Topic1">
                                     <br/>
+                                    Counter_Topic:<br>
+                                    <input type="text" name="Counter_Topic1">
+                                    <br/>
                                 </fieldset>
                                 <button> Submit </button>
                                 <!--input type="submit"-->
@@ -67,7 +70,8 @@ class BrokerSetting(object):
             obj['broker'] = {"Broker_IP": str(params['Broker_IP1']),
                              "Broker_port": str(params['Broker_port1']),
                              "DHT_Topic": str(params['DHT_Topic1']),
-                             "AC_Topic": str(params['AC_Topic1'])}
+                             "AC_Topic": str(params['AC_Topic1']),
+                             "Counter_Topic": str(params['Counter_Topic1'])}
         except:
             raise KeyError("***** ERROR IN READING THE JSON FILE*****")
         try:
@@ -109,6 +113,9 @@ class BrokerSetting(object):
                                 <br/>
                                 AC_Topic:<br>
                                 <input type="text" name="AC_Topic1">
+                                <br/>
+                                Counter_Topic:<br>
+                                <input type="text" name="Counter_Topic!">
                                 <br/>
                             </fieldset>
                             <button> Submit </button>
