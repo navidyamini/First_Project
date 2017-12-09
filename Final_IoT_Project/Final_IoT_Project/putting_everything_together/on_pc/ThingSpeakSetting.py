@@ -1,9 +1,8 @@
 import cherrypy
 import os
-import requests
 import json
 
-class SettingThingSpeak(object):
+class ThingSpeakSetting(object):
     exposed = True
 
     def GET(self, *uri):
@@ -27,7 +26,7 @@ class SettingThingSpeak(object):
                         <body>
 
                         <h1>Museum thingspeak connection settings</h1>
-                        <p>please Enter the thingspeak connection info here.</p>
+                        <p>Please enter the thingspeak connection info here.</p>
 
                         <form action="/reply" method="POST">
                             <table>
@@ -104,7 +103,7 @@ class SettingThingSpeak(object):
                     <body>
 
                     <h1>Museum thingspeak connection settings</h1>
-                    <p>Successfully Writing the ThingSpeak connection info into the json file.</p>
+                    <p>Successfully writing the ThingSpeak connection info into the json file.</p>
 
                     <form action="/reply" method="POST">
                         <table>
@@ -147,7 +146,7 @@ if __name__ == "__main__":
             'tools.staticdir.root': os.path.abspath(os.getcwd())
         }
     }
-    cherrypy.tree.mount(SettingThingSpeak(), '/', conf)
+    cherrypy.tree.mount(ThingSpeakSetting(), '/', conf)
     cherrypy.server.socket_host = '192.168.1.65'
     cherrypy.engine.start()
     cherrypy.engine.block()
