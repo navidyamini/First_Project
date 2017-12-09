@@ -12,16 +12,16 @@ class ThingSpeak(object):
 
     def setThingSpeakVariables(self):
         try:
-            respond = requests.get(self.url+"ThingsSpeakInfoReader.py")
+            respond = requests.get(self.url)
         except:
             print "ThingSpeak: ERROR IN CONNECTING TO THE SERVER FOR READING THINGSPEAKCONNECTIONINFO.JSON"
         json_format = json.loads(respond.text)
-        self.THINGSPEAK_HOST = json_format["THINGSPEAK_HOST"]
-        self.ACCESS_TOKEN = json_format["ACCESS_TOKEN"]
-        self.channelID = json_format["channelID"]
-        self.tTransport = json_format["tTransport"]
-        self.tPort = int(json_format["tPort"])
-        self.mqttHost =json_format["mqttHost"]
+        self.THINGSPEAK_HOST = json_format["thingspeak"]["THINGSPEAK_HOST"]
+        self.ACCESS_TOKEN = json_format["thingspeak"]["ACCESS_TOKEN"]
+        self.channelID = json_format["thingspeak"]["channelID"]
+        self.tTransport = json_format["thingspeak"]["tTransport"]
+        self.tPort = int(json_format["thingspeak"]["tPort"])
+        self.mqttHost =json_format["thingspeak"]["mqttHost"]
         print "ThingSpesk: THINGSPEAK VARIABLES ARE READY"
 
     def sending_dht_data(self):

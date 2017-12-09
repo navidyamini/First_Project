@@ -11,12 +11,12 @@ class telegramBot(object):
 
     def setThingSpeakVariables(self):
         try:
-            respond = requests.get(self.url+"ThingsSpeakInfoReader.py")
+            respond = requests.get(self.url)
         except:
             print "TelegramBot: ERROR IN CONNECTING TO THE SERVER FOR READING THINGSPEAKCONNECTIONINFO.JSON"
         json_format = json.loads(respond.text)
-        self.channelID = json_format["channelID"]
-        self.READ_API_KEY = json_format["READ_API_KEY"]
+        self.channelID = json_format["thingspeak"]["channelID"]
+        self.READ_API_KEY = json_format["thingspeak"]["READ_API_KEY"]
         print "TelegramBot:: THINGSPEAK VARIABLES ARE READY"
 
     def handler(self, msg):
@@ -39,7 +39,6 @@ class telegramBot(object):
 
         elif command == '/getpeopleno':
             bot.sendMessage(chat_id, self.getpeopleno())
-
         else:
             bot.sendMessage(chat_id, "Invalid Command")
 
@@ -99,12 +98,15 @@ class telegramBot(object):
 
 if __name__ == '__main__':
 
+    respond = requests.get("http://192.168.1.65:8080/")
+    json_format = json.loads(respond.text)
+    port = json_format["telegram"]["Port"]
     telegram_bot = telegramBot()
     try:
         def handle(msg):
             # print msg
             telegram_bot.handler(msg)
-        bot = telepot.Bot('371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY')
+        bot = telepot.Bot(port)
         bot.message_loop(handle)
         print 'I am listening...'
     except:
