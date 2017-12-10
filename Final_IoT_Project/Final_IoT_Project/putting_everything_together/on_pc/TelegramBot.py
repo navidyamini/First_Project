@@ -98,10 +98,13 @@ class telegramBot(object):
 
 if __name__ == '__main__':
 
-    respond = requests.get("http://192.168.1.65:8080/")
-    json_format = json.loads(respond.text)
-    port = json_format["telegram"]["Port"]
-    telegram_bot = telegramBot()
+    try:
+        respond = requests.get("http://192.168.1.65:8080/")
+        json_format = json.loads(respond.text)
+        port = json_format["telegram"]["Port"]
+        telegram_bot = telegramBot()
+    except:
+        print "ERROR IN CONNECTING TO SERVER FOR GETTING TELEGROM BOT PORT"
     try:
         def handle(msg):
             # print msg

@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d77e229-7671-45ff-b288-75ffd0f84209" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/SubscribeData.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/PublishData.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/LEDbyRelay.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/CheckingThreshold.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/CheckingThreshold.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/BrokerSetting.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/BrokerSetting.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/initial_data.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/initial_data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/initial_data.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/initial_data.json" />
     </list>
     <ignored path="First_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +50,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="publish_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_data.py">
+      <file leaf-file-name="CheckingThreshold.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/CheckingThreshold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="60" />
+            <state relative-caret-position="408">
+              <caret line="63" column="71" lean-forward="false" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LEDbyRelay.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/LEDbyRelay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subscribe_order_AC.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="43" />
+              <folding>
+                <element signature="e#281#312#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TelegramBot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublishData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/PublishData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1297">
+              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+              <folding>
+                <element signature="e#271#304#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BluetoothCounter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/BluetoothCounter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubscribeData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/SubscribeData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,89 +132,7 @@
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="122" lean-forward="false" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="133" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrokerSetting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/BrokerSetting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscribe_data_BT.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_BT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscribe_data_DHT.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscribe_order_AC.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thingSpeakConnectionInfo.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/thingSpeakConnectionInfo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="132" lean-forward="true" selection-start-line="0" selection-start-column="132" selection-end-line="0" selection-end-column="132" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initial_data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/initial_data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thingSpeakConnectionInfo.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/thingSpeakConnectionInfo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="70" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="70" />
+              <caret line="1" column="79" lean-forward="false" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -169,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_data_DHT.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_temp.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_hum.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/subscribe_data_DHT.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/reading_DHT.py" />
@@ -199,7 +188,6 @@
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThresholdReader.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/Checking_threshold.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/CheckingThreshold.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/CheckingThreshold.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThingSpeakWriteResult.html" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/textBoxInteringTest.html" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThingSpeakInfoWriter.py" />
@@ -209,15 +197,20 @@
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/SettingBroker.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThingSpeakSetting.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/BrokerSetting.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/initial_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/TelegramBotSetting.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBotSetting.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/ResourceCatalog.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ThingSpeak.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ResourceCatalog.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/BrokerSetting.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/SubscribeData.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/initial_data.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/initial_data.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/PublishData.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/CheckingThreshold.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/CheckingThreshold.py" />
       </list>
     </option>
   </component>
@@ -312,7 +305,129 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test folder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="putting_everything_together" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="putting_everything_together" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="on_raspberry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="putting_everything_together" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="on_pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="putting_everything_together" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RawWebpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,10 +490,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\test folder" />
-      <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\putting_everything_together\on_pc" />
-      <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\test folder\RawWebpage" />
       <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\putting_everything_together\on_raspberry" />
+      <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\putting_everything_together\on_pc" />
+      <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\test folder" />
+      <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\test folder\RawWebpage" />
       <recent name="C:\Users\Asus\PycharmProjects\First_Project\Final_IoT_Project\Final_IoT_Project\Control" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -882,14 +997,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512856889534</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="putting things together">
+      <created>1512859577454</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1512859577454</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43533123" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -984,20 +1106,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ICTforHealth/Lab01/untitled0.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/publish_hum.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/reading_DHT.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/OOP_PROVA/reading_DHT.py">
@@ -1086,32 +1194,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ReadingDHT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/LEDbyRelay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Classes/telegramBot.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/RawWebpage/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/BluetoothCounter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="60" lean-forward="false" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1171,85 +1258,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/initial_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/ThresholdReader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="57" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/ThingSpeakInfoReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThingSpeakSetting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/CheckingThreshold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBotSetting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ResourceCatalog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ThingSpeak.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="100" column="53" lean-forward="false" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1265,14 +1278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1293,33 +1298,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/initial_data.json">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_data.py">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ThingSpeak.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="60" />
+        <state relative-caret-position="-583">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ReadingDHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThingSpeakSetting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="42" />
+        <state relative-caret-position="-68">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBotSetting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ResourceCatalog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/BrokerSetting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="-544">
           <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -1327,19 +1362,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/publish_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="122" lean-forward="false" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="133" />
+        <state relative-caret-position="284">
+          <caret line="94" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="26" />
+          <folding>
+            <element signature="e#271#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/ThingSpeakInfoReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_data_DHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="15" />
+          <folding>
+            <element signature="e#281#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/doc/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/test folder/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/SubscribeData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="79" lean-forward="false" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/BluetoothCounter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/PublishData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1297">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="e#271#304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Control/subscribe_order_AC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="43" />
+          <folding>
+            <element signature="e#281#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/LEDbyRelay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/CheckingThreshold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="63" column="71" lean-forward="false" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
