@@ -61,6 +61,17 @@ class ThingSpeak(object):
             print("ThingSpeak: ERROR IN PUBLISHING THE NUMBER OF PEOPLE TO THINGSPEAK.")
         return
 
+    def ac_status(self,order):
+
+        # build the payload string
+        payload = "field4=" + str(order)
+        # attempt to publish this data to the topic
+        try:
+            publish.single(self.topic, payload, hostname=self.mqttHost, transport=self.tTransport, port=self.tPort)
+        except:
+            print("ThingSpeak: ERROR IN PUBLISHING THE AIR CONDITION STATUS TO THINGSPEAK")
+        return
+
 if __name__ == '__main__':
 
     thingspeak = ThingSpeak()

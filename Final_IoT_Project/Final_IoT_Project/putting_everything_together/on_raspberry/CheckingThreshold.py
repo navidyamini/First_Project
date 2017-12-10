@@ -2,6 +2,7 @@ import json
 from LEDbyRelay import LEDbyRelay
 import requests
 import time
+from ThingSpeak import ThingSpeak
 
 class CheckingThreshold(object):
     def __init__(self):
@@ -14,6 +15,7 @@ class CheckingThreshold(object):
         self.min_temperature = 0.00
         self.min_humidity = 0.00
         self.controling_LED = LEDbyRelay(17)
+        self.thingSpeak = ThingSpeak()
 
     def sensor_data(self,data):
         try:
@@ -45,6 +47,7 @@ class CheckingThreshold(object):
         if self.temperature > self.max_temperature or self.temperature < self.min_temperature or self.humidity > self.max_humidity or self.humidity < self.min_humidity:
             order = "Turn_on"
             print order,self.flag
+            self.thingSpeak.ac_status(1)
             if(self.flag == 0):
                 try:
                     self.controling_LED.setup()
@@ -55,6 +58,7 @@ class CheckingThreshold(object):
         else:
             order = "Turn_off"
             print order,self.flag
+            self.thingSpeak.ac_status(0)
             if(self.flag == 1):
                 try:
                     self.controling_LED.setup()

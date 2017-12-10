@@ -13,12 +13,14 @@ class LEDbyRelay(object):
         self.relayPin = relayPin
     #setup function for some setup---custom function
     def setup(self):
-        GPIO.setwarnings(False)
-        #set the gpio modes to BCM numbering
-        GPIO.setmode(GPIO.BCM)
-        #set RelayPin's mode to output,and initial level to LOW(0V)
-        GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.HIGH)
-
+        try:
+            GPIO.setwarnings(False)
+            #set the gpio modes to BCM numbering
+            GPIO.setmode(GPIO.BCM)
+            #set RelayPin's mode to output,and initial level to LOW(0V)
+            GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.HIGH)
+        except:
+            print "LEDbyRelay: ERROR IN SETUPING THE LED"
     #Turn on
     def connect(self):
         GPIO.output(self.relayPin,GPIO.LOW)
