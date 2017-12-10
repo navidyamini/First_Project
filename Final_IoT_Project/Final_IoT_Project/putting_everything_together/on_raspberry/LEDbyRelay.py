@@ -8,7 +8,7 @@ GPIO.setwarnings(False)
 GPIO.setup(17,GPIO.OUT)
 
 class LEDbyRelay(object):
-    "turnnig on and off the LED"""
+    #"turnnig on and off the LED"""
 
     def __init__(self,relayPin):
 
@@ -24,7 +24,7 @@ class LEDbyRelay(object):
             #set RelayPin's mode to output,and initial level to LOW(0V)
             GPIO.setup(self.relayPin,GPIO.OUT,initial=GPIO.HIGH)
         except:
-            print "LEDbyRelay: ERROR IN SETUPING THE LED"
+            print "LEDbyRelay: ERROR IN SETUP THE LED"
     #Turn on
     def connect(self):
         GPIO.output(self.relayPin,GPIO.LOW)
