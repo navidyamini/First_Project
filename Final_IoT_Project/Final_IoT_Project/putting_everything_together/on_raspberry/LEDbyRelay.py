@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 import time
+from ThingSpeak import ThingSpeak
+from PublishAcStatus import PublishAcStatus
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -11,6 +13,8 @@ class LEDbyRelay(object):
     def __init__(self,relayPin):
 
         self.relayPin = relayPin
+        self.thingSpeak = ThingSpeak()
+        self.publish = PublishAcStatus()
     #setup function for some setup---custom function
     def setup(self):
         try:
@@ -24,10 +28,14 @@ class LEDbyRelay(object):
     #Turn on
     def connect(self):
         GPIO.output(self.relayPin,GPIO.LOW)
+        self.thingSpeak.ac_status(1)
+        self.publish.publish_data("Turn_on")
 
     #Turn off
     def disconnect(self):
         GPIO.output(self.relayPin,GPIO.HIGH)
+        self.thingSpeak.ac_status(0)
+        self.publish.publish_data("Turn_off")
 
     #define a destroy function for clean up everything after the script finished
     def destroy(self):

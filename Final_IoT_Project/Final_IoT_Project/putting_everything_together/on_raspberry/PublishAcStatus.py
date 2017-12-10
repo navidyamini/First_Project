@@ -1,24 +1,35 @@
 #####################################################
 ##   First class that have to PUBLISH data about   ##
-##   turning on and off the AC                     ##
-##   to be placed in PC                            ##
+##   the status of the AC                          ##
+##   to be placed in RASPERRYPI                    ##
 #####################################################
 
 import paho.mqtt.client as paho
-import time
 import datetime
 import json
+import requests
 
-class publish_order_AC(object):
+class PublishAcStatus(object):
 
     def __init__(self):
+        self.url = 'http://192.168.1.65:8080/'
+        try:
+            respond = requests.get(self.url)
+        except:
+            print "PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+        json_format = json.loads(respond.text)
+        Broker_IP = json_format["broker"]["Broker_IP"]
+        Broker_port = json_format["broker"]["Broker_port"]
+        self.AC_Topic = json_format["broker"]["AC_Topic"]
+        print "PublishAcStatus:: BROKER VARIABLES ARE READY"
+
         try:
             self.client = paho.Client()
             self.client.on_connect = self.on_connect
             self.client.on_publish = self.on_publish
-            self.client.connect('192.168.1.110', 1883)
+            self.client.connect(Broker_IP, int(Broker_port))
         except:
-            print "problem in connecting to mqq broker in calss publish_order_AC"
+            print "PublishAcStatus:ERROR IN CONNECTING TO THE BROKER"
 
     @staticmethod
     def on_connect(client, userdata, flags, rc):
@@ -42,10 +53,10 @@ class publish_order_AC(object):
         #This function will publishe the order to AC
         try:
             json_format = json.dumps({'Order' : str(order)})
-            self.client.publish('Ac/Order', str(json_format), qos=1)
+            self.client.publish(self.AC_Topic, str(json_format), qos=1)
             return ("CIAONE", json_format)
         except:
             get_time = datetime.datetime.now()
             current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
-            print "Error in publishing data in class publish_order_AC"
+            print "PublishAcStatus:ERROR IN PUBLISHING THE DATA"
             print ("at time: " + str(current_time))
