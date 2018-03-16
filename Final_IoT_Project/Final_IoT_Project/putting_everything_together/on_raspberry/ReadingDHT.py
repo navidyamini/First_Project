@@ -3,12 +3,8 @@ import json
 import datetime
 
 
-# print 'hello'
-
-class Reading_DHT(object):
+class ReadingDHT(object):
     """reading temperature and humidity"""
-
-    # print 'hello2'
 
     def __init__(self):
 
@@ -17,8 +13,10 @@ class Reading_DHT(object):
 
     def reading_sensor(self):
 
-        self.humidity, self.temperature = Adafruit_DHT.read_retry(11, 4)
-
+        try:
+            self.humidity, self.temperature = Adafruit_DHT.read_retry(11, 4)
+        except:
+            print "ReadingDHT: ERROR IN READING THE SENSOR"
         if (self.humidity is not None and self.temperature is not None):
             print "From Sensor:"
             print 'Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(self.temperature, self.humidity)
@@ -28,12 +26,11 @@ class Reading_DHT(object):
             # print json_format
             return json_format
         else:
-            print ' Error in reading data from sensor'
-            return
-
+            print 'ReadingDHT: ERROR IN SENDING JSON'
+        return
 
 if __name__ == '__main__':
 
-    data_of_DHT = Reading_DHT()
+    data_of_DHT = ReadingDHT()
     while True:
         data_of_DHT.reading_sensor()

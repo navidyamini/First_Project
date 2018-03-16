@@ -89,7 +89,7 @@ if __name__ == '__main__':
     client = mqttc.Client()
     client.on_connect = Publisher_DHT.on_connect
     client.on_publish = Publisher_DHT.on_publish
-    client.connect('192.168.1.254', 1883)
+    client.connect('192.168.1.110', 1883)
     client.loop_start()
 
     sens = Publisher_DHT(sensor_data, client)
