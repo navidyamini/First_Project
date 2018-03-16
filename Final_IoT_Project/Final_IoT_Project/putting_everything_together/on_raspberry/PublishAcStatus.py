@@ -1,7 +1,7 @@
 #####################################################
 ##   First class that have to PUBLISH data about   ##
 ##   the status of the AC                          ##
-##   to be placed in RASPERRYPI                    ##
+##   to be placed on RASPERRYPI                    ##
 #####################################################
 
 import paho.mqtt.client as paho

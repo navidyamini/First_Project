@@ -23,7 +23,10 @@ if __name__ == '__main__':
     }
     # cherrypy.quickstart(WebCalculator(),'/',conf)
     cherrypy.tree.mount(ThingSpeakInfoWriter(), '/', conf)
-    cherrypy.server.socket_host = '192.168.1.65'
+    #cherrypy.server.socket_host = '192.168.1.65'
+    cherrypy.config.update({
+        "server.socket_host": '192.168.1.65',
+        "server.socket_port": 8080})
     cherrypy.engine.start()
     cherrypy.engine.block()
 

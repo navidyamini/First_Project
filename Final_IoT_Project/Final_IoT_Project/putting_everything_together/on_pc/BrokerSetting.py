@@ -135,6 +135,9 @@ if __name__ == "__main__":
         }
     }
     cherrypy.tree.mount(BrokerSetting(), '/', conf)
-    cherrypy.server.socket_host = '192.168.1.65'
+    #cherrypy.server.socket_host = '192.168.1.65'
+    cherrypy.config.update({
+        "server.socket_host": '192.168.1.65',
+        "server.socket_port": 8081})
     cherrypy.engine.start()
     cherrypy.engine.block()

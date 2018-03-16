@@ -1,7 +1,7 @@
 #####################################################
 ##   First class that have to PUBLISH data about   ##
 ##   TEMPERATURE and HUMIDITY and No.People in room##
-##   to be placed in RASPERRYPI                    ##
+##   to be placed on RASPERRYPI                    ##
 #####################################################
 
 from ReadingDHT import ReadingDHT
