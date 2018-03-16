@@ -1,1 +1,1 @@
-{"thresholds": {"min_hum": 10.0, "min_temp": 20.0, "max_hum": 12.0, "max_temp": 32.0}, "id": 3}
+{"thresholds": {"min_hum": 6.0, "min_temp": 4.0, "max_hum": 5.0, "max_temp": 3.0}, "id": 3}
