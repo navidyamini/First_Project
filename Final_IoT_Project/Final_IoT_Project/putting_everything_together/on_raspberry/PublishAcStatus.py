@@ -16,7 +16,7 @@ class PublishAcStatus(object):
         try:
             respond = requests.get(self.url)
         except:
-            print "PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
         json_format = json.loads(respond.text)
         Broker_IP = json_format["broker"]["Broker_IP"]
         Broker_port = json_format["broker"]["Broker_port"]
@@ -29,7 +29,7 @@ class PublishAcStatus(object):
             self.client.on_publish = self.on_publish
             self.client.connect(Broker_IP, int(Broker_port))
         except:
-            print "PublishAcStatus:ERROR IN CONNECTING TO THE BROKER"
+            print ("PublishAcStatus:ERROR IN CONNECTING TO THE BROKER")
 
     @staticmethod
     def on_connect(client, userdata, flags, rc):
@@ -58,5 +58,5 @@ class PublishAcStatus(object):
         except:
             get_time = datetime.datetime.now()
             current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
-            print "PublishAcStatus:ERROR IN PUBLISHING THE DATA"
+            print ("PublishAcStatus:ERROR IN PUBLISHING THE DATA")
             print ("at time: " + str(current_time))
