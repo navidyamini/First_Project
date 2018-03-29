@@ -20,6 +20,7 @@ class PublishData(object):
         self.client = client
         self.bCounter = bCounter
 
+    def load_topics(self):
         try:
             respond = requests.get(self.url)
         except:
@@ -92,6 +93,8 @@ if __name__ == '__main__':
     sens = PublishData(sensor_data, bCounter, client)
 
     while True:
+        sens.load_topics()
+
         try:
             respond = requests.get(url)
         except:
@@ -109,6 +112,7 @@ if __name__ == '__main__':
             print "PublishData: ERROR IN CONNECTING TO THE BROKER"
 
         while True:
+            sens.load_topics()
             sens.publish_sensor_data()
             sens.publish_people_counting()
             time.sleep(15)
