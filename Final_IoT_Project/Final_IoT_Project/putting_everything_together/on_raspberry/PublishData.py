@@ -89,19 +89,17 @@ if __name__ == '__main__':
     except:
         print "PublishData: ERROR IN GETTING DATA FROM SENSOR "
     client = mqttc.Client()
-
-    try:
-        respond = requests.get(url)
-    except:
-        print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER IP"
-
-    json_format = json.loads(respond.text)
-    ip = json_format["broker"]["Broker_IP"]
-    port = json_format["broker"]["Broker_port"]
-
     sens = PublishData(sensor_data, bCounter, client)
 
     while True:
+        try:
+            respond = requests.get(url)
+        except:
+            print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER IP"
+
+        json_format = json.loads(respond.text)
+        ip = json_format["broker"]["Broker_IP"]
+        port = json_format["broker"]["Broker_port"]
         try:
             client.on_connect = PublishData.on_connect
             client.on_publish = PublishData.on_publish

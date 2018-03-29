@@ -5,6 +5,8 @@
 
 import datetime
 import paho.mqtt.client as paho
+import requests
+import json
 
 class SubscribeData(object):
 
@@ -21,23 +23,27 @@ class SubscribeData(object):
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))
         print ("at time: " + str(current_time))
-        #sending the data to Checking_threshold for checking the tresholds.
-        #check_data = CheckingThreshold()
-        #check_data.sensor_data(msg.payload)
-        #check_data.load_file()
-        #check_data.checking()
-        #to_thingspeak = thingspeak()
-        #to_thingspeak.sending_dht_data(msg.payload)
 
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
+    url = 'http://192.168.1.65:8080/'
+    try:
+        respond = requests.get(url)
+    except:
+        print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+    json_format = json.loads(respond.text)
+    DHT_Topic = json_format["broker"]["DHT_Topic"]
+    Counter_Topic = json_format["broker"]["Counter_Topic"]
+    print "PublishData:: BROKER VARIABLES ARE READY"
     client = paho.Client()
     while True:
         try:
             client.on_subscribe = SubscribeData.on_subscribe
             client.on_message = SubscribeData.on_message
             client.connect('192.168.1.110', 1883)
-            client.subscribe("sensors/data", qos=1)
+            client.subscribe(str(DHT_Topic), qos=1)
+            client.subscribe(str(Counter_Topic), qos=1)
             client.loop_forever()
         except:
             print "SubscribeData: Problem in connecting to broker"
+
