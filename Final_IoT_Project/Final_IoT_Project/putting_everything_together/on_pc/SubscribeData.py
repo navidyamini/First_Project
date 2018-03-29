@@ -27,16 +27,18 @@ class SubscribeData(object):
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
     url = 'http://192.168.1.65:8080/'
-    try:
-        respond = requests.get(url)
-    except:
-        print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
-    json_format = json.loads(respond.text)
-    DHT_Topic = json_format["broker"]["DHT_Topic"]
-    Counter_Topic = json_format["broker"]["Counter_Topic"]
-    print "PublishData:: BROKER VARIABLES ARE READY"
     client = paho.Client()
+
     while True:
+        try:
+            respond = requests.get(url)
+            json_format = json.loads(respond.text)
+            DHT_Topic = json_format["broker"]["DHT_Topic"]
+            Counter_Topic = json_format["broker"]["Counter_Topic"]
+            print "PublishData:: BROKER VARIABLES ARE READY"
+        except:
+            print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+
         try:
             client.on_subscribe = SubscribeData.on_subscribe
             client.on_message = SubscribeData.on_message

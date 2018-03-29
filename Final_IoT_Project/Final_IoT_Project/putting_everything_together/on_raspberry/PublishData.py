@@ -22,10 +22,10 @@ class PublishData(object):
 
     def load_topics(self):
         try:
-            respond = requests.get(self.url)
+            self.respond = requests.get(self.url)
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
-        json_format = json.loads(respond.text)
+        json_format = json.loads(self.respond.text)
         self.DHT_Topic = json_format["broker"]["DHT_Topic"]
         self.Counter_Topic = json_format["broker"]["Counter_Topic"]
         print "PublishData:: BROKER VARIABLES ARE READY"
@@ -89,20 +89,20 @@ if __name__ == '__main__':
         bCounter = BluetoothCounter()
     except:
         print "PublishData: ERROR IN GETTING DATA FROM SENSOR "
+
     client = mqttc.Client()
     sens = PublishData(sensor_data, bCounter, client)
 
     while True:
         sens.load_topics()
-
         try:
             respond = requests.get(url)
+            json_format = json.loads(respond.text)
+            ip = json_format["broker"]["Broker_IP"]
+            port = json_format["broker"]["Broker_port"]
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER IP"
 
-        json_format = json.loads(respond.text)
-        ip = json_format["broker"]["Broker_IP"]
-        port = json_format["broker"]["Broker_port"]
         try:
             client.on_connect = PublishData.on_connect
             client.on_publish = PublishData.on_publish
