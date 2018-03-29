@@ -74,7 +74,8 @@ class ThingSpeak(object):
     def ac_status(self,order):
 
         # build the payload string
-        payload = "field4=" + str(order)
+        self.setThingSpeakVariables()
+        payload = "&field4=" + str(order)
         # attempt to publish this data to the topic
         try:
             publish.single(self.topic, payload, hostname=self.mqttHost, transport=self.tTransport, port=self.tPort)
@@ -88,6 +89,6 @@ if __name__ == '__main__':
     while True:
         thingspeak.setThingSpeakVariables()
         thingspeak.sending_dht_data()
-        time.sleep(20)
+        time.sleep(40)
         thingspeak.number_of_people()
         time.sleep(20)

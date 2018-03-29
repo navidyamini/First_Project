@@ -25,33 +25,38 @@ class telegramBot(object):
         command = msg['text']
         self.setThingSpeakVariables()
 
-        if command == '/turnon':
-            bot.sendMessage(chat_id, self.turn_on())
+        if command == '/acstatus':
+            bot.sendMessage(chat_id, self.acstatus())
 
-        elif command == '/turnoff':
-            bot.sendMessage(chat_id, self.turn_off())
+        elif command == '/visitors':
+            bot.sendMessage(chat_id, self.getpeopleno())
 
-        elif command == '/gettemp':
+        elif command == '/temp':
             bot.sendMessage(chat_id, self.get_temp())
 
-        elif command == '/gethum':
+        elif command == '/hum':
             bot.sendMessage(chat_id, self.get_hum())
-
-        elif command == '/getpeopleno':
-            bot.sendMessage(chat_id, self.getpeopleno())
         else:
             bot.sendMessage(chat_id, "Invalid Command")
 
-    def turn_on(self):
-        print'trying to turn it on'
-        # self.led.setup()
-        self.led.connect()
-        return "on"
+    def acstatus(self):
+        print'trying to send back the A/C status'
+        try:
+            TS = urllib2.urlopen(
+                "http://api.thingspeak.com/channels/%s/fields/field4/last.json?api_key=%s" % (self.channelID, self.READ_API_KEY))
+            response = TS.read()
+            data = json.loads(response)
+            result = data['field4']
+            if(int(result)== 0):
+                status = "It is OFF"
+            elif(int(result)== 1):
+                status = "It is ON"
+            time.sleep(5)
+            TS.close()
+        except:
+                print "ERROR IN READING THE A/S STATUS FROM THINGSPEAK"
+        return 'A/C status : '+ str(status)
 
-    def turn_off(self):
-        print'trying to turn it off'
-        self.led.disconnect()
-        return "off"
 
     def get_temp(self):
         print'trying to send back temperature'

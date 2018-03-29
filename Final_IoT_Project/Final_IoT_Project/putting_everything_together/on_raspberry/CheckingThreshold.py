@@ -2,9 +2,11 @@ import json
 from LEDbyRelay import LEDbyRelay
 import requests
 import time
+from ReadingDHT import ReadingDHT
 
 
 class CheckingThreshold(object):
+
     def __init__(self):
         self.url = 'http://192.168.1.65:8080/'
         self.flag = 0
@@ -15,30 +17,29 @@ class CheckingThreshold(object):
         self.min_temperature = 0.00
         self.min_humidity = 0.00
         self.controling_LED = LEDbyRelay(17)
+        self.dht = ReadingDHT()
 
-    def sensor_data(self,data):
+    def sensor_data(self):
         try:
-            json_format = json.loads(data)
-            self.humidity = json_format["humidity"]
-            self.temperature = json_format["temperature"]
+            json_format = self.dht.reading_sensor()
+            THD_json = json.loads(json_format)
+            self.humidity = THD_json["humidity"]
+            self.temperature = THD_json["temperature"]
         except:
             print "CheckingThreshold: ERROR IN READING HUMIDITY AND TEMPERATUR"
 
     def load_file(self):
         try:
             respond = requests.get(self.url)
-        except:
-            print "CheckingThreshold: ERROR IN CONNECTING TO THE SERVER FOR READING initial_data.JSON"
-        try:
             json_format = json.loads(respond.text)
-            print json_format
+            #print json_format
             self.max_temperature = json_format["thresholds"]["max_temp"]
             self.max_humidity = json_format["thresholds"]["max_hum"]
             self.min_temperature = json_format["thresholds"]["min_temp"]
             self.min_humidity = json_format["thresholds"]["min_hum"]
 
         except :
-            print "CheckingThreshold: ERROR IN READING THE JSON FILE VALUES"
+            print "CheckingThreshold: ERROR IN CONNECTING TO THE SERVER FOR READING initial_data.JSON"
         return
 
     def checking(self):
@@ -71,6 +72,7 @@ if __name__ == '__main__':
     treshhold = CheckingThreshold()
 
     while True:
+        treshhold.sensor_data()
         treshhold.load_file()
         treshhold.checking()
-        time(15)
+        time.sleep(60)

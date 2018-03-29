@@ -14,7 +14,7 @@ class LEDbyRelay(object):
 
         self.relayPin = relayPin
         self.thingSpeak = ThingSpeak()
-        self.publish = PublishAcStatus()
+        #self.publish = PublishAcStatus()
     #setup function for some setup---custom function
     def setup(self):
         try:
@@ -27,15 +27,21 @@ class LEDbyRelay(object):
             print "LEDbyRelay: ERROR IN SETUP THE LED"
     #Turn on
     def connect(self):
+        #self.thingSpeak.setThingSpeakVariables()
+        publish = PublishAcStatus()
         GPIO.output(self.relayPin,GPIO.LOW)
         self.thingSpeak.ac_status(1)
-        self.publish.publish_data("Turn_on")
+        publish.publish_data("Turn_on")
+        return
 
     #Turn off
     def disconnect(self):
+        publish = PublishAcStatus()
+        #self.thingSpeak.setThingSpeakVariables()
         GPIO.output(self.relayPin,GPIO.HIGH)
         self.thingSpeak.ac_status(0)
-        self.publish.publish_data("Turn_off")
+        publish.publish_data("Turn_off")
+        return
 
     #define a destroy function for clean up everything after the script finished
     def destroy(self):

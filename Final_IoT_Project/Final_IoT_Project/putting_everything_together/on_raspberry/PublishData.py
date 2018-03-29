@@ -23,12 +23,13 @@ class PublishData(object):
     def load_topics(self):
         try:
             self.respond = requests.get(self.url)
+            json_format = json.loads(self.respond.text)
+            self.DHT_Topic = json_format["broker"]["DHT_Topic"]
+            self.Counter_Topic = json_format["broker"]["Counter_Topic"]
+            print "PublishData:: BROKER VARIABLES ARE READY"
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
-        json_format = json.loads(self.respond.text)
-        self.DHT_Topic = json_format["broker"]["DHT_Topic"]
-        self.Counter_Topic = json_format["broker"]["Counter_Topic"]
-        print "PublishData:: BROKER VARIABLES ARE READY"
+
 
     @staticmethod
     def on_connect(client, userdata, flags, rc):
@@ -115,4 +116,4 @@ if __name__ == '__main__':
             sens.load_topics()
             sens.publish_sensor_data()
             sens.publish_people_counting()
-            time.sleep(15)
+            time.sleep(35)

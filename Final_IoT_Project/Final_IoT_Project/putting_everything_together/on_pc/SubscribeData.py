@@ -35,6 +35,7 @@ if __name__ == '__main__':
             json_format = json.loads(respond.text)
             DHT_Topic = json_format["broker"]["DHT_Topic"]
             Counter_Topic = json_format["broker"]["Counter_Topic"]
+            AC_Topic = json_format["broker"]["AC_Topic"]
             print "PublishData:: BROKER VARIABLES ARE READY"
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -45,6 +46,7 @@ if __name__ == '__main__':
             client.connect('192.168.1.110', 1883)
             client.subscribe(str(DHT_Topic), qos=1)
             client.subscribe(str(Counter_Topic), qos=1)
+            client.subscribe(str(AC_Topic), qos=1)
             client.loop_forever()
         except:
             print "SubscribeData: Problem in connecting to broker"

@@ -15,13 +15,14 @@ class PublishAcStatus(object):
         self.url = 'http://192.168.1.65:8080/'
         try:
             respond = requests.get(self.url)
+            json_format = json.loads(respond.text)
+            Broker_IP = json_format["broker"]["Broker_IP"]
+            Broker_port = json_format["broker"]["Broker_port"]
+            self.AC_Topic = json_format["broker"]["AC_Topic"]
+            print "PublishAcStatus:: BROKER VARIABLES ARE READY"
         except:
             print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
-        json_format = json.loads(respond.text)
-        Broker_IP = json_format["broker"]["Broker_IP"]
-        Broker_port = json_format["broker"]["Broker_port"]
-        self.AC_Topic = json_format["broker"]["AC_Topic"]
-        print "PublishAcStatus:: BROKER VARIABLES ARE READY"
+
 
         try:
             self.client = paho.Client()
