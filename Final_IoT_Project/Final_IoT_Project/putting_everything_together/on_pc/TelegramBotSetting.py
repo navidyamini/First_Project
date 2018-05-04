@@ -31,8 +31,11 @@ class BrokerSetting(object):
                         <form action="/reply" method="POST">
                             <table>
                                 <fieldset>
-                                    Port:<br>
+                                    Token:<br>
                                     <input type="text" name="Port1">
+                                    <br/>
+                                    chatID:<br>
+                                    <input type="text" name="chatID1">
                                     <br/>
                                 </fieldset>
                                 <button> Submit </button>
@@ -55,7 +58,8 @@ class BrokerSetting(object):
                 obj = json.load(json_data_file)
 
             dict_data = obj['telegram']
-            obj['telegram'] = {"Port": str(params['Port1'])}
+            obj['telegram'] = {"Port": str(params['Port1']),
+                               "chatID": str(params['chatID1'])}
         except:
             raise KeyError("***** ERROR IN READING THE JSON FILE*****")
         try:
@@ -86,8 +90,11 @@ class BrokerSetting(object):
                     <form action="/reply" method="POST">
                         <table>
                             <fieldset>
-                                Port:<br>
+                                Token:<br>
                                 <input type="text" name="Port1">
+                                <br/>
+                                chatID:<br>
+                                <input type="text" name="chatID1">
                                 <br/>
                             </fieldset>
                             <button> Submit </button>
