@@ -1,0 +1,5 @@
+run
+Subcribe
+TelegromBot
+ResourceCatalog
+movementDetection
