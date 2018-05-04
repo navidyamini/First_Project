@@ -99,7 +99,7 @@ class telegramBot(object):
             TS.close()
         except:
                 print "ERROR IN READING NUMBER OF PEOPLE FROM THINGSPEAK"
-        return '#.people in the museum : '+ number_of_people
+        return 'number of people in the museum : '+ number_of_people
 
 if __name__ == '__main__':
 
