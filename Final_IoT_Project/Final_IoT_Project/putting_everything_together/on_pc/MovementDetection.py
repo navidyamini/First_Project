@@ -29,7 +29,7 @@ class MovementDetection(object):
         except:
             raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
         painting_json_format = json.loads(json_string)
-        moved = painting_json_format[str(msg.payload.decode("utf-8"))]["paint"]
+        moved ="WARNING " +(painting_json_format[str(msg.payload.decode("utf-8"))]["paint"]) +" is moving"
         print moved
         #moved = str(msg.payload.decode("utf-8"))
         print("message topic=", msg.topic)
