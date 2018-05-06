@@ -10,7 +10,7 @@ class BluetoothCounter(object):
 
     def search(self):
         try:
-            devices = bluetooth.discover_devices(duration=15, lookup_names = True)
+            devices = bluetooth.discover_devices(duration=20, lookup_names = True)
         except:
             print "BleutoothCounter: ERROR IN FINDING THE BLUETOOTH DEVICES"
         return devices
