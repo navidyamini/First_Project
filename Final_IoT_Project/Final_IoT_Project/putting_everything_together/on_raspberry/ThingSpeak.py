@@ -89,6 +89,6 @@ if __name__ == '__main__':
     while True:
         thingspeak.setThingSpeakVariables()
         thingspeak.sending_dht_data()
-        time.sleep(45)
+        time.sleep(40)
         thingspeak.number_of_people()
-        time.sleep(30)
+        time.sleep(20)
