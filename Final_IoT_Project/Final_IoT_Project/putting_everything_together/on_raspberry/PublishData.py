@@ -116,4 +116,4 @@ if __name__ == '__main__':
             sens.load_topics()
             sens.publish_sensor_data()
             sens.publish_people_counting()
-            time.sleep(35)
+            time.sleep(30)
