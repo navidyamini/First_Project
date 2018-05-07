@@ -23,6 +23,42 @@ class SubscribeData(object):
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))
         print ("at time: " + str(current_time))
+        message_body = str(msg.payload.decode("utf-8"))
+
+        url = 'http://192.168.1.65:8080/'
+        try:
+            respond = requests.get(url)
+            json_format = json.loads(respond.text)
+            DHT_Topic = json_format["broker"]["DHT_Topic"]
+            Counter_Topic = json_format["broker"]["Counter_Topic"]
+            #AC_Topic = json_format["broker"]["AC_Topic"]
+        except:
+            print "PublishData on_message: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+
+        try:
+            file = open("../RawWebpage/real_time_data.json", "r")
+            json_string = file.read()
+            file.close()
+        except:
+            raise KeyError("*****SubscribeData: ERROR IN READING JSON FILE RELATED TO REAL TIME DATA *****")
+        input = json.loads(message_body)
+        json_format_output = json.loads(json_string)
+
+        if(msg.topic == DHT_Topic):
+            json_format_output["temperature"]["value"] = input["temperature"]
+            json_format_output["humidity"]["value"] = input["humidity"]
+
+        elif(msg.topic == Counter_Topic):
+            json_format_output["bluetoothCounter"]["value"] = input["bluetooth counter"]
+        else:
+            json_format_output["AcStatus"]["value"] = input["Order"]
+
+        try:
+            with open("../RawWebpage/real_time_data.json", 'w') as json_data_file:
+                json.dump(json_format_output, json_data_file)
+                json_data_file.close()
+        except:
+            raise KeyError("*****SubscribeData ERROR IN WRITING THE JSON FILE*****")
 
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA

@@ -27,7 +27,7 @@ class MovementDetection(object):
             json_string = file.read()
             file.close()
         except:
-            raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
+            raise KeyError("*****MovementDetection: ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
         painting_json_format = json.loads(json_string)
         moved ="WARNING " +(painting_json_format[str(msg.payload.decode("utf-8"))]["paint"]) +" is moving"
         print moved
