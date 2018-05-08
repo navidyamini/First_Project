@@ -197,7 +197,7 @@
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row tile_count">
-            <h2>Current values in the room: </h2>
+            <h2>Thingspeak current values in the room: </h2>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-thermometer-full"></i> Temperature</span>
               <div class="count" id="temp"></div>
@@ -221,24 +221,24 @@
           </div>
 
           <div class="row tile_count">
-            <h2>Current values in the room: </h2>
+            <h2>Mqtt current values in the room: </h2>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-thermometer-full"></i> Temperature</span>
-              <div class="count" id="temp"></div>
+              <div class="count" id="mqtt_temp"></div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-circle"></i> Humidity</span>
-              <div class="count" id="hum"></div>
+              <div class="count" id="mqtt_hum"></div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-child"></i> Number of people</span>
-              <div class="count" id="num-people"></div>
+              <div class="count" id="mqtt_num-people"></div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-plug"></i></div>
-                <div class="count" id="ac"></div>
+                <div class="count" id="mqtt_ac"></div>
                 <h3>A/C status</h3>
               </div>
             </div>
@@ -357,7 +357,7 @@
     <script src="gentelella-master/build/js/custom.min.js"></script>
 
     <!-- ThingspeakData -->
-    <!--<script src="Thingspeakdata2.js"></script>-->
+
     <script>
       var tempContainer = document.getElementById("temp");
       var humContainer = document.getElementById("hum");
@@ -414,6 +414,67 @@
               }else if(ac == 0){acContainer.innerHTML = "OFF";}
 
               setTimeout(getThingspeak,10000);
+
+          });
+      });
+    </script>
+
+    <!-- MqttJsonData -->
+
+    <script>
+      var mqtttempContainer = document.getElementById("mqtt_temp");
+      var mqtthumContainer = document.getElementById("mqtt_hum");
+      var mqttnpeopleContainer = document.getElementById("mqtt_num-people");
+      var mqttacContainer = document.getElementById("mqtt_ac");
+      var mqtttemp = "";
+      var mqtthum = "";
+      var mqttnpeople = "";
+      var mqttac = "";
+
+      var mqttprevtemp = "";
+      var mqttprevhum = "";
+      var mqttprevnpeople = "";
+      var mqttprevac = "";
+
+      $(document).ready(function getMqtt() {
+
+          mqttprevtemp = mqtttemp;
+          mqttprevhum = mqtthum;
+          mqttprevnpeople = mqttnpeople;
+          mqttprevac = mqttac;
+
+          $.getJSON('Navid data/RawWebpage/real_time_data.json', function (mqttourData) {
+
+              mqtttemp = mqttourData["temperature"].value;
+              mqtthum = mqttourData["humidity"].value;
+              mqttnpeople = mqttourData["bluetoothCounter"].value;
+              mqttac = mqttourData["AcStatus"].value;
+
+
+              if (mqtttemp == null){
+                  mqtttemp = mqttprevtemp;
+              }
+
+              if(mqtthum == null){
+                  mqtthum = mqttprevhum;
+              }
+              if(mqttnpeople == null){
+                  mqttnpeople = mqttprevnpeople;
+              }
+              if(mqttac == null){
+                  mqttac = mqttprevac;
+              }
+
+              console.log(mqtttemp,mqtthum,mqttnpeople,mqttac);
+
+              mqtttempContainer.innerHTML = mqtttemp;
+              mqtthumContainer.innerHTML = mqtthum;
+              mqttnpeopleContainer.innerHTML = mqttnpeople;
+              if (mqttac == "Turn_on") {
+                mqttacContainer.innerHTML = "ON";
+              }else if(mqttac == "Turn_off"){mqttacContainer.innerHTML = "OFF";}
+
+              setTimeout(getMqtt,10000);
 
           });
       });
