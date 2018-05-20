@@ -23,7 +23,6 @@ class PublishAcStatus(object):
         except:
             print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
 
-
         try:
             self.client = paho.Client()
             self.client.on_connect = self.on_connect
