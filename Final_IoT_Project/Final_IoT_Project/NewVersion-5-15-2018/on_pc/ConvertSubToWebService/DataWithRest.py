@@ -31,9 +31,6 @@ class DataWithRest(object):
         elif(uri[0] == 'all'):
             return str(results)
 
-        elif(uri[0] == 'tempAndHum'):
-            return str(results['temperature']['value']),str(results['humidity']['value'])
-
 
 if __name__ == '__main__':
 
