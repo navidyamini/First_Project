@@ -9,7 +9,7 @@ import requests
 import json
 
 
-class SubscribeDataTS(object):
+class SubscribeData(object):
 
     def __init__(self,url,client):
         self.url = url
@@ -24,9 +24,9 @@ class SubscribeDataTS(object):
             self.DHT_topic = json_format["broker"]["DHT_Topic"]
             self.counter_topic = json_format["broker"]["Counter_Topic"]
             self.AC_status = json_format["broker"]["AC_Topic"]
-            print "SubscribeDataTS:: TOPICS ARE READY"
+            print "SubscribeData: TOPICS ARE READY"
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
     @staticmethod
     def on_subscribe(client, userdata, mid, granted_qos):
@@ -49,7 +49,7 @@ class SubscribeDataTS(object):
             json_string = file.read()
             file.close()
         except:
-            raise KeyError("***** SubscribeDataTS: ERROR IN READING CONFIG FILE *****")
+            raise KeyError("***** SubscribeData: ERROR IN READING CONFIG FILE *****")
 
         config_json = json.loads(json_string)
         url = config_json["reSourceCatalog"]["url"]
@@ -60,9 +60,9 @@ class SubscribeDataTS(object):
             DHT_topic = json_format["broker"]["DHT_Topic"]
             counter_topic = json_format["broker"]["Counter_Topic"]
             AC_status = json_format["broker"]["AC_Topic"]
-            print "SubscribeDataTS:: TOPICS ARE READY"
+            print "SubscribeData: TOPICS ARE READY"
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
         try:
             file = open("real_time_data.json", "r")
@@ -97,12 +97,12 @@ if __name__ == '__main__':
         json_string = file.read()
         file.close()
     except:
-        raise KeyError("***** SubscribeDataTS: ERROR IN READING CONFIG FILE *****")
+        raise KeyError("***** SubscribeData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
     url = config_json["reSourceCatalog"]["url"]
     client = paho.Client()
-    sens = SubscribeDataTS(url, client)
+    sens = SubscribeData(url, client)
 
     while True:
         try:
@@ -111,9 +111,9 @@ if __name__ == '__main__':
             json_format = json.loads(respond.text)
             Broker_IP = json_format["broker"]["Broker_IP"]
             Broker_Port = json_format["broker"]["Broker_port"]
-            print "SubscribeDataTS:: BROKER VARIABLES ARE READY"
+            print "SubscribeData:: BROKER VARIABLES ARE READY"
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
         try:
             client.connect(Broker_IP, int(Broker_Port))
             client.subscribe(str(sens.DHT_topic), qos=1)
@@ -121,5 +121,5 @@ if __name__ == '__main__':
             client.subscribe(str(sens.AC_status), qos=1)
             client.loop_forever()
         except:
-            print "SubscribeDataTS: Problem in connecting to broker"
+            print "SubscribeData: Problem in connecting to broker"
 
