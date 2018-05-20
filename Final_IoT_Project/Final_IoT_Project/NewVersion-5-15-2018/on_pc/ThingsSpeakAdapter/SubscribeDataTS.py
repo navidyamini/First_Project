@@ -64,6 +64,7 @@ class SubscribeDataTS(object):
             elif(topic == self.counter_topic ):
                 self.thingSpeak.number_of_people(payload)
                 time.sleep(10)
+            #TODO send the ac status to thing speak
             #elif(topic == self.AC_status ):
                 #self.thingSpeak.ac_status(payload)
             #print ("from chek",payload,topic)
