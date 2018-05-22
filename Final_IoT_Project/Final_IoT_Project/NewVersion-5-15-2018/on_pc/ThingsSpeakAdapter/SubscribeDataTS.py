@@ -9,10 +9,11 @@ import requests
 import json
 import time
 from ThingSpeakUpload import ThingSpeak
-payload = "null"
-topic = "null"
+
 
 class SubscribeDataTS(object):
+    payload = "null"
+    topic = "null"
 
     def __init__(self,url,client):
         self.url = url
@@ -40,29 +41,25 @@ class SubscribeDataTS(object):
         print ("at time: " + str(current_time))
 
     @classmethod
-    def on_message(self,client, userdata, msg):
-        global payload
-        global topic
+    def on_message(cls,client, userdata, msg):
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))
         print ("at time: " + str(current_time))
         message_body = str(msg.payload.decode("utf-8"))
-        payload = json.loads(message_body)
-        topic = msg.topic
+        cls.payload = json.loads(message_body)
+        cls.topic = msg.topic
 
+    #@classmethod
     def check(self):
-        global payload
-        global topic
-
-        if(payload != 'null'):
+        if(self.payload != 'null'):
             self.thingSpeak.setThingSpeakVariables()
             #print(payload)
-            if(topic == self.DHT_topic ):
-                self.thingSpeak.sending_dht_data(payload)
+            if(self.topic == self.DHT_topic ):
+                self.thingSpeak.sending_dht_data(self.payload)
                 time.sleep(10)
-            elif(topic == self.counter_topic ):
-                self.thingSpeak.number_of_people(payload)
+            elif(self.topic == self.counter_topic ):
+                self.thingSpeak.number_of_people(self.payload)
                 time.sleep(10)
             #TODO send the ac status to thing speak
             #elif(topic == self.AC_status ):
