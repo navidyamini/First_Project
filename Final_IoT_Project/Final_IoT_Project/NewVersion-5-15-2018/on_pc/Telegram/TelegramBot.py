@@ -44,14 +44,10 @@ class telegramBot(object):
         print'trying to send back the A/C status'
         try:
             result = requests.get("http://"+self.restURL+ ":" + self.port+ "/ac").content
-            if(result== "Turn_on"):
-                status = "It is OFF"
-            elif(result== "Turn_off"):
-                status = "It is ON"
             time.sleep(5)
         except:
                 print "ERROR IN READING THE A/S STATUS FROM THINGSPEAK"
-        return 'A/C status : '+ str(status)
+        return 'A/C status : '+ str(result)
 
 
     def get_temp(self):

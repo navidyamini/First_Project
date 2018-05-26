@@ -43,15 +43,15 @@ class CheckingThreshold(object):
         try:
             self.temperature = requests.get("http://" + self.restURL + ":" + self.port + "/temp").content
             self.humidity = requests.get("http://" + self.restURL + ":" + self.port + "/hum").content
-            #print self.temperature,self.humidity
+            print "real time data",self.temperature,self.humidity
         except:
             print "CheckingThreshold: ERROR IN GETTING DATA FROM WEB SERVICE"
         return
 
     def check_thresholds(self):
-
-        if self.temperature > self.max_temperature or self.temperature < self.min_temperature or self.humidity > self.max_humidity or self.humidity < self.min_humidity:
-
+        temperature =float(self.temperature)
+        humidity= float(self.humidity)
+        if (temperature > self.max_temperature) or (temperature < self.min_temperature) or (humidity > self.max_humidity) or (humidity < self.min_humidity):
             self.order = "Turn_on"
             try:
                 self.order_msg = json.dumps({'Order': str(self.order)})
@@ -133,9 +133,5 @@ if __name__ == '__main__':
         except:
             print "PublishData: ERROR IN CONNECTING TO THE BROKER"
 
-        while True:
-            sens.load_file()
-            sens.getting_temp_hum()
-            sens.check_thresholds()
-            sens.publish_order()
-            time.sleep(30)
+        sens.publish_order()
+        time.sleep(10)

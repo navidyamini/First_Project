@@ -29,7 +29,7 @@ class DataWithRest(object):
             return str(results['bluetoothCounter']['value'])
 
         elif(uri[0] == 'all'):
-            return str(results)
+            return str(json_string)
 
 
 if __name__ == '__main__':

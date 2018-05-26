@@ -8,30 +8,28 @@ import paho.mqtt.client as paho
 import requests
 import json
 import time
-from ThingSpeakUpload import ThingSpeak
+from LEDbyRelay import LEDbyRelay
 
+class SubscribeAcOrder(object):
 
-class SubscribeDataTS(object):
     payload = "null"
-    topic = "null"
-
+    orders = 'null'
     def __init__(self,url,client):
-        self.url = url
+        self.flag = 0
+        self.url =url
+        self.controling_LED = LEDbyRelay(url)
         self.client = client
         client.on_subscribe = self.on_subscribe
         client.on_message = self.on_message
-        self.thingSpeak = ThingSpeak(self.url)
 
     def load_topics(self):
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
-            self.DHT_topic = json_format["broker"]["DHT_Topic"]
-            self.counter_topic = json_format["broker"]["Counter_Topic"]
-            self.AC_status = json_format["broker"]["Ac_Status"]
-            print "SubscribeDataTS:: TOPICS ARE READY"
+            self.AC_status = json_format["broker"]["AC_Topic"]
+            print "SubscribeAcOrder: Ac TOPIC ARE READY"
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print "SubscribeAcOrder: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
     @staticmethod
     def on_subscribe(client, userdata, mid, granted_qos):
@@ -48,40 +46,42 @@ class SubscribeDataTS(object):
         print ("at time: " + str(current_time))
         message_body = str(msg.payload.decode("utf-8"))
         cls.payload = json.loads(message_body)
-        cls.topic = msg.topic
+        cls.orders = cls.payload["Order"]
 
-    #@classmethod
-    def check(self):
-        if(self.payload != 'null'):
-            self.thingSpeak.setThingSpeakVariables()
-            #print(payload)
-            if(self.topic == self.DHT_topic ):
-                self.thingSpeak.sending_dht_data(self.payload)
-                time.sleep(10)
-            elif(self.topic == self.counter_topic ):
-                self.thingSpeak.number_of_people(self.payload)
-                time.sleep(10)
-            #TODO send the ac status to thing speak
-            elif(self.topic == self.AC_status ):
-                self.thingSpeak.ac_status(self.payload)
-                time.sleep(10)
-            #print ("from chek",payload,topic)
-            payload='null'
-        return
+    def order(self):
+
+        if(self.orders == "Turn_on" and self.flag == 0):
+            print("Sending Turn on order")
+
+            try:
+                self.controling_LED.setup()
+                self.controling_LED.connect()
+                self.flag = 1
+            except:
+                print "SubscribeAcOrder: ERROR IN SENDING TURN ON ORDER TO RELAY"
+
+        elif(self.orders == "Turn_off" and self.flag == 1):
+            print("Sending Turn off order")
+            try:
+                self.controling_LED.setup()
+                self.controling_LED.disconnect()
+                self.flag = 0
+            except:
+                print "SubscribeAcOrder: ERROR IN SENDING TURN OFF ORDER TO RELAY"
 
 if __name__ == '__main__':
-    #url = 'http://192.168.1.65:8080/'
+    # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
         file.close()
     except:
-        raise KeyError("***** SubscribeDataTS: ERROR IN READING CONFIG FILE *****")
+        raise KeyError("***** SubscribeAcOrder: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
     url = config_json["reSourceCatalog"]["url"]
     client = paho.Client()
-    sens = SubscribeDataTS(url, client)
+    sens = SubscribeAcOrder(url, client)
 
     while True:
         try:
@@ -90,17 +90,17 @@ if __name__ == '__main__':
             json_format = json.loads(respond.text)
             Broker_IP = json_format["broker"]["Broker_IP"]
             Broker_Port = json_format["broker"]["Broker_port"]
-            print "SubscribeDataTS:: BROKER VARIABLES ARE READY"
+            print "SubscribeAcOrder:: BROKER VARIABLES ARE READY"
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print "SubscribeAcOrder: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
         try:
             client.connect(Broker_IP, int(Broker_Port))
-            client.subscribe(str(sens.DHT_topic), qos=1)
-            client.subscribe(str(sens.counter_topic), qos=1)
             client.subscribe(str(sens.AC_status), qos=1)
             client.loop_start()
         except:
-            print "SubscribeDataTS: Problem in connecting to broker"
-        while True:
-            sens.check()
-            time.sleep(10)
+            print "SubscribeAcOrder: Problem in connecting to broker"
+        sens.order()
+        time.sleep(10)
+
+
+

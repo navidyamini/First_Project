@@ -25,41 +25,6 @@ class SubscribeData(object):
         print ("at time: " + str(current_time))
         message_body = str(msg.payload.decode("utf-8"))
 
-        url = 'http://192.168.1.65:8080/'
-        try:
-            respond = requests.get(url)
-            json_format = json.loads(respond.text)
-            DHT_Topic = json_format["broker"]["DHT_Topic"]
-            Counter_Topic = json_format["broker"]["Counter_Topic"]
-            #AC_Topic = json_format["broker"]["AC_Topic"]
-        except:
-            print "PublishData on_message: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
-
-        try:
-            file = open("../RawWebpage/real_time_data.json", "r")
-            json_string = file.read()
-            file.close()
-        except:
-            raise KeyError("*****SubscribeData: ERROR IN READING JSON FILE RELATED TO REAL TIME DATA *****")
-        input = json.loads(message_body)
-        json_format_output = json.loads(json_string)
-
-        if(msg.topic == DHT_Topic):
-            json_format_output["temperature"]["value"] = input["temperature"]
-            json_format_output["humidity"]["value"] = input["humidity"]
-
-        elif(msg.topic == Counter_Topic):
-            json_format_output["bluetoothCounter"]["value"] = input["bluetooth counter"]
-        else:
-            json_format_output["AcStatus"]["value"] = input["Order"]
-
-        try:
-            with open("../RawWebpage/real_time_data.json", 'w') as json_data_file:
-                json.dump(json_format_output, json_data_file)
-                json_data_file.close()
-        except:
-            raise KeyError("*****SubscribeData ERROR IN WRITING THE JSON FILE*****")
-
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
     url = 'http://192.168.1.65:8080/'
@@ -71,7 +36,7 @@ if __name__ == '__main__':
             json_format = json.loads(respond.text)
             DHT_Topic = json_format["broker"]["DHT_Topic"]
             Counter_Topic = json_format["broker"]["Counter_Topic"]
-            AC_Topic = json_format["broker"]["AC_Topic"]
+            AC_Topic = json_format["broker"]["Ac_Status"]
             print "PublishData:: BROKER VARIABLES ARE READY"
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -80,8 +45,8 @@ if __name__ == '__main__':
             client.on_subscribe = SubscribeData.on_subscribe
             client.on_message = SubscribeData.on_message
             client.connect('192.168.1.110', 1883)
-            client.subscribe(str(DHT_Topic), qos=1)
-            client.subscribe(str(Counter_Topic), qos=1)
+            #client.subscribe(str(DHT_Topic), qos=1)
+            #client.subscribe(str(Counter_Topic), qos=1)
             client.subscribe(str(AC_Topic), qos=1)
             client.loop_forever()
         except:

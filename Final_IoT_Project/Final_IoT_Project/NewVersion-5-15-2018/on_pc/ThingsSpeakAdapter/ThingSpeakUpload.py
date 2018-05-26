@@ -66,10 +66,14 @@ class ThingSpeak(object):
         return
 
     def ac_status(self,order):
-
+        status = order["Status"]
+        if(status == "It is ON"):
+            result =1
+        if(status == "It is OFF"):
+            result =0
         # build the payload string
         self.setThingSpeakVariables()
-        payload = "&field4=" + str(order)
+        payload = "&field4=" + str(result)
         # attempt to publish this data to the topic
         try:
             publish.single(self.topic, payload, hostname=self.mqttHost, transport=self.tTransport, port=self.tPort)

@@ -23,7 +23,7 @@ class SubscribeData(object):
             json_format = json.loads(self.respond.text)
             self.DHT_topic = json_format["broker"]["DHT_Topic"]
             self.counter_topic = json_format["broker"]["Counter_Topic"]
-            self.AC_status = json_format["broker"]["AC_Topic"]
+            self.AC_status = json_format["broker"]["Ac_Status"]
             print "SubscribeData: TOPICS ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -59,7 +59,7 @@ class SubscribeData(object):
             json_format = json.loads(respond.text)
             DHT_topic = json_format["broker"]["DHT_Topic"]
             counter_topic = json_format["broker"]["Counter_Topic"]
-            AC_status = json_format["broker"]["AC_Topic"]
+            AC_status = json_format["broker"]["Ac_Status"]
             print "SubscribeData: TOPICS ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -81,7 +81,7 @@ class SubscribeData(object):
             json_format_output["bluetoothCounter"]["value"] = input["bluetooth counter"]
 
         elif (msg.topic == AC_status):
-            json_format_output["AcStatus"]["value"] = input["Order"]
+            json_format_output["AcStatus"]["value"] = input["Status"]
 
         try:
             with open("real_time_data.json", 'w') as json_data_file:

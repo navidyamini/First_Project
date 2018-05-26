@@ -1,1 +1,1 @@
-{"humidity": {"value": 36.0}, "temperature": {"value": 24.0}, "AcStatus": {"value": "Turn_on"}, "bluetoothCounter": {"value": "1"}}
+{"bluetoothCounter": {"value": "2"}, "temperature": {"value": 25.0}, "AcStatus": {"value": "It is OFF"}, "humidity": {"value": 35.0}}
