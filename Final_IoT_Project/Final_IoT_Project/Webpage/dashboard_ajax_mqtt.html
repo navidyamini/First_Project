@@ -443,43 +443,17 @@
           mqttprevnpeople = mqttnpeople;
           mqttprevac = mqttac;
 
-          $.getJSON('http://192.168.1.65:8082/text?callback=?',{contentType: "application/json"}, function (result) {
+          function logResults(json){
+            console.log(json);
+          }
 
-              console.log(result);
-
-
-              mqtttemp = mqttourData["temperature"].value;
-              mqtthum = mqttourData["humidity"].value;
-              mqttnpeople = mqttourData["bluetoothCounter"].value;
-              mqttac = mqttourData["AcStatus"].value;
-
-
-              if (mqtttemp == null){
-                  mqtttemp = mqttprevtemp;
-              }
-
-              if(mqtthum == null){
-                  mqtthum = mqttprevhum;
-              }
-              if(mqttnpeople == null){
-                  mqttnpeople = mqttprevnpeople;
-              }
-              if(mqttac == null){
-                  mqttac = mqttprevac;
-              }
-
-              console.log(mqtttemp,mqtthum,mqttnpeople,mqttac);
-
-              mqtttempContainer.innerHTML = mqtttemp;
-              mqtthumContainer.innerHTML = mqtthum;
-              mqttnpeopleContainer.innerHTML = mqttnpeople;
-              if (mqttac == "It is ON") {
-                mqttacContainer.innerHTML = "ON";
-              }else if(mqttac == "It is OFF"){mqttacContainer.innerHTML = "OFF";}
-
-              setTimeout(getMqtt,10000);
+          $.ajax({
+            url : "http://192.168.1.65:8082/all",
+            dataType : "jsonp",
+            jsonpCallback : "logResults"
 
           });
+
       });
     </script>
 
