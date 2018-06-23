@@ -446,10 +446,6 @@
 
           $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
 
-              console.log(result);
-              console.log(cont)
-
-
               mqtttemp = result["temperature"].value;
               mqtthum = result["humidity"].value;
               mqttnpeople = result["bluetoothCounter"].value;
@@ -479,7 +475,6 @@
                 mqttacContainer.innerHTML = "ON";
               }else if(mqttac == "It is OFF"){mqttacContainer.innerHTML = "OFF";}
 
-              cont = cont +1;
               setTimeout(getMqtt,10000);
 
           });
