@@ -435,6 +435,7 @@
       var mqttprevhum = "";
       var mqttprevnpeople = "";
       var mqttprevac = "";
+      var cont = 1;
 
       $(document).ready(function getMqtt() {
 
@@ -443,12 +444,16 @@
           mqttprevnpeople = mqttnpeople;
           mqttprevac = mqttac;
 
-          $.getJSON('http://localhost:9000/real_time_data.json', function (mqttourData) {
+          $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
 
-              mqtttemp = mqttourData["temperature"].value;
-              mqtthum = mqttourData["humidity"].value;
-              mqttnpeople = mqttourData["bluetoothCounter"].value;
-              mqttac = mqttourData["AcStatus"].value;
+              console.log(result);
+              console.log(cont)
+
+
+              mqtttemp = result["temperature"].value;
+              mqtthum = result["humidity"].value;
+              mqttnpeople = result["bluetoothCounter"].value;
+              mqttac = result["AcStatus"].value;
 
 
               if (mqtttemp == null){
@@ -470,10 +475,11 @@
               mqtttempContainer.innerHTML = mqtttemp;
               mqtthumContainer.innerHTML = mqtthum;
               mqttnpeopleContainer.innerHTML = mqttnpeople;
-              if (mqttac == "Turn_on") {
+              if (mqttac == "It is ON") {
                 mqttacContainer.innerHTML = "ON";
-              }else if(mqttac == "Turn_off"){mqttacContainer.innerHTML = "OFF";}
+              }else if(mqttac == "It is OFF"){mqttacContainer.innerHTML = "OFF";}
 
+              cont = cont +1;
               setTimeout(getMqtt,10000);
 
           });

@@ -971,7 +971,7 @@ if __name__ == "__main__":
     # cherrypy.quickstart(MuseumsWP(), '/', conf)
 
     cherrypy.tree.mount (MuseumsWP ( ), '/', conf)
-    # cherrypy.server.socket_host = '192.168.1.71'
-    # cherrypy.server.socket_port = 8081
+    cherrypy.server.socket_host = 'localhost'
+    cherrypy.server.socket_port = 8081
     cherrypy.engine.start ( )
     cherrypy.engine.block ( )

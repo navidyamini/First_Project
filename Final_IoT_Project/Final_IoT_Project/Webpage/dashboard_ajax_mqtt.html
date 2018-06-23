@@ -443,16 +443,18 @@
           mqttprevnpeople = mqttnpeople;
           mqttprevac = mqttac;
 
-          function logResults(json){
-            console.log(json);
-          }
+
 
           $.ajax({
-            url : "http://192.168.1.65:8082/all",
-            dataType : "jsonp",
-            jsonpCallback : "logResults"
+            url : "http://localhost:8082/all",
+            dataType : 'json',
+            jsonp : false,
+            jsonpCallback : 'parseResponse'
 
+          }).done(function logResults(data){
+            console.log(data);
           });
+
 
       });
     </script>

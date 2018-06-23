@@ -435,6 +435,7 @@
       var mqttprevhum = "";
       var mqttprevnpeople = "";
       var mqttprevac = "";
+      var cont = 1;
 
       $(document).ready(function () {
 
@@ -443,9 +444,10 @@
           mqttprevnpeople = mqttnpeople;
           mqttprevac = mqttac;
 
-          $.getJSON('http://192.168.1.65:8082/text?callback=?',{contentType: "application/json"}, function (result) {
+          $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
 
               console.log(result);
+              console.log(cont)
 
 
               mqtttemp = mqttourData["temperature"].value;
@@ -477,6 +479,7 @@
                 mqttacContainer.innerHTML = "ON";
               }else if(mqttac == "It is OFF"){mqttacContainer.innerHTML = "OFF";}
 
+              cont = cont +1;
               setTimeout(getMqtt,10000);
 
           });

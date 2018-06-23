@@ -47,7 +47,7 @@ if __name__ == '__main__':
     #cherrypy.server.socket_host = '192.168.1.65'
     #cherrypy.server.socket_port = '8080'
     cherrypy.config.update({
-        "server.socket_host": '192.168.1.65',
+        "server.socket_host": 'localhost',
         "server.socket_port": 8080})
     cherrypy.engine.start()
     cherrypy.engine.block()
