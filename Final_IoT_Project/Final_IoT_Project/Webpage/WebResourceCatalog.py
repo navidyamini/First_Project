@@ -522,18 +522,17 @@ class MuseumsWP (object):
 
     def POST(self, *uri, **params):
         # obj = cherrypy.request.body.read()
-
-        with open ('initial_data.json', 'r') as json_data_file:
-            obj = json.load (json_data_file)
-
-        dict_data = obj['thresholds']
+        data = {}
 
         if uri[0]== "replytresh":
 
-            obj['thresholds'] = {"max_temp": str(params['maxt']),
+            data ={'thresholds': {"max_temp": str(params['maxt']),
                                  "min_temp": str(params['mint']),
                                  "max_hum": str(params['maxh']),
-                                 "min_hum": str(params['minh'])}
+                                 "min_hum": str(params['minh'])}}
+
+            json_data = json.dumps(data)
+
         elif uri[0]=="replything":
             obj['thingspeak'] = {"READ_API_KEY": str(params['rApi']),
                                  "ACCESS_TOKEN": str(params['accTok']),
