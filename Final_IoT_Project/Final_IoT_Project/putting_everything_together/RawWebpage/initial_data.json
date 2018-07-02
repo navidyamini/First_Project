@@ -1,6 +1,1 @@
-{"telegram": {"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY", "chatID": "94432957"},
-  "thresholds": {"min_hum": 1.0, "min_temp": 1.0, "max_hum": 100.0, "max_temp": 100.0},
-  "thingspeak": {"READ_API_KEY": "PN6SHE0RIBDLGS85", "ACCESS_TOKEN": "DDNTX8BUX8A17YZG", "tTransport": "websockets", "channelID": "240810", "tPort": "80", "mqttHost": "mqtt.thingspeak.com", "THINGSPEAK_HOST": "mqtt.thingspeak.com"},
-  "broker": {"Broker_IP": "192.168.1.110", "Broker_port": "1883",  "AC_Topic": "Gallery1/Room1/RP1/Ac1/Order", "DHT_Topic": "Gallery1/Room1/RP1/TempHum1", "Counter_Topic": "Gallery1/Room1/RP1/BlueTooth1","Ac_Status": "Gallery1/Room1/RP1/Ac1/Status"},
-  "dataToRest": {"Host_IP": "localhost", "port": "8082"},
-  "id": 3}
+{"thingspeak": {"READ_API_KEY": "11", "ACCESS_TOKEN": "10", "tTransport": "9", "channelID": "8", "tPort": "7", "mqttHost": "6", "THINGSPEAK_HOST": "5"}, "telegram": {"Port": "18", "chatID": "19"}, "thresholds": {"min_hum": "4", "min_temp": "2", "max_hum": "3", "max_temp": "1"}, "broker": {"Broker_IP": "12", "DHT_Topic": "14", "AC_Topic": "15", "Ac_Status": "17", "Broker_port": "13", "Counter_Topic": "16"}, "dataToRest": {"Host_IP": "20", "port": "21"}, "id": 3}
