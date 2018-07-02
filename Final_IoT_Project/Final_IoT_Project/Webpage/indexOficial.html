@@ -194,6 +194,70 @@
             label.smallthingspeak{clear: left;width: 150px; font-weight:normal;}
         </style>
 
+        <style>
+
+          .hover_bkgr_fricc{
+              background:rgba(0,0,0,.4);
+              cursor:pointer;
+              display:none;
+              height:100%;
+              position:fixed;
+              text-align:center;
+              top:0;
+              width:100%;
+              z-index:10000;
+          }
+          .hover_bkgr_fricc .helper{
+              display:inline-block;
+              height:100%;
+              vertical-align:middle;
+          }
+          .hover_bkgr_fricc > div {
+              background-color: #fff;
+              box-shadow: 10px 10px 60px #555;
+              display: inline-block;
+              height: auto;
+              max-width: 300px;
+              min-height: 100px;
+              vertical-align: middle;
+              width: 100%;
+              position: relative;
+              border-radius: 8px;
+              padding: 15px 5%;
+          }
+          .popupCloseButton {
+              background-color: #fff;
+              border: 3px solid #999;
+              border-radius: 30px;
+              cursor: pointer;
+              display: inline-block;
+              font-family: arial;
+              font-weight: bold;
+              position: absolute;
+              top: -10px;
+              right: -10px;
+              font-size: 16px;
+              line-height: 17px;
+              width: 25px;
+              height: 25px;
+
+          }
+          .popupCloseButton:hover {
+              background-color: #ccc;
+          }
+
+        </style>
+
+
+
+        <div align="center" class="hover_bkgr_fricc">
+            <span class="helper"></span>
+            <div>
+                <div class="popupCloseButton">X</div>
+                <p>Add any HTML content<br />inside the popup box!</p>
+            </div>
+        </div>
+
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row tile_count">
@@ -217,7 +281,6 @@
 
           </div>
           <!-- /top tiles -->
-
 
 
           <div class="row">
@@ -446,6 +509,19 @@
 
     <!-- Custom Theme Scripts -->
     <script src="gentelella-master/build/js/custom.min.js"></script>
+
+    <script>
+      $(window).load(function () {
+          $('.hover_bkgr_fricc').show();
+
+          $('.hover_bkgr_fricc').click(function(){
+              $('.hover_bkgr_fricc').hide();
+          });
+          $('.popupCloseButton').click(function(){
+              $('.hover_bkgr_fricc').hide();
+          });
+      });
+    </script>
 
   </body>
 </html>
