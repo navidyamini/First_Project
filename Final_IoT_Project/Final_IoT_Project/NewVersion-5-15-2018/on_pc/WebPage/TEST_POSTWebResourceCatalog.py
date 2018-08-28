@@ -5,7 +5,7 @@ import string
 class HelloWorld(object):
     @cherrypy.expose
     def index(self):
-        return "Hello world!"
+        return "bla bla"
 
     @cherrypy.expose
     def generate(self):
