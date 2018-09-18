@@ -2,18 +2,16 @@
 	"roomArtworks": [{
 			"beacon_id": "b9c71e98bc32320b",
 			"beacon_name": "smartgallery6",
-			"name": "The Tree of Life",
-			"artist": "Gustav Klimt",
-			"icon": "smartgallery6",
+			"paint": "The Tree of Life",
+			"painter": "Gustav Klimt",
 			"description": "alaalallalalalaallala",
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		},
 		{
 			"beacon_id ": "dbc3ca355c21e192 ",
 			"beacon_name": "smartgallery6",
-			"name": "The huge(the Lovers)",
-			"artist": "Egon Schiele",
-			"icon": "smartgallery4",
+			"paint": "The huge(the Lovers)",
+			"painter": "Egon Schiele",
 			"description": "alaalallalalalaallala",
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		},
@@ -21,9 +19,8 @@
 
 			"beacon_id": "5 c47b10ea18fdc94",
 			"beacon_name": "smartgallery6",
-			"name": "Almond Blossom",
-			"artist": "Vincent Van Gogh",
-			"icon": "smartgallery2",
+			"paint": "Almond Blossom",
+			"painter": "Vincent Van Gogh",
 			"description": "alaalallalalalaallala",
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		},
@@ -31,9 +28,8 @@
 
 			"beacon_id": "79 b1c4d98adf4ed4",
 			"beacon_name": "smartgallery6",
-			"name": "Desnudo con Alcantrances",
-			"artist": "Diego Rivera",
-			"icon": "smartgallery5",
+			"paint": "Desnudo con Alcantrances",
+			"painter": "Diego Rivera",
 			"description": "alaalallalalalaallala",
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		}
