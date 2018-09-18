@@ -61,7 +61,7 @@
                 <ul class="nav side-menu" id="rooms">
                   <li id="room1"><a><i class="fa fa-home"></i> Room 1 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu" id="options">
-                      <li><a href="room1">Thresholds</a></li>
+                      <li><a href="thresholds1">Thresholds</a></li>
                       <li><a href="dash1">Dashboard</a></li>
                     </ul>
                   </li>
@@ -70,7 +70,11 @@
 
               </div>
               <div class="menu_section">
-                <button onclick="myRoom()">Add new room </button>
+
+                <form action="/newRoom" method="GET">
+                    <input type="submit" name="newRoom" value="Add new room" />
+                </form>
+
               </div>
 
             </div>
@@ -119,64 +123,7 @@
                     <i class="fa fa-envelope-o"></i>
                     <span class="badge bg-green">6</span>
                   </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                  
                 </li>
               </ul>
             </nav>
@@ -296,7 +243,7 @@
                   </div>
                   <div class="x_content">
                     <div align="center">
-                      <form style="font-size:15px" action="/replytresh" method="POST">
+                      <form style="font-size:15px" action="/replytresh1" method="POST">
                             Maximum temperature:   <input type="number" value="'''+ str(json_inidata["thresholds"]["max_temp"])+'''" name="maxt" >
                             <br/>
                             Minimum temperature:   <input type="text" value="'''+ str(json_inidata["thresholds"]["min_temp"])+'''" name="mint">
@@ -333,7 +280,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="thingspeak" style="font-size:15px" action="/replything" method="POST">
+                      <form class="big" id="thingspeak" style="font-size:15px" action="/replything1" method="POST">
                             <label class="thingspeak">Thingspeak_HOST:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["thingspeak"]["THINGSPEAK_HOST"])+'''" name="tkHost" >
                             <br/>
                             <label class="thingspeak">mqtt HOST:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["thingspeak"]["mqttHost"])+'''" name="mqttHost">
@@ -373,7 +320,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="broker" style="font-size:15px" action="/replybroker" method="POST">
+                      <form class="big" id="broker" style="font-size:15px" action="/replybroker1" method="POST">
                             <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_IP"])+'''" name="brokerIP" >
                             <br/>
                             <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_port"])+'''" name="brokerPort">
@@ -412,7 +359,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="telegram" style="font-size:15px" action="/replytele" method="POST">
+                      <form class="big" id="telegram" style="font-size:15px" action="/replytele1" method="POST">
                             <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["Port"])+'''" name="telPort" >
                             <br/>
                             <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["chatID"])+'''" name="telchatid" >
@@ -441,7 +388,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest" method="POST">
+                      <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest1" method="POST">
                             <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["Host_IP"])+'''" name="hostIP" >
                             <br/>
                             <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["port"])+'''" name="dtrport" >
@@ -512,29 +459,6 @@
     <!-- Custom Theme Scripts -->
     <script src="gentelella-master/build/js/custom.min.js"></script>
 
-    <script>
-      $(window).load(function () {
-          $('.hover_bkgr_fricc').show();
-
-          $('.hover_bkgr_fricc').click(function(){
-              $('.hover_bkgr_fricc').hide();
-          });
-          $('.popupCloseButton').click(function(){
-              $('.hover_bkgr_fricc').hide();
-          });
-      });
-    </script>
-
-    <script>
-      function myRoom() {
-        var ul = document.getElementById("rooms");
-        var li = document.createElement("li");
-        var children = ul.children.length + 1;
-        li.setAttribute("id", "element"+children);
-        li.appendChild(document.createTextNode("Room "+children));
-        ul.appendChild(li);
-      }
-    </script>
 
   </body>
 </html>

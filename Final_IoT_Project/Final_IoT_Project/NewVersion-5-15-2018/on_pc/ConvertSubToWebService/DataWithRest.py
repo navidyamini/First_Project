@@ -47,8 +47,8 @@ if __name__ == '__main__':
 
     respond = requests.get(url)
     json_format = json.loads(respond.text)
-    Host_IP = json_format["dataToRest"]["Host_IP"]
-    port = json_format["dataToRest"]["port"]
+    Host_IP = json_format["room_1"]["dataToRest"]["Host_IP"]
+    port = json_format["room_1"]["dataToRest"]["port"]
 
     conf = {
         '/': {

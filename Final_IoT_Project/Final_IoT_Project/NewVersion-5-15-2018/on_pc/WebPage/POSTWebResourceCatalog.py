@@ -1617,7 +1617,7 @@ if __name__ == "__main__":
         },
         '/static': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': os.path.join (os.getcwd ( ), "static")}
+            'tools.staticdir.dir': os.path.join (os.getcwd ( ), "gentelella-master")}
     }
     # cherrypy.quickstart(MuseumsWP(), '/', conf)
 
