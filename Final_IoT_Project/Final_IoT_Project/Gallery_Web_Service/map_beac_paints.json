@@ -1,0 +1,41 @@
+{
+	"roomArtworks": [{
+			"beacon_id": "b9c71e98bc32320b",
+			"beacon_name": "smartgallery6",
+			"name": "The Tree of Life",
+			"artist": "Gustav Klimt",
+			"icon": "smartgallery6",
+			"description": "alaalallalalalaallala",
+			"artistInfo": "znnnnnnnnnnnnnnn"
+		},
+		{
+			"beacon_id ": "dbc3ca355c21e192 ",
+			"beacon_name": "smartgallery6",
+			"name": "The huge(the Lovers)",
+			"artist": "Egon Schiele",
+			"icon": "smartgallery4",
+			"description": "alaalallalalalaallala",
+			"artistInfo": "znnnnnnnnnnnnnnn"
+		},
+		{
+
+			"beacon_id": "5 c47b10ea18fdc94",
+			"beacon_name": "smartgallery6",
+			"name": "Almond Blossom",
+			"artist": "Vincent Van Gogh",
+			"icon": "smartgallery2",
+			"description": "alaalallalalalaallala",
+			"artistInfo": "znnnnnnnnnnnnnnn"
+		},
+		{
+
+			"beacon_id": "79 b1c4d98adf4ed4",
+			"beacon_name": "smartgallery6",
+			"name": "Desnudo con Alcantrances",
+			"artist": "Diego Rivera",
+			"icon": "smartgallery5",
+			"description": "alaalallalalalaallala",
+			"artistInfo": "znnnnnnnnnnnnnnn"
+		}
+	]
+}
