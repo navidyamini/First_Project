@@ -107,7 +107,10 @@ if __name__ == '__main__':
         raise KeyError("***** CheckingThreshold: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
+
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url= ip + roomId
 
     client = mqttc.Client()
     sens = CheckingThreshold(url, client)

@@ -9,9 +9,9 @@ GPIO.setup(17,GPIO.OUT)
 class LEDbyRelay(object):
     #"turnnig on and off the LED"""
 
-    def __init__(self,url):
+    def __init__(self,url,roomId):
         self.relayPin = 17
-        self.publish = PublishAcStatus(url)
+        self.publish = PublishAcStatus(url,roomId)
     #setup function for some setup---custom function
 
     def setup(self):

@@ -11,8 +11,9 @@ import requests
 
 class PublishAcStatus(object):
 
-    def __init__(self,url):
+    def __init__(self,url,roomId):
         self.url = url
+        self.roomId = roomId
         self.client = paho.Client()
         self.client.on_connect = self.on_connect
         self.client.on_publish = self.on_publish
@@ -39,7 +40,7 @@ class PublishAcStatus(object):
     def publish_data(self,order):
         #This function will publishe the order to AC
         try:
-            json_format = json.dumps({'Status' : str(order)})
+            json_format = json.dumps({'roomId':self.roomId,'Status' : str(order)})
             self.client.publish(self.AC_Topic, str(json_format), qos=1)
             return ("CIAONE", json_format)
         except:

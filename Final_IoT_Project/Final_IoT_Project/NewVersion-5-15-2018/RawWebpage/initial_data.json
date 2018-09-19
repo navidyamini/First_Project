@@ -1,5 +1,8 @@
 {
-
+	"dataToRest": {
+			"Host_IP": "192.168.1.10",
+			"port": "8082"
+		},
 	"room_1": {
 		"telegram": {
 			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
