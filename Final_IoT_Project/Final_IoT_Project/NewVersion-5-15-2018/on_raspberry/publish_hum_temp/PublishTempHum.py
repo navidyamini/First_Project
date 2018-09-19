@@ -13,10 +13,11 @@ import json
 
 class PublishData(object):
 
-    def __init__(self, url, sensor_t_h, client):
+    def __init__(self, url, sensor_t_h,roomId, client):
         self.url = url
         self.sensor_t_h = sensor_t_h
         self.client = client
+        self.roomId=roomId
 
     def load_topics(self):
         try:
@@ -49,7 +50,12 @@ class PublishData(object):
         #This function will publishe the data related to temperature and humidity
         try:
             json_format = self.sensor_t_h.reading_sensor()
-            msg_info = client.publish(self.DHT_Topic, str(json_format), qos=1)
+            temp_hum_data = json.loads(json_format)
+            temp=temp_hum_data["temperature"]
+            hum=temp_hum_data["humidity"]
+            time=temp_hum_data["time"]
+            new_json_format=json.dumps({"roomId":self.roomId,"temperature": temp, "humidity": hum,"time":time})
+            msg_info = client.publish(self.DHT_Topic, str(new_json_format), qos=1)
             if msg_info.is_published() == True:
                 print ("\nMessage is published.")
             # This call will block until the message is published
@@ -72,15 +78,16 @@ if __name__ == '__main__':
         raise KeyError("***** PublishData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
-
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url = ip+roomId
     try:
         sensor_data = ReadingDHT()
     except:
         print "PublishData: ERROR IN GETTING DATA FROM SENSOR "
 
     client = mqttc.Client()
-    sens = PublishData(url, sensor_data, client)
+    sens = PublishData(url, sensor_data,roomId, client)
 
     while True:
         sens.load_topics()

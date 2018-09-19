@@ -14,10 +14,10 @@ class SubscribeAcOrder(object):
 
     payload = "null"
     orders = 'null'
-    def __init__(self,url,client):
+    def __init__(self,url,roomId,client):
         self.flag = 0
         self.url =url
-        self.controling_LED = LEDbyRelay(url)
+        self.controling_LED = LEDbyRelay(url,roomId)
         self.client = client
         client.on_subscribe = self.on_subscribe
         client.on_message = self.on_message
@@ -79,9 +79,11 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeAcOrder: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url = ip+roomId
     client = paho.Client()
-    sens = SubscribeAcOrder(url, client)
+    sens = SubscribeAcOrder(url,roomId, client)
 
     while True:
         try:

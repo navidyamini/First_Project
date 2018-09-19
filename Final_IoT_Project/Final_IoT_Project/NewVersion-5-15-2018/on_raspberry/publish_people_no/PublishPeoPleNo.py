@@ -13,10 +13,11 @@ from BluetoothCounter import BluetoothCounter
 
 class PublishPeopleNo(object):
 
-    def __init__(self, url,bCounter, client):
+    def __init__(self, url,bCounter,roomId, client):
         self.url = url
         self.bCounter = bCounter
         self.client = client
+        self.roomId=roomId
 
     def load_topics(self):
         try:
@@ -50,7 +51,7 @@ class PublishPeopleNo(object):
         #this function will publish data related to the number of people in the room
         try:
             counter = self.bCounter.device_counter()
-            json_format = json.dumps({'bluetooth counter': str(counter)})
+            json_format = json.dumps({'roomId':self.roomId,'bluetooth counter': str(counter)})
             msg_info = client.publish(self.Counter_Topic, str(json_format), qos=1)
             if msg_info.is_published() == True:
                 print ("\nMessage is published.")
@@ -75,7 +76,9 @@ if __name__ == '__main__':
         raise KeyError("***** PublishPeopleNo: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url = ip+roomId
 
     try:
         bCounter = BluetoothCounter()
@@ -83,7 +86,7 @@ if __name__ == '__main__':
         print "PublishPeopleNo: ERROR IN GETTING DATA FROM SENSOR "
 
     client = mqttc.Client()
-    sens = PublishPeopleNo(url, bCounter, client)
+    sens = PublishPeopleNo(url, bCounter,roomId, client)
 
     while True:
         sens.load_topics()

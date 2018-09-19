@@ -11,9 +11,10 @@ import json
 
 class SubscribeData(object):
 
-    def __init__(self,url,client):
+    def __init__(self,url,roomId,client):
         self.url = url
         self.client = client
+        self.roomId = roomId
         client.on_subscribe = self.on_subscribe
         client.on_message = self.on_message
 
@@ -23,7 +24,7 @@ class SubscribeData(object):
             json_format = json.loads(self.respond.text)
             self.DHT_topic = json_format["broker"]["DHT_Topic"]
             self.counter_topic = json_format["broker"]["Counter_Topic"]
-            self.AC_status = json_format["broker"]["Ac_Status"]
+            self.AC_status = json_format["broker"]["AC_Topic"]
             print "SubscribeData: TOPICS ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -52,39 +53,39 @@ class SubscribeData(object):
             raise KeyError("***** SubscribeData: ERROR IN READING CONFIG FILE *****")
 
         config_json = json.loads(json_string)
-        url = config_json["reSourceCatalog"]["url"]
+        ip = config_json["reSourceCatalog"]["url"]
+        roomId = config_json["reSourceCatalog"]["roomId"]
+        url = ip + roomId
 
         try:
             respond = requests.get(url)
             json_format = json.loads(respond.text)
             DHT_topic = json_format["broker"]["DHT_Topic"]
             counter_topic = json_format["broker"]["Counter_Topic"]
-            AC_status = json_format["broker"]["Ac_Status"]
+            AC_status = json_format["broker"]["AC_Topic"]
             print "SubscribeData: TOPICS ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
         try:
-            file = open("real_time_data.json", "r")
+            file = open("ConvertSubToWebService/real_time_data.json", "r")
             json_string = file.read()
             file.close()
         except:
             raise KeyError("*****SubscribeData: ERROR IN READING JSON FILE RELATED TO REAL TIME DATA *****")
         input = json.loads(message_body)
         json_format_output = json.loads(json_string)
-
         if(msg.topic == DHT_topic):
-            json_format_output["temperature"]["value"] = input["temperature"]
-            json_format_output["humidity"]["value"] = input["humidity"]
+            json_format_output[self.room_id]["temperature"]["value"] = input["temperature"]
+            json_format_output[self.room_id]["humidity"]["value"] = input["humidity"]
 
         elif(msg.topic == counter_topic):
-            json_format_output["bluetoothCounter"]["value"] = input["bluetooth counter"]
+            json_format_output[self.room_id]["bluetoothCounter"]["value"] = input["bluetooth counter"]
 
         elif (msg.topic == AC_status):
-            json_format_output["AcStatus"]["value"] = input["Status"]
-
+            json_format_output[self.room_id]["AcStatus"]["value"] = input["Status"]
         try:
-            with open("real_time_data.json", 'w') as json_data_file:
+            with open("ConvertSubToWebService/real_time_data.json", 'w') as json_data_file:
                 json.dump(json_format_output, json_data_file)
                 json_data_file.close()
         except:
@@ -100,9 +101,11 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url= ip + roomId
     client = paho.Client()
-    sens = SubscribeData(url, client)
+    sens = SubscribeData(url,roomId, client)
 
     while True:
         try:

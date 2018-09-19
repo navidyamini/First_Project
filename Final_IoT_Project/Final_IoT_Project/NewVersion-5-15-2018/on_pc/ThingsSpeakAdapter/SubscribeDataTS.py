@@ -28,7 +28,7 @@ class SubscribeDataTS(object):
             json_format = json.loads(self.respond.text)
             self.DHT_topic = json_format["broker"]["DHT_Topic"]
             self.counter_topic = json_format["broker"]["Counter_Topic"]
-            self.AC_status = json_format["broker"]["Ac_Status"]
+            self.AC_status = json_format["broker"]["AC_Topic"]
             print "SubscribeDataTS:: TOPICS ARE READY"
         except:
             print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -79,7 +79,9 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeDataTS: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url= ip + roomId
     client = paho.Client()
     sens = SubscribeDataTS(url, client)
 
