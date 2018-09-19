@@ -108,9 +108,7 @@ if __name__ == '__main__':
 
     config_json = json.loads(json_string)
 
-    ip = config_json["reSourceCatalog"]["url"]
-    roomId = config_json["reSourceCatalog"]["roomId"]
-    url= ip + roomId
+    url = config_json["reSourceCatalog"]["url"]
 
     client = mqttc.Client()
     sens = CheckingThreshold(url, client)

@@ -1,6 +1,5 @@
 {
 	"reSourceCatalog": {
-		"url": "http://192.168.43.91:8081/",
-		"roomId":"dataToRest"
+		"url": "http://192.168.43.91:8080/dataToRest"
 	}
 }

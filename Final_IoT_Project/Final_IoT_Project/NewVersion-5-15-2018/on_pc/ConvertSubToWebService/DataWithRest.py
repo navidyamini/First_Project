@@ -11,32 +11,33 @@ class DataWithRest(object):
         try:
             file = open("real_time_data.json", "r")
             json_string = file.read()
+            room_id = uri[0]
             file.close()
         except:
             raise KeyError("***** DataWithRest: ERROR IN READING JSON FILE RELATED TO DATA *****")
         results = json.loads(json_string)
+        if (room_id in results):
+            if(uri[1] == 'temp'):
+                return str(results[room_id]['temperature']['value'])
 
-        if(uri[0] == 'temp'):
-            return str(results['temperature']['value'])
+            elif(uri[1] == 'hum'):
+                return str(results[room_id]['humidity']['value'])
 
-        elif(uri[0] == 'hum'):
-            return str(results['humidity']['value'])
+            elif(uri[1] == 'ac'):
+                return str(results[room_id]['AcStatus']['value'])
 
-        elif(uri[0] == 'ac'):
-            return str(results['AcStatus']['value'])
+            elif(uri[1] == 'noPeople'):
+                return str(results[room_id]['bluetoothCounter']['value'])
 
-        elif(uri[0] == 'noPeople'):
-            return str(results['bluetoothCounter']['value'])
-
-        elif(uri[0] == 'all'):
-            return str(json_string)
+            elif(uri[1] == 'all'):
+                return str(results[room_id])
 
 
 if __name__ == '__main__':
 
     try:
-        #file = open("config_file.json", "r") #Navid's Local IP address
-        file = open("config_file_xime.json", "r") #Ximena's local IP address
+        file = open("config_file.json", "r") #Navid's Local IP address
+        #file = open("config_file_xime.json", "r") #Ximena's local IP address
         json_string = file.read()
         file.close()
     except:
@@ -47,8 +48,8 @@ if __name__ == '__main__':
 
     respond = requests.get(url)
     json_format = json.loads(respond.text)
-    Host_IP = json_format["dataToRest"]["Host_IP"]
-    port = json_format["dataToRest"]["port"]
+    Host_IP = json_format["Host_IP"]
+    port = json_format["port"]
 
     conf = {
         '/': {
