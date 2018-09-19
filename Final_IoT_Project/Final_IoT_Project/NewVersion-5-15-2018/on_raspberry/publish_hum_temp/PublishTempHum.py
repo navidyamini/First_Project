@@ -72,8 +72,9 @@ if __name__ == '__main__':
         raise KeyError("***** PublishData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
-
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url = ip+roomId
     try:
         sensor_data = ReadingDHT()
     except:

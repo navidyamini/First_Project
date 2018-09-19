@@ -21,7 +21,7 @@
 			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
 		},
 		"broker": {
-			"Broker_IP": "192.168.1.254",
+			"Broker_IP": "192.168.43.159",
 			"Broker_port": "1883",
 			"AC_Topic": "Gallery1/Room1/RP1/Ac1/Order",
 			"DHT_Topic": "Gallery1/Room1/RP1/TempHum1",
@@ -54,7 +54,7 @@
 			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
 		},
 		"broker": {
-			"Broker_IP": "192.168.1.254",
+			"Broker_IP": "192.168.43.159",
 			"Broker_port": "1883",
 			"AC_Topic": "Gallery1/Room2/RP1/Ac1/Order",
 			"DHT_Topic": "Gallery1/Room2/RP1/TempHum1",

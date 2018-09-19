@@ -100,7 +100,9 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    url = config_json["reSourceCatalog"]["url"]
+    ip = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["roomId"]
+    url= ip + roomId
     client = paho.Client()
     sens = SubscribeData(url, client)
 

@@ -51,10 +51,10 @@ if __name__ == '__main__':
     }
     # cherrypy.quickstart(WebCalculator(),'/',conf)
     cherrypy.tree.mount(ResourceCatalog(), '/', conf)
-    #cherrypy.server.socket_host = '192.168.1.65'
+    #cherrypy.server.socket_host = '192.168.43.91'
     #cherrypy.server.socket_port = '8080'
     cherrypy.config.update({
-        "server.socket_host": 'localhost',
+        "server.socket_host": '192.168.43.91',
         "server.socket_port": 8080})
     cherrypy.engine.start()
     cherrypy.engine.block()
