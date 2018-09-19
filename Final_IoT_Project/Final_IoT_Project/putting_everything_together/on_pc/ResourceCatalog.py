@@ -10,9 +10,16 @@ class ResourceCatalog(object):
             file = open("../RawWebpage/initial_data.json", "r")
             json_string = file.read()
             file.close()
+            room_id = uri[0]
         except:
             raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
-        return json_string
+        json_dic = json.loads(json_string)
+        if(room_id in json_dic):
+            result = json_dic[uri[0]]
+            requested_data = json.dumps(result)
+            return requested_data
+        else:
+            return"NOTHING FOUNDED, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
     '''
     def POST(self, *uri, **params):
         try:
