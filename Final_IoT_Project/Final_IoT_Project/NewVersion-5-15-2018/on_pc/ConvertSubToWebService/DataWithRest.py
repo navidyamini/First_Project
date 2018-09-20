@@ -35,7 +35,7 @@ class DataWithRest(object):
             elif(uri[1] == 'all'):
                 return str(results[item])
         else:
-            return "Nothing found, check the input url again"
+            return "Nothing found, check the input again"
 
 
 if __name__ == '__main__':

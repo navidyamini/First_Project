@@ -10,21 +10,23 @@ class telegramBot(object):
         self.url = url
         bot = telepot.Bot(port)
 
-    def setThingSpeakVariables(self):
+    def setWebServiceVariables(self):
         try:
-            respond = requests.get(self.url+"/")
+            respond = requests.get(self.url+"/dataToRest")
         except:
             print "TelegramBot: ERROR IN CONNECTING TO THE SERVER FOR GETTING RESTFUL WEB SERVICE URL"
         json_format = json.loads(respond.text)
-        self.restURL = json_format["dataToRest"]["Host_IP"]
-        self.port = json_format["dataToRest"]["port"]
+        self.restURL = json_format["Host_IP"]
+        self.port = json_format["port"]
         print "TelegramBot:: RESTFUL ARE READY"
 
     def handler(self, msg):
 
         chat_id = msg['chat']['id']
         command = msg['text']
-        self.setThingSpeakVariables()
+        self.setWebServiceVariables()
+
+        bot.sendMessage(chat_id, self.sendResult(command))
 
         if command == '/acstatus':
             bot.sendMessage(chat_id, self.acstatus())
@@ -39,6 +41,18 @@ class telegramBot(object):
             bot.sendMessage(chat_id, self.get_hum())
         else:
             bot.sendMessage(chat_id, "Invalid Command")
+
+
+    def sendResult(self,command):
+        print'trying to send back the result'
+        try:
+            result = requests.get("http://"+self.restURL+ ":" + self.port+ "/"+command+"/all").content
+            time.sleep(5)
+        except:
+                print "ERROR IN GETTING RESULTS"
+
+        return str(result)
+
 
     def acstatus(self):
         print'trying to send back the A/C status'
@@ -92,9 +106,9 @@ if __name__ == '__main__':
     url = config_json["reSourceCatalog"]["url"]
 
     try:
-        respond = requests.get(url)
+        respond = requests.get(url+"/telegram")
         json_format = json.loads(respond.text)
-        port = json_format["telegram"]["Port"]
+        port = json_format["Port"]
         telegram_bot = telegramBot(url,port)
     except:
         print "ERROR IN CONNECTING TO SERVER FOR GETTING TELEGROM BOT PORT"
