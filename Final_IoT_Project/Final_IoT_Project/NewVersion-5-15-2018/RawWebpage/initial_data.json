@@ -28,9 +28,9 @@
 			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
 		},
 		"topic": {
-			"AC_Topic": "Gallery1/Room1/RP1/Ac1/Order",
-			"DHT_Topic": "Gallery1/Room1/RP1/TempHum1",
-			"Counter_Topic": "Gallery1/Room1/RP1/BlueTooth1"
+			"AC_Topic": "Gallery1/Room1/Order",
+			"DHT_Topic": "Gallery1/Room1/TempHum1",
+			"Counter_Topic": "Gallery1/Room1/BlueTooth1"
 		},
 		"id": 3
 	},
@@ -55,9 +55,9 @@
 			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
 		},
 		"topic": {
-			"AC_Topic": "Gallery1/Room2/RP1/Ac1/Order",
-			"DHT_Topic": "Gallery1/Room2/RP1/TempHum1",
-			"Counter_Topic": "Gallery1/Room2/RP1/BlueTooth1"
+			"AC_Topic": "Gallery1/Room2/Order",
+			"DHT_Topic": "Gallery1/Room2/TempHum1",
+			"Counter_Topic": "Gallery1/Room2/BlueTooth1"
 		},
 		"id": 3
 	}

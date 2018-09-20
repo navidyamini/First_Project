@@ -51,7 +51,7 @@ class PublishPeopleNo(object):
         #this function will publish data related to the number of people in the room
         try:
             counter = self.bCounter.device_counter()
-            json_format = json.dumps({'roomId':self.roomId,'bluetooth counter': str(counter)})
+            json_format = json.dumps({"subject":"num_people",'roomId':self.roomId,'bluetooth_counter': str(counter)})
             msg_info = client.publish(self.Counter_Topic, str(json_format), qos=1)
             if msg_info.is_published() == True:
                 print ("\nMessage is published.")

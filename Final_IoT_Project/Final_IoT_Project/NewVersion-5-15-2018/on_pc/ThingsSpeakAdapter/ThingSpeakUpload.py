@@ -53,7 +53,7 @@ class ThingSpeak(object):
 
     def number_of_people(self,meesage):
 
-        result = meesage["bluetooth counter"]
+        result = meesage["bluetooth_counter"]
         print result
         #time.sleep(10)
         # build the payload string

@@ -1,6 +1,6 @@
 {
 	"reSourceCatalog": {
 		"url": "http://192.168.43.91:8080/",
-		"roomId":"room_1"
+		"wildcards":"Gallery1/#"
 	}
 }

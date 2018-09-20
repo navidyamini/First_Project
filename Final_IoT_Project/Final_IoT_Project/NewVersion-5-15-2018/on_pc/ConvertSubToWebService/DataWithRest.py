@@ -11,33 +11,38 @@ class DataWithRest(object):
         try:
             file = open("real_time_data.json", "r")
             json_string = file.read()
-            room_id = uri[0]
+            item = uri[0]
             file.close()
         except:
             raise KeyError("***** DataWithRest: ERROR IN READING JSON FILE RELATED TO DATA *****")
         results = json.loads(json_string)
-        if (room_id in results):
+        if(item == "all"):
+            return json_string
+
+        if (item in results):
             if(uri[1] == 'temp'):
-                return str(results[room_id]['temperature']['value'])
+                return str(results[item]['temperature']['value'])
 
             elif(uri[1] == 'hum'):
-                return str(results[room_id]['humidity']['value'])
+                return str(results[item]['humidity']['value'])
 
             elif(uri[1] == 'ac'):
-                return str(results[room_id]['AcStatus']['value'])
+                return str(results[item]['AcStatus']['value'])
 
             elif(uri[1] == 'noPeople'):
-                return str(results[room_id]['bluetoothCounter']['value'])
+                return str(results[item]['bluetoothCounter']['value'])
 
             elif(uri[1] == 'all'):
-                return str(results[room_id])
+                return str(results[item])
+        else:
+            return "Nothing found, check the input url again"
 
 
 if __name__ == '__main__':
 
     try:
-        #file = open("config_file.json", "r") #Navid's Local IP address
-        file = open("config_file_xime.json", "r") #Ximena's local IP address
+        file = open("config_file.json", "r") #Navid's Local IP address
+        #file = open("config_file_xime.json", "r") #Ximena's local IP address
         json_string = file.read()
         file.close()
     except:
@@ -46,7 +51,7 @@ if __name__ == '__main__':
     config_json = json.loads(json_string)
     url = config_json["reSourceCatalog"]["url"]
 
-    respond = requests.get(url)
+    respond = requests.get(url+"/dataToRest")
     json_format = json.loads(respond.text)
     Host_IP = json_format["Host_IP"]
     port = json_format["port"]
