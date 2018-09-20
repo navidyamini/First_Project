@@ -1,0 +1,73 @@
+{
+	"dataToRest": {
+			"Host_IP": "localhost",
+			"port": "8082"
+		},
+	"room_1": {
+		"telegram": {
+			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
+			"chatID": "94432957"
+		},
+		"thresholds": {
+			"min_hum": 1.0,
+			"min_temp": 1.0,
+			"max_hum": 10.0,
+			"max_temp": 10.0
+		},
+		"thingspeak": {
+			"READ_API_KEY": "PN6SHE0RIBDLGS85",
+			"ACCESS_TOKEN": "DDNTX8BUX8A17YZG",
+			"tTransport": "websockets",
+			"channelID": "240810",
+			"tPort": "80",
+			"mqttHost": "mqtt.thingspeak.com",
+			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
+		},
+		"broker": {
+			"Broker_IP": "192.168.43.159",
+			"Broker_port": "1883",
+			"AC_Topic": "Gallery1/Room1/RP1/Ac1/Order",
+			"DHT_Topic": "Gallery1/Room1/RP1/TempHum1",
+			"Counter_Topic": "Gallery1/Room1/RP1/BlueTooth1"
+		},
+		"dataToRest": {
+			"Host_IP": "localhost",
+			"port": "8082"
+		},
+		"id": 3
+	},
+	"room_2": {
+		"telegram": {
+			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
+			"chatID": "94432957"
+		},
+		"thresholds": {
+			"min_hum": 1.0,
+			"min_temp": 1.0,
+			"max_hum": 10.0,
+			"max_temp": 10.0
+		},
+		"thingspeak": {
+			"READ_API_KEY": "PN6SHE0RIBDLGS85",
+			"ACCESS_TOKEN": "DDNTX8BUX8A17YZG",
+			"tTransport": "websockets",
+			"channelID": "240810",
+			"tPort": "80",
+			"mqttHost": "mqtt.thingspeak.com",
+			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
+		},
+		"broker": {
+			"Broker_IP": "192.168.43.159",
+			"Broker_port": "1883",
+			"AC_Topic": "Gallery1/Room2/RP1/Ac1/Order",
+			"DHT_Topic": "Gallery1/Room2/RP1/TempHum1",
+			"Counter_Topic": "Gallery1/Room2/RP1/BlueTooth1"
+		},
+		"dataToRest": {
+			"Host_IP": "localhost",
+			"port": "8082"
+		},
+		"id": 3
+	}
+
+}
