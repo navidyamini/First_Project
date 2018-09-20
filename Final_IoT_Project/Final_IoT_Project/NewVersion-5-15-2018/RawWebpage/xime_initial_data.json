@@ -3,7 +3,7 @@
 			"Host_IP": "localhost",
 			"port": "8082"
 		},
-	"room_1": {
+	"Room_1": {
 		"telegram": {
 			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
 			"chatID": "94432957"
@@ -36,7 +36,7 @@
 		},
 		"id": 3
 	},
-	"room_2": {
+	"Room_2": {
 		"telegram": {
 			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
 			"chatID": "94432957"

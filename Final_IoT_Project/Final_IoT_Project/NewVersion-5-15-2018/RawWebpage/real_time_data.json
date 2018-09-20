@@ -1,5 +1,5 @@
 {
-	"room_2": {
+	"Room_2": {
 		"humidity": {
 			"value": 35.0
 		},
@@ -13,7 +13,7 @@
 			"value": "2"
 		}
 	},
-	"room_1": {
+	"Room_1": {
 		"humidity": {
 			"value": 33.0
 		},
