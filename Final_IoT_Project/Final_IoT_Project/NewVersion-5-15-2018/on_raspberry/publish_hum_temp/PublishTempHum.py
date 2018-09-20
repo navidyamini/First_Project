@@ -23,7 +23,7 @@ class PublishData(object):
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
-            self.DHT_Topic = json_format["broker"]["DHT_Topic"]
+            self.DHT_Topic = json_format["topic"]["DHT_Topic"]
             print "PublishData:: BROKER VARIABLES ARE READY"
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -54,7 +54,7 @@ class PublishData(object):
             temp=temp_hum_data["temperature"]
             hum=temp_hum_data["humidity"]
             time=temp_hum_data["time"]
-            new_json_format=json.dumps({"roomId":self.roomId,"temperature": temp, "humidity": hum,"time":time})
+            new_json_format=json.dumps({"subject":"temp_hum_data","roomId":self.roomId,"temperature": temp, "humidity": hum,"time":time})
             msg_info = client.publish(self.DHT_Topic, str(new_json_format), qos=1)
             if msg_info.is_published() == True:
                 print ("\nMessage is published.")
@@ -78,9 +78,9 @@ if __name__ == '__main__':
         raise KeyError("***** PublishData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    ip = config_json["reSourceCatalog"]["url"]
+    resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     roomId = config_json["reSourceCatalog"]["roomId"]
-    url = ip+roomId
+    url = resourceCatalogIP + roomId
     try:
         sensor_data = ReadingDHT()
     except:
@@ -92,17 +92,17 @@ if __name__ == '__main__':
     while True:
         sens.load_topics()
         try:
-            respond = requests.get(url)
+            respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
-            ip = json_format["broker"]["Broker_IP"]
-            port = json_format["broker"]["Broker_port"]
+            broker_ip = json_format["Broker_IP"]
+            port = json_format["Broker_port"]
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER IP"
 
         try:
             client.on_connect = PublishData.on_connect
             client.on_publish = PublishData.on_publish
-            client.connect(ip, int(port))
+            client.connect(broker_ip, int(port))
             client.loop_start()
         except:
             print "PublishData: ERROR IN CONNECTING TO THE BROKER"

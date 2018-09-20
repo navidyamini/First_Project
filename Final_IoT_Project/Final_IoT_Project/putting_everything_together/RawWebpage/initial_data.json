@@ -3,6 +3,10 @@
 			"Host_IP": "192.168.1.10",
 			"port": "8082"
 		},
+	"broker": {
+			"Broker_IP": "192.168.1.254",
+			"Broker_port": "1883"
+		},
 	"room_1": {
 		"telegram": {
 			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
@@ -23,16 +27,10 @@
 			"mqttHost": "mqtt.thingspeak.com",
 			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
 		},
-		"broker": {
-			"Broker_IP": "192.168.43.159",
-			"Broker_port": "1883",
+		"topic": {
 			"AC_Topic": "Gallery1/Room1/RP1/Ac1/Order",
 			"DHT_Topic": "Gallery1/Room1/RP1/TempHum1",
 			"Counter_Topic": "Gallery1/Room1/RP1/BlueTooth1"
-		},
-		"dataToRest": {
-			"Host_IP": "192.168.1.10",
-			"port": "8082"
 		},
 		"id": 3
 	},
@@ -56,16 +54,10 @@
 			"mqttHost": "mqtt.thingspeak.com",
 			"THINGSPEAK_HOST": "mqtt.thingspeak.com"
 		},
-		"broker": {
-			"Broker_IP": "192.168.43.159",
-			"Broker_port": "1883",
+		"topic": {
 			"AC_Topic": "Gallery1/Room2/RP1/Ac1/Order",
 			"DHT_Topic": "Gallery1/Room2/RP1/TempHum1",
 			"Counter_Topic": "Gallery1/Room2/RP1/BlueTooth1"
-		},
-		"dataToRest": {
-			"Host_IP": "192.168.1.10",
-			"port": "8082"
 		},
 		"id": 3
 	}

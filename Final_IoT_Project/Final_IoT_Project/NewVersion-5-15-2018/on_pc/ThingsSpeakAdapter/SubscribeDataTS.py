@@ -26,9 +26,9 @@ class SubscribeDataTS(object):
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
-            self.DHT_topic = json_format["broker"]["DHT_Topic"]
-            self.counter_topic = json_format["broker"]["Counter_Topic"]
-            self.AC_status = json_format["broker"]["AC_Topic"]
+            self.DHT_topic = json_format["topic"]["DHT_Topic"]
+            self.counter_topic = json_format["topic"]["Counter_Topic"]
+            self.AC_status = json_format["topic"]["AC_Topic"]
             print "SubscribeDataTS:: TOPICS ARE READY"
         except:
             print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -79,19 +79,19 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeDataTS: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    ip = config_json["reSourceCatalog"]["url"]
+    resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     roomId = config_json["reSourceCatalog"]["roomId"]
-    url= ip + roomId
+    url= resourceCatalogIP + roomId
     client = paho.Client()
     sens = SubscribeDataTS(url, client)
 
     while True:
         try:
             sens.load_topics()
-            respond = requests.get(url)
+            respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
-            Broker_IP = json_format["broker"]["Broker_IP"]
-            Broker_Port = json_format["broker"]["Broker_port"]
+            Broker_IP = json_format["Broker_IP"]
+            Broker_Port = json_format["Broker_port"]
             print "SubscribeDataTS:: BROKER VARIABLES ARE READY"
         except:
             print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"

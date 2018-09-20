@@ -11,10 +11,9 @@ import json
 
 class SubscribeData(object):
 
-    def __init__(self,url,roomId,client):
+    def __init__(self,url,client):
         self.url = url
         self.client = client
-        self.roomId = roomId
         client.on_subscribe = self.on_subscribe
         client.on_message = self.on_message
 
@@ -22,9 +21,9 @@ class SubscribeData(object):
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
-            self.DHT_topic = json_format["broker"]["DHT_Topic"]
-            self.counter_topic = json_format["broker"]["Counter_Topic"]
-            self.AC_status = json_format["broker"]["AC_Topic"]
+            self.DHT_topic = json_format["topic"]["DHT_Topic"]
+            self.counter_topic = json_format["topic"]["Counter_Topic"]
+            self.AC_status = json_format["topic"]["AC_Topic"]
             print "SubscribeData: TOPICS ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -60,32 +59,66 @@ class SubscribeData(object):
         try:
             respond = requests.get(url)
             json_format = json.loads(respond.text)
-            DHT_topic = json_format["broker"]["DHT_Topic"]
-            counter_topic = json_format["broker"]["Counter_Topic"]
-            AC_status = json_format["broker"]["AC_Topic"]
+            DHT_topic = json_format["topic"]["DHT_Topic"]
+            counter_topic = json_format["topic"]["Counter_Topic"]
+            AC_status = json_format["topic"]["AC_Topic"]
             print "SubscribeData: TOPICS ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
         try:
-            file = open("ConvertSubToWebService/real_time_data.json", "r")
+            file = open("real_time_data.json", "r")
             json_string = file.read()
             file.close()
         except:
             raise KeyError("*****SubscribeData: ERROR IN READING JSON FILE RELATED TO REAL TIME DATA *****")
         input = json.loads(message_body)
         json_format_output = json.loads(json_string)
+
+        the_romm_id = input["roomId"]
+        subject = input["subject"]
+        print(the_romm_id)
+
+        if (the_romm_id in json_format_output ):
+            if (subject == "temp_hum_data"):
+                json_format_output[the_romm_id]["temperature"]["value"] = input["temperature"]
+                json_format_output[the_romm_id]["humidity"]["value"] = input["humidity"]
+
+            elif (subject == counter_topic):
+                json_format_output[the_romm_id]["bluetoothCounter"]["value"] = input["bluetooth counter"]
+
+            elif (subject == AC_status):
+                json_format_output[the_romm_id]["AcStatus"]["value"] = input["Status"]
+
+        else:
+            #temp={}
+            if (subject == "temp_hum_data"):
+                #temp["name"] = name
+                #temp["children"] = []
+                json_format_output[the_romm_id]["temperature"]["value"] = input["temperature"]
+                json_format_output[the_romm_id]["humidity"]["value"] = input["humidity"]
+
+            elif (subject == counter_topic):
+                json_format_output[the_romm_id]["bluetoothCounter"]["value"] = input["bluetooth counter"]
+
+            elif (subject == AC_status):
+                json_format_output[the_romm_id]["AcStatus"]["value"] = input["Status"]
+
+        """
+        print(json_format_output[self.roomId]["temperature"]["value"])
+
         if(msg.topic == DHT_topic):
-            json_format_output[self.room_id]["temperature"]["value"] = input["temperature"]
-            json_format_output[self.room_id]["humidity"]["value"] = input["humidity"]
+            json_format_output[str(self.roomId)]["temperature"]["value"] = input["temperature"]
+            json_format_output[str(self.roomId)]["humidity"]["value"] = input["humidity"]
 
         elif(msg.topic == counter_topic):
-            json_format_output[self.room_id]["bluetoothCounter"]["value"] = input["bluetooth counter"]
+            json_format_output[self.roomId]["bluetoothCounter"]["value"] = input["bluetooth counter"]
 
         elif (msg.topic == AC_status):
-            json_format_output[self.room_id]["AcStatus"]["value"] = input["Status"]
+            json_format_output[self.roomId]["AcStatus"]["value"] = input["Status"]
+        """
         try:
-            with open("ConvertSubToWebService/real_time_data.json", 'w') as json_data_file:
+            with open("real_time_data.json", 'w') as json_data_file:
                 json.dump(json_format_output, json_data_file)
                 json_data_file.close()
         except:
@@ -101,19 +134,19 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeData: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    ip = config_json["reSourceCatalog"]["url"]
+    resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     roomId = config_json["reSourceCatalog"]["roomId"]
-    url= ip + roomId
+    url= resourceCatalogIP + roomId
     client = paho.Client()
-    sens = SubscribeData(url,roomId, client)
+    sens = SubscribeData(url, client)
 
     while True:
         try:
             sens.load_topics()
-            respond = requests.get(url)
+            respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
-            Broker_IP = json_format["broker"]["Broker_IP"]
-            Broker_Port = json_format["broker"]["Broker_port"]
+            Broker_IP = json_format["Broker_IP"]
+            Broker_Port = json_format["Broker_port"]
             print "SubscribeData:: BROKER VARIABLES ARE READY"
         except:
             print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"

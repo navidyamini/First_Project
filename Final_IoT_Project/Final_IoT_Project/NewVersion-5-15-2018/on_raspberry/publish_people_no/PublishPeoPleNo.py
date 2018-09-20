@@ -23,7 +23,7 @@ class PublishPeopleNo(object):
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
-            self.Counter_Topic = json_format["broker"]["Counter_Topic"]
+            self.Counter_Topic = json_format["topic"]["Counter_Topic"]
             print "PublishPeopleNo:: BROKER VARIABLES ARE READY"
         except:
             print "PublishPeopleNo: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -76,9 +76,9 @@ if __name__ == '__main__':
         raise KeyError("***** PublishPeopleNo: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    ip = config_json["reSourceCatalog"]["url"]
+    resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     roomId = config_json["reSourceCatalog"]["roomId"]
-    url = ip+roomId
+    url = resourceCatalogIP + roomId
 
     try:
         bCounter = BluetoothCounter()
@@ -91,17 +91,17 @@ if __name__ == '__main__':
     while True:
         sens.load_topics()
         try:
-            respond = requests.get(url)
+            respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
-            ip = json_format["broker"]["Broker_IP"]
-            port = json_format["broker"]["Broker_port"]
+            broker_ip = json_format["Broker_IP"]
+            port = json_format["Broker_port"]
         except:
             print "PublishPeopleNo: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER IP"
 
         try:
             client.on_connect = PublishPeopleNo.on_connect
             client.on_publish = PublishPeopleNo.on_publish
-            client.connect(ip, int(port))
+            client.connect(broker_ip, int(port))
             client.loop_start()
         except:
             print "PublishPeopleNo: ERROR IN CONNECTING TO THE BROKER"

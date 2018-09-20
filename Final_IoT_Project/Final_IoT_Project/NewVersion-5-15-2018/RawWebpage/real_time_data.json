@@ -1,16 +1,1 @@
-{
-	"room_1": {
-		"bluetoothCounter": {
-			"value": "2"
-		},
-		"temperature": {
-			"value": 25.0
-		},
-		"AcStatus": {
-			"value": "It is OFF"
-		},
-		"humidity": {
-			"value": 35.0
-		}
-	}
-}
+{"AcStatus": {"value": "Turn_on"}, "temperature": {"value": 22.0}, "bluetoothCounter": {"value": "1"}, "humidity": {"value": 36.0}}

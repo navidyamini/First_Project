@@ -10,14 +10,16 @@ class ResourceCatalog(object):
             file = open("../RawWebpage/initial_data.json", "r")
             json_string = file.read()
             file.close()
-            room_id = uri[0]
+            item = uri[0]
         except:
             raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
         json_dic = json.loads(json_string)
-        if(room_id in json_dic):
-            result = json_dic[uri[0]]
+        if(item in json_dic):
+            result = json_dic[item]
             requested_data = json.dumps(result)
             return requested_data
+        elif(item=="all"):
+            return json_string
         else:
             return"NOTHING FOUNDED, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
     '''
