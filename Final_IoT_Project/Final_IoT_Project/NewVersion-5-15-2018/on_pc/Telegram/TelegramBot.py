@@ -18,80 +18,33 @@ class telegramBot(object):
         json_format = json.loads(respond.text)
         self.restURL = json_format["Host_IP"]
         self.port = json_format["port"]
-        print "TelegramBot:: RESTFUL ARE READY"
+        print "TelegramBot: RESTFUL ARE READY"
 
     def handler(self, msg):
 
         chat_id = msg['chat']['id']
         command = msg['text']
         self.setWebServiceVariables()
-
         bot.sendMessage(chat_id, self.sendResult(command))
-
-        if command == '/acstatus':
-            bot.sendMessage(chat_id, self.acstatus())
-
-        elif command == '/visitors':
-            bot.sendMessage(chat_id, self.getpeopleno())
-
-        elif command == '/temp':
-            bot.sendMessage(chat_id, self.get_temp())
-
-        elif command == '/hum':
-            bot.sendMessage(chat_id, self.get_hum())
-        else:
-            bot.sendMessage(chat_id, "Invalid Command")
-
 
     def sendResult(self,command):
         print'trying to send back the result'
         try:
             result = requests.get("http://"+self.restURL+ ":" + self.port+ "/"+command+"/all").content
             time.sleep(5)
-        except:
-                print "ERROR IN GETTING RESULTS"
-
-        return str(result)
-
-
-    def acstatus(self):
-        print'trying to send back the A/C status'
-        try:
-            result = requests.get("http://"+self.restURL+ ":" + self.port+ "/ac").content
-            time.sleep(5)
-        except:
-                print "ERROR IN READING THE A/S STATUS FROM THINGSPEAK"
-        return 'A/C status : '+ str(result)
-
-
-    def get_temp(self):
-        print'trying to send back temperature'
-        try:
-            result = requests.get("http://"+self.restURL + ":" + self.port + "/temp").content
-            time.sleep(5)
+            jsonformat = json.loads(result)
+            temp=jsonformat['temperature']['value']
+            hum=jsonformat['humidity']['value']
+            staus=jsonformat['AcStatus']['value']
+            count=jsonformat['bluetoothCounter']['value']
+            outputString = 'Temperature'+ str(temp) + "\n" + 'Humidity' + str(hum) +"\n"+"AcStatus"+staus+"\n"+"Number of people"+str(count)
 
         except:
-            print "ERROR IN READING TEMPERATURE FROM THINGSPEAK"
-        return 'Temperature is: {0:0.1f} C'.format(float(result))
+                return "Invalid command.\nPlease enter the correct room id\nex: Room_1"
 
-    def get_hum(self):
-        print'trying to send back humidity'
+        return str(outputString)
 
-        try:
-            result = requests.get("http://"+self.restURL + ":" + self.port + "/hum").content
-            time.sleep(5)
-        except:
-                print "ERROR IN READING HUMIDITY FROM THINGSPEAK"
-        return 'Humidity is: {0:0.1f} %'.format(float(result))
 
-    def getpeopleno(self):
-        print'trying to send back number of people'
-        try:
-            result = requests.get("http://"+self.restURL + ":" + self.port + "/noPeople").content
-            time.sleep(5)
-        except:
-                print "ERROR IN READING NUMBER OF PEOPLE FROM THINGSPEAK"
-        return 'number of people in the museum : '+ result
 
 if __name__ == '__main__':
 

@@ -33,7 +33,7 @@ class DataWithRest(object):
                 return str(results[item]['bluetoothCounter']['value'])
 
             elif(uri[1] == 'all'):
-                return str(results[item])
+                return str(json.dumps(results[item]))
         else:
             return "Nothing found, check the input again"
 
