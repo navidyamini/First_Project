@@ -78,12 +78,12 @@ class SubscribeData(object):
         the_romm_id = input["roomId"]
         subject = input["subject"]
         print(the_romm_id)
-
+        the_romm_id = "room_1222222222"
         if (the_romm_id in json_format_output ):
             if (subject == "temp_hum_data"):
                 json_format_output[the_romm_id]["temperature"]["value"] = input["temperature"]
                 json_format_output[the_romm_id]["humidity"]["value"] = input["humidity"]
-
+            #TODO:
             elif (subject == counter_topic):
                 json_format_output[the_romm_id]["bluetoothCounter"]["value"] = input["bluetooth counter"]
 
@@ -91,13 +91,15 @@ class SubscribeData(object):
                 json_format_output[the_romm_id]["AcStatus"]["value"] = input["Status"]
 
         else:
-            #temp={}
             if (subject == "temp_hum_data"):
-                #temp["name"] = name
-                #temp["children"] = []
-                json_format_output[the_romm_id]["temperature"]["value"] = input["temperature"]
-                json_format_output[the_romm_id]["humidity"]["value"] = input["humidity"]
 
+                temporary_json={}
+                temporary_json["temperature"]={"value":input["temperature"]}
+                temporary_json["humidity"]={"value":input["humidity"]}
+                temporary_json["bluetoothCounter"]={"value":0}
+                temporary_json["AcStatus"]={"value":"It is OFF"}
+                json_format_output[the_romm_id] = temporary_json
+            # TODO:
             elif (subject == counter_topic):
                 json_format_output[the_romm_id]["bluetoothCounter"]["value"] = input["bluetooth counter"]
 

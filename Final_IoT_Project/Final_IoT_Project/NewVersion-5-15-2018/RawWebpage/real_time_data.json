@@ -1,1 +1,30 @@
-{"AcStatus": {"value": "Turn_on"}, "temperature": {"value": 22.0}, "bluetoothCounter": {"value": "1"}, "humidity": {"value": 36.0}}
+{
+	"room_2": {
+		"humidity": {
+			"value": 35.0
+		},
+		"temperature": {
+			"value": 25.0
+		},
+		"AcStatus": {
+			"value": "It is OFF"
+		},
+		"bluetoothCounter": {
+			"value": "2"
+		}
+	},
+	"room_1": {
+		"humidity": {
+			"value": 33.0
+		},
+		"temperature": {
+			"value": 27.0
+		},
+		"AcStatus": {
+			"value": "It is OFF"
+		},
+		"bluetoothCounter": {
+			"value": "2"
+		}
+	}
+}

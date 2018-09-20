@@ -51,9 +51,9 @@ class PublishData(object):
         try:
             json_format = self.sensor_t_h.reading_sensor()
             temp_hum_data = json.loads(json_format)
-            temp=temp_hum_data["temperature"]
-            hum=temp_hum_data["humidity"]
-            time=temp_hum_data["time"]
+            temp = temp_hum_data["temperature"]
+            hum = temp_hum_data["humidity"]
+            time = temp_hum_data["time"]
             new_json_format=json.dumps({"subject":"temp_hum_data","roomId":self.roomId,"temperature": temp, "humidity": hum,"time":time})
             msg_info = client.publish(self.DHT_Topic, str(new_json_format), qos=1)
             if msg_info.is_published() == True:
