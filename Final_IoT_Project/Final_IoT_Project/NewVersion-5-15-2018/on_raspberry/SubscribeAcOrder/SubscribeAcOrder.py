@@ -47,6 +47,7 @@ class SubscribeAcOrder(object):
         print ("at time: " + str(current_time))
         message_body = str(msg.payload.decode("utf-8"))
         cls.payload = json.loads(message_body)
+        print(cls.payload["Order"])
         cls.orders = cls.payload["Order"]
 
     def order(self):

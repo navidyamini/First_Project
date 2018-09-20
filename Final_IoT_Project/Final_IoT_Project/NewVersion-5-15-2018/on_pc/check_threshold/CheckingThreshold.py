@@ -62,13 +62,13 @@ class CheckingThreshold(object):
         if (temperature > self.max_temperature) or (temperature < self.min_temperature) or (humidity > self.max_humidity) or (humidity < self.min_humidity):
             self.order = "Turn_on"
             try:
-                self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id,'Order': str(self.order)})
+                self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id,"Order": str(self.order)})
             except:
                 print "CheckingThreshold: ERROR IN SENDING TURN ON ORDER"
         else:
             self.order = "Turn_off"
             try:
-                self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id, 'Order': str(self.order)})
+                self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id, "Order": str(self.order)})
             except:
                 print "CheckingThreshold: ERROR IN SENDING TURN OFF ORDER"
         return

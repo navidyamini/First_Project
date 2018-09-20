@@ -7,11 +7,12 @@
 			"Broker_IP": "192.168.1.254",
 			"Broker_port": "1883"
 		},
-	"room_1": {
-		"telegram": {
+  "telegram": {
 			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
 			"chatID": "94432957"
 		},
+	"room_1": {
+
 		"thresholds": {
 			"min_hum": 1.0,
 			"min_temp": 1.0,
@@ -30,7 +31,8 @@
 		"topic": {
 			"AC_Topic": "Gallery1/Room1/Order",
 			"DHT_Topic": "Gallery1/Room1/TempHum1",
-			"Counter_Topic": "Gallery1/Room1/BlueTooth1"
+			"Counter_Topic": "Gallery1/Room1/BlueTooth1",
+			"Ac_Status": "Gallery1/Room1/Status"
 		},
 		"id": 3
 	},
@@ -57,7 +59,8 @@
 		"topic": {
 			"AC_Topic": "Gallery1/Room2/Order",
 			"DHT_Topic": "Gallery1/Room2/TempHum1",
-			"Counter_Topic": "Gallery1/Room2/BlueTooth1"
+			"Counter_Topic": "Gallery1/Room2/BlueTooth1",
+			"Ac_Status": "Gallery1/Room2/Status"
 		},
 		"id": 3
 	}

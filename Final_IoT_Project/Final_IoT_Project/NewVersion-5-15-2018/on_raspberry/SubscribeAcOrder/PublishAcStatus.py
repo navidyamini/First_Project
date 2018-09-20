@@ -68,7 +68,7 @@ class PublishAcStatus(object):
         try:
             respond = requests.get(self.url + "/" + self.roomId)
             json_format = json.loads(respond.text)
-            self.AC_Topic = json_format["topic"]["AC_Topic"]
+            self.AC_Topic = json_format["topic"]["Ac_Status"]
             print "PublishAcStatus: BROKER VARIABLES ARE READY"
         except:
             print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
