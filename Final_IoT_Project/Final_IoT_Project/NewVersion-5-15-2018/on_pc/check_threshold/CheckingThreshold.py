@@ -6,8 +6,9 @@ import paho.mqtt.client as mqttc
 
 class CheckingThreshold(object):
 
-    def __init__(self,url,client):
+    def __init__(self,url,roomId,client):
         self.url_resource = url
+        self.room_id = roomId
         self.flag = 0
         self.temperature = 0.00
         self.humidity = 0.00
@@ -20,16 +21,23 @@ class CheckingThreshold(object):
     def load_file(self):
         try:
             #print(self.url_resource)
-            respond = requests.get(self.url_resource)
+            respond = requests.get(self.url_resource+"/dataToRest")
             #print(respond)
             json_format = json.loads(respond.text)
 
-            self.restURL = json_format["dataToRest"]["Host_IP"]
+            self.restURL = json_format["Host_IP"]
             #print(self.restURL)
-            self.port = json_format["dataToRest"]["port"]
+            self.port = json_format["port"]
             #print(self.port)
-            self.AC_Topic = json_format["broker"]["AC_Topic"]
+        except :
+            print "CheckingThreshold: ERROR IN CONNECTING TO THE SERVER FOR GETTING WEB SERVICE IP"
 
+        try:
+            # print(self.url_resource)
+            respond = requests.get(self.url_resource+"/"+self.room_id)
+            # print(respond)
+            json_format = json.loads(respond.text)
+            self.AC_Topic = json_format["topic"]["AC_Topic"]
             self.max_temperature = json_format["thresholds"]["max_temp"]
             self.max_humidity = json_format["thresholds"]["max_hum"]
             self.min_temperature = json_format["thresholds"]["min_temp"]
@@ -41,8 +49,8 @@ class CheckingThreshold(object):
 
     def getting_temp_hum(self):
         try:
-            self.temperature = requests.get("http://" + self.restURL + ":" + self.port + "/temp").content
-            self.humidity = requests.get("http://" + self.restURL + ":" + self.port + "/hum").content
+            self.temperature = requests.get("http://" + self.restURL + ":" + self.port + "/" + self.room_id + "/temp").content
+            self.humidity = requests.get("http://" + self.restURL + ":" + self.port + "/" + self.room_id + "/hum").content
             print "real time data",self.temperature,self.humidity
         except:
             print "CheckingThreshold: ERROR IN GETTING DATA FROM WEB SERVICE"
@@ -54,13 +62,13 @@ class CheckingThreshold(object):
         if (temperature > self.max_temperature) or (temperature < self.min_temperature) or (humidity > self.max_humidity) or (humidity < self.min_humidity):
             self.order = "Turn_on"
             try:
-                self.order_msg = json.dumps({'Order': str(self.order)})
+                self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id,'Order': str(self.order)})
             except:
                 print "CheckingThreshold: ERROR IN SENDING TURN ON ORDER"
         else:
             self.order = "Turn_off"
             try:
-                self.order_msg = json.dumps({'Order': str(self.order)})
+                self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id, 'Order': str(self.order)})
             except:
                 print "CheckingThreshold: ERROR IN SENDING TURN OFF ORDER"
         return
@@ -78,7 +86,7 @@ class CheckingThreshold(object):
     def on_publish(cls, client, userdata, mid):
         # get the current time
         get_time = datetime.datetime.now()
-        current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
+        current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("mid: " + str(mid))
         print("Published Message")
         print ("at time: " + str(current_time))
@@ -108,10 +116,10 @@ if __name__ == '__main__':
 
     config_json = json.loads(json_string)
 
-    url = config_json["reSourceCatalog"]["url"]
-
+    resourceCatalogIp = config_json["reSourceCatalog"]["url"]
+    roomId = config_json["reSourceCatalog"]["room_Id"]
     client = mqttc.Client()
-    sens = CheckingThreshold(url, client)
+    sens = CheckingThreshold(resourceCatalogIp, roomId ,client)
 
     while True:
         sens.load_file()
@@ -119,10 +127,10 @@ if __name__ == '__main__':
         sens.check_thresholds()
 
         try:
-            respond = requests.get(url)
+            respond = requests.get(resourceCatalogIp+"/broker")
             json_format = json.loads(respond.text)
-            ip = json_format["broker"]["Broker_IP"]
-            port = json_format["broker"]["Broker_port"]
+            ip = json_format["Broker_IP"]
+            port = json_format["Broker_port"]
         except:
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER IP"
 

@@ -14,9 +14,10 @@ class SubscribeAcOrder(object):
 
     payload = "null"
     orders = 'null'
-    def __init__(self,url,roomId,client):
+    def __init__(self, url, roomId, client):
         self.flag = 0
         self.url =url
+        self.room_Id = roomId
         self.controling_LED = LEDbyRelay(url,roomId)
         self.client = client
         client.on_subscribe = self.on_subscribe
@@ -24,9 +25,9 @@ class SubscribeAcOrder(object):
 
     def load_topics(self):
         try:
-            self.respond = requests.get(self.url)
+            self.respond = requests.get(self.url + self.room_Id)
             json_format = json.loads(self.respond.text)
-            self.AC_status = json_format["broker"]["AC_Topic"]
+            self.AC_status = json_format["topic"]["AC_Topic"]
             print "SubscribeAcOrder: Ac TOPIC ARE READY"
         except:
             print "SubscribeAcOrder: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -79,19 +80,18 @@ if __name__ == '__main__':
         raise KeyError("***** SubscribeAcOrder: ERROR IN READING CONFIG FILE *****")
 
     config_json = json.loads(json_string)
-    ip = config_json["reSourceCatalog"]["url"]
+    resourceCatalogip = config_json["reSourceCatalog"]["url"]
     roomId = config_json["reSourceCatalog"]["roomId"]
-    url = ip+roomId
     client = paho.Client()
-    sens = SubscribeAcOrder(url,roomId, client)
+    sens = SubscribeAcOrder(resourceCatalogip,roomId, client)
 
     while True:
         try:
             sens.load_topics()
-            respond = requests.get(url)
+            respond = requests.get(resourceCatalogip+"/broker")
             json_format = json.loads(respond.text)
-            Broker_IP = json_format["broker"]["Broker_IP"]
-            Broker_Port = json_format["broker"]["Broker_port"]
+            Broker_IP = json_format["Broker_IP"]
+            Broker_Port = json_format["Broker_port"]
             print "SubscribeAcOrder:: BROKER VARIABLES ARE READY"
         except:
             print "SubscribeAcOrder: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"

@@ -40,7 +40,7 @@ class PublishAcStatus(object):
     def publish_data(self,order):
         #This function will publishe the order to AC
         try:
-            json_format = json.dumps({'roomId':self.roomId,'Status' : str(order)})
+            json_format = json.dumps({'subject':'Ac_Status','roomId':self.roomId,'Status' : str(order)})
             self.client.publish(self.AC_Topic, str(json_format), qos=1)
             return ("CIAONE", json_format)
         except:
@@ -57,12 +57,19 @@ class PublishAcStatus(object):
 
     def load(self):
         try:
-            respond = requests.get(self.url)
+            respond = requests.get(self.url+"/broker")
             json_format = json.loads(respond.text)
-            Broker_IP = json_format["broker"]["Broker_IP"]
-            Broker_port = json_format["broker"]["Broker_port"]
-            self.AC_Topic = json_format["broker"]["Ac_Status"]
-            print "PublishAcStatus:: BROKER VARIABLES ARE READY"
+            Broker_IP = json_format["Broker_IP"]
+            Broker_port = json_format["Broker_port"]
+            print "PublishAcStatus: BROKER VARIABLES ARE READY"
+        except:
+            print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
+
+        try:
+            respond = requests.get(self.url + "/" + self.roomId)
+            json_format = json.loads(respond.text)
+            self.AC_Topic = json_format["topic"]["AC_Topic"]
+            print "PublishAcStatus: BROKER VARIABLES ARE READY"
         except:
             print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
         try:
