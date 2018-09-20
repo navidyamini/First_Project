@@ -10,23 +10,23 @@
     <title>Admon Museums | </title>
 
     <!-- Bootstrap -->
-    <link href="gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="gentelella-master/vendors/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/vendors/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="gentelella-master/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/static/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="gentelella-master/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/static/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <!-- bootstrap-progressbar -->
-    <link href="gentelella-master/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="/static/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="gentelella-master/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="/static/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="/static/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="gentelella-master/build/css/custom.min.css" rel="stylesheet">
+    <link href="/static/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -43,7 +43,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="gentelella-master/production/images/Carla.jpeg" alt="..." class="img-circle profile_img">
+                <img src="/static/production/images/Carla.jpeg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -61,7 +61,7 @@
                 <ul class="nav side-menu" id="rooms">
                   <li id="room1"><a><i class="fa fa-home"></i> Room 1 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu" id="options">
-                      <li><a href="room1">Thresholds</a></li>
+                      <li><a href="thresholds1">Thresholds</a></li>
                       <li><a href="dash1">Dashboard</a></li>
                     </ul>
                   </li>
@@ -70,7 +70,11 @@
 
               </div>
               <div class="menu_section">
-                <button onclick="myRoom()">Add new room </button>
+
+                <form action="/newRoom" method="GET">
+                    <input type="submit" name="newRoom" value="Add new room" />
+                </form>
+
               </div>
 
             </div>
@@ -78,7 +82,7 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="gentelella-master/production/login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="/static/production/login.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -97,7 +101,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="gentelella-master/production/images/Carla.jpeg" alt="">Carla Corona
+                    <img src="/static/production/images/Carla.jpeg" alt="">Carla Corona
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -109,7 +113,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="gentelella-master/production/login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="/static/production/login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -119,64 +123,7 @@
                     <i class="fa fa-envelope-o"></i>
                     <span class="badge bg-green">6</span>
                   </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="gentelella-master/production/images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+
                 </li>
               </ul>
             </nav>
@@ -296,7 +243,7 @@
                   </div>
                   <div class="x_content">
                     <div align="center">
-                      <form style="font-size:15px" action="/replytresh" method="POST">
+                      <form style="font-size:15px" action="/replytresh1" method="POST">
                             Maximum temperature:   <input type="number" value="'''+ str(json_inidata["thresholds"]["max_temp"])+'''" name="maxt" >
                             <br/>
                             Minimum temperature:   <input type="text" value="'''+ str(json_inidata["thresholds"]["min_temp"])+'''" name="mint">
@@ -333,7 +280,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="thingspeak" style="font-size:15px" action="/replything" method="POST">
+                      <form class="big" id="thingspeak" style="font-size:15px" action="/replything1" method="POST">
                             <label class="thingspeak">Thingspeak_HOST:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["thingspeak"]["THINGSPEAK_HOST"])+'''" name="tkHost" >
                             <br/>
                             <label class="thingspeak">mqtt HOST:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["thingspeak"]["mqttHost"])+'''" name="mqttHost">
@@ -373,7 +320,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="broker" style="font-size:15px" action="/replybroker" method="POST">
+                      <form class="big" id="broker" style="font-size:15px" action="/replybroker1" method="POST">
                             <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_IP"])+'''" name="brokerIP" >
                             <br/>
                             <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_port"])+'''" name="brokerPort">
@@ -412,7 +359,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="telegram" style="font-size:15px" action="/replytele" method="POST">
+                      <form class="big" id="telegram" style="font-size:15px" action="/replytele1" method="POST">
                             <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["Port"])+'''" name="telPort" >
                             <br/>
                             <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["chatID"])+'''" name="telchatid" >
@@ -441,7 +388,7 @@
 
 
                     <div align="left">
-                      <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest" method="POST">
+                      <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest1" method="POST">
                             <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["Host_IP"])+'''" name="hostIP" >
                             <br/>
                             <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["port"])+'''" name="dtrport" >
@@ -472,69 +419,46 @@
     </div>
 
     <!-- jQuery -->
-    <script src="gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/static/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="gentelella-master/vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/static/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="gentelella-master/vendors/nprogress/nprogress.js"></script>
+    <script src="/static/vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="gentelella-master/vendors/Chart.js/dist/Chart.min.js"></script>
+    <script src="/static/vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- gauge.js -->
-    <script src="gentelella-master/vendors/gauge.js/dist/gauge.min.js"></script>
+    <script src="/static/vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="gentelella-master/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="gentelella-master/vendors/iCheck/icheck.min.js"></script>
+    <script src="/static/vendors/iCheck/icheck.min.js"></script>
     <!-- Skycons -->
-    <script src="gentelella-master/vendors/skycons/skycons.js"></script>
+    <script src="/static/vendors/skycons/skycons.js"></script>
     <!-- Flot -->
-    <script src="gentelella-master/vendors/Flot/jquery.flot.js"></script>
-    <script src="gentelella-master/vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="gentelella-master/vendors/Flot/jquery.flot.time.js"></script>
-    <script src="gentelella-master/vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="gentelella-master/vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="gentelella-master/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="gentelella-master/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="gentelella-master/vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="/static/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="/static/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="/static/vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="gentelella-master/vendors/DateJS/build/date.js"></script>
+    <script src="/static/vendors/DateJS/build/date.js"></script>
     <!-- JQVMap -->
-    <script src="gentelella-master/vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="gentelella-master/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="gentelella-master/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="/static/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="/static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="/static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="gentelella-master/vendors/moment/min/moment.min.js"></script>
-    <script src="gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="/static/vendors/moment/min/moment.min.js"></script>
+    <script src="/static/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="gentelella-master/build/js/custom.min.js"></script>
+    <script src="/static/build/js/custom.min.js"></script>
 
-    <script>
-      $(window).load(function () {
-          $('.hover_bkgr_fricc').show();
-
-          $('.hover_bkgr_fricc').click(function(){
-              $('.hover_bkgr_fricc').hide();
-          });
-          $('.popupCloseButton').click(function(){
-              $('.hover_bkgr_fricc').hide();
-          });
-      });
-    </script>
-
-    <script>
-      function myRoom() {
-        var ul = document.getElementById("rooms");
-        var li = document.createElement("li");
-        var children = ul.children.length + 1;
-        li.setAttribute("id", "element"+children);
-        li.appendChild(document.createTextNode("Room "+children));
-        ul.appendChild(li);
-      }
-    </script>
 
   </body>
 </html>

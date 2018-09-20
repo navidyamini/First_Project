@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -71,13 +71,10 @@
                       <li><a href="dash2">Dashboard</a></li>
                     </ul>
                   </li>
-
                 </ul>
-
               </div>
               <div class="menu_section">
-
-                <form action="" method="GET">
+                <form action="/newRoom" method="GET">
                     <input type="submit" name="newRoom" value="Add new room" />
                 </form>
 
@@ -129,7 +126,6 @@
                     <i class="fa fa-envelope-o"></i>
                     <span class="badge bg-green">6</span>
                   </a>
-
                 </li>
               </ul>
             </nav>
@@ -149,107 +145,112 @@
             label.smallthingspeak{clear: left;width: 150px; font-weight:normal;}
         </style>
 
-        <style>
-            /*form {width:100%; height:450px; margin:auto; position:relative;}*/
-            input.normalheight{height: 28px; }
-            input.small { width:24.9%;}
-            input.thingspeak{float: left; width:71%;font-weight:normal;}
-            form.big { line-height: 2;}
-            label.thingspeak{ float: left;clear: left; width: 150px; text-align: left;font-weight:normal;}
-            label.smallthingspeak{clear: left;width: 150px; font-weight:normal;}
-        </style>
-
-        <style>
-
-          .hover_bkgr_fricc{
-              background:rgba(0,0,0,.4);
-              cursor:pointer;
-              display:none;
-              height:100%;
-              position:fixed;
-              text-align:center;
-              top:0;
-              width:100%;
-              z-index:10000;
-          }
-          .hover_bkgr_fricc .helper{
-              display:inline-block;
-              height:100%;
-              vertical-align:middle;
-          }
-          .hover_bkgr_fricc > div {
-              background-color: #fff;
-              box-shadow: 10px 10px 60px #555;
-              display: inline-block;
-              height: auto;
-              max-width: 300px;
-              min-height: 100px;
-              vertical-align: middle;
-              width: 100%;
-              position: relative;
-              border-radius: 8px;
-              padding: 15px 5%;
-          }
-          .popupCloseButton {
-              background-color: #fff;
-              border: 3px solid #999;
-              border-radius: 30px;
-              cursor: pointer;
-              display: inline-block;
-              font-family: arial;
-              font-weight: bold;
-              position: absolute;
-              top: -10px;
-              right: -10px;
-              font-size: 16px;
-              line-height: 17px;
-              width: 25px;
-              height: 25px;
-
-          }
-          .popupCloseButton:hover {
-              background-color: #ccc;
-          }
-
-        </style>
-
-
-
-        <div align="center" class="hover_bkgr_fricc">
-            <span class="helper"></span>
-            <div>
-                <div class="popupCloseButton">X</div>
-                <p>ERROR<br />The values could not be updated</p>
-            </div>
-        </div>
-
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row tile_count">
-            <h2 style="font-size:20px">Smart Museum Management System</h2>
+            <h2>Thingspeak current values in the room: </h2>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-thermometer-full"></i> Temperature</span>
+              <div class="count" id="temp"></div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-circle"></i> Humidity</span>
+              <div class="count" id="hum"></div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-child"></i> Number of people</span>
+              <div class="count" id="num-people"></div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-plug"></i></div>
+                <div class="count" id="ac"></div>
+                <h3>A/C status</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="row tile_count">
+            <h2>Mqtt current values in the room: </h2>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-thermometer-full"></i> Temperature</span>
+              <div class="count" id="mqtt_temp"></div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-circle"></i> Humidity</span>
+              <div class="count" id="mqtt_hum"></div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-child"></i> Number of people</span>
+              <div class="count" id="mqtt_num-people"></div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-plug"></i></div>
+                <div class="count" id="mqtt_ac"></div>
+                <h3>A/C status</h3>
+              </div>
+            </div>
           </div>
           <!-- /top tiles -->
 
 
+
           <div class="row">
 
+
             <div class="column">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel tile fixed_height_350">
+              <div class="col-md-6 col-sm-4 col-xs-12">
+                <div class="x_panel tile fixed_height_305">
                   <div class="x_title">
-                    <h2>Instructions</h2>
+                    <h2>Temperature</h2></b>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <h2 style="font-size:16px">This platform is done to manage the temperatures in the smart system implemented on the museum's rooms. </h2>
-                    <h2 style="font-size:16px">Each room has a dashboard in which you can observed the different paramenters settled in each room, and a configuration settings sections where you can modify the settings and thresholds of the room.</h2>
+                    <div align="center">
+                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/240810/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div class="column">
+              <div class="col-md-6 col-sm-4 col-xs-12">
+                <div class="x_panel tile fixed_height_305">
+                  <div class="x_title">
+                    <h2>Humidity</h2></b>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div align="center">
+                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/240810/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=20&type=line&xaxis=Time"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
+          <div class="row">
+            <div class="column">
+              <div class="col-md-6 col-sm-4 col-xs-12" align="center">
+                <div class="x_panel tile fixed_height_305">
+                  <div class="x_title">
+                    <h2>Number of people in the room</h2></b>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div align="center">
+                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/240810/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15%22"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- /page content -->
@@ -306,20 +307,130 @@
     <!-- Custom Theme Scripts -->
     <script src="/static/build/js/custom.min.js"></script>
 
-    <script>
-      $(window).load(function () {
-          $('.hover_bkgr_fricc').show();
+    <!-- ThingspeakData -->
 
-          $('.hover_bkgr_fricc').click(function(){
-              $('.hover_bkgr_fricc').hide();
-          });
-          $('.popupCloseButton').click(function(){
-              $('.hover_bkgr_fricc').hide();
+    <script>
+      var tempContainer = document.getElementById("temp");
+      var humContainer = document.getElementById("hum");
+      var npeopleContainer = document.getElementById("num-people");
+      var acContainer = document.getElementById("ac");
+      var temp = "";
+      var hum = "";
+      var npeople = "";
+      var ac = "";
+
+      var prevtemp = "";
+      var prevhum = "";
+      var prevnpeople = "";
+      var prevac = "";
+
+      $(document).ready(function getThingspeak() {
+
+          prevtemp = temp;
+          prevhum = hum;
+          prevnpeople = npeople;
+          prevac = ac;
+
+          $.getJSON('https://api.thingspeak.com/channels/240810/feeds.json?results=1', function thingGet(ourData) {
+
+              var data = ourData["feeds"];
+
+              temp = data[0].field1;
+              hum = data[0].field2;
+              npeople = data[0].field3;
+              ac = data[0].field4;
+
+
+              if (temp == null){
+                  temp = prevtemp;
+              }
+
+              if(hum == null){
+                  hum = prevhum;
+              }
+              if(npeople == null){
+                  npeople = prevnpeople;
+              }
+              if(ac == null){
+                  ac = prevac;
+              }
+
+              console.log(temp,hum,npeople,ac);
+
+              tempContainer.innerHTML = temp;
+              humContainer.innerHTML = hum;
+              npeopleContainer.innerHTML = npeople;
+              if (ac == 1) {
+                acContainer.innerHTML = "ON";
+              }else if(ac == 0){acContainer.innerHTML = "OFF";}
+
+              setTimeout(getThingspeak,10000);
+
           });
       });
     </script>
 
+    <!-- MqttJsonData -->
 
+    <script>
+      var mqtttempContainer = document.getElementById("mqtt_temp");
+      var mqtthumContainer = document.getElementById("mqtt_hum");
+      var mqttnpeopleContainer = document.getElementById("mqtt_num-people");
+      var mqttacContainer = document.getElementById("mqtt_ac");
+      var mqtttemp = "";
+      var mqtthum = "";
+      var mqttnpeople = "";
+      var mqttac = "";
+
+      var mqttprevtemp = "";
+      var mqttprevhum = "";
+      var mqttprevnpeople = "";
+      var mqttprevac = "";
+      var cont = 1;
+
+      $(document).ready(function getMqtt() {
+
+          mqttprevtemp = mqtttemp;
+          mqttprevhum = mqtthum;
+          mqttprevnpeople = mqttnpeople;
+          mqttprevac = mqttac;
+
+          $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
+
+              mqtttemp = result["temperature"].value;
+              mqtthum = result["humidity"].value;
+              mqttnpeople = result["bluetoothCounter"].value;
+              mqttac = result["AcStatus"].value;
+
+
+              if (mqtttemp == null){
+                  mqtttemp = mqttprevtemp;
+              }
+
+              if(mqtthum == null){
+                  mqtthum = mqttprevhum;
+              }
+              if(mqttnpeople == null){
+                  mqttnpeople = mqttprevnpeople;
+              }
+              if(mqttac == null){
+                  mqttac = mqttprevac;
+              }
+
+              console.log(mqtttemp,mqtthum,mqttnpeople,mqttac);
+
+              mqtttempContainer.innerHTML = mqtttemp;
+              mqtthumContainer.innerHTML = mqtthum;
+              mqttnpeopleContainer.innerHTML = mqttnpeople;
+              if (mqttac == "It is ON") {
+                mqttacContainer.innerHTML = "ON";
+              }else if(mqttac == "It is OFF"){mqttacContainer.innerHTML = "OFF";}
+
+              setTimeout(getMqtt,10000);
+
+          });
+      });
+    </script>
 
   </body>
 </html>
