@@ -12,7 +12,7 @@ class telegramBot(object):
 
     def setThingSpeakVariables(self):
         try:
-            respond = requests.get(self.url)
+            respond = requests.get(self.url+"/")
         except:
             print "TelegramBot: ERROR IN CONNECTING TO THE SERVER FOR GETTING RESTFUL WEB SERVICE URL"
         json_format = json.loads(respond.text)
