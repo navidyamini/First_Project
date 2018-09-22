@@ -952,18 +952,18 @@ class MuseumsWP (object):
 
 
                                                 <div align="left">
-                                                  <form class="big" id="broker" style="font-size:15px" action="/replybroker1" method="POST">
-                                                        <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Broker_IP"])+'''" name="brokerIP" >
+                                                  <form class="big" id="broker" style="font-size:15px" action="/replybroker" method="POST">
+                                                        <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_IP"])+'''" name="brokerIP" >
                                                         <br/>
-                                                        <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Broker_port"])+'''" name="brokerPort">
+                                                        <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_port"])+'''" name="brokerPort">
                                                         <br/>
-                                                        <label class="thingspeak">DHT Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["DHT_Topic"])+'''" name="dhtTop">
+                                                        <label class="thingspeak">DHT Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["DHT_Topic"])+'''" name="dhtTop">
                                                         <br/>
-                                                        <label class="thingspeak">AC Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["AC_Topic"])+'''" name="acTop">
+                                                        <label class="thingspeak">AC Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["AC_Topic"])+'''" name="acTop">
                                                         <br/>
-                                                        <label class="thingspeak">Counter Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Counter_Topic"])+'''" name="counTop">
+                                                        <label class="thingspeak">Counter Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Counter_Topic"])+'''" name="counTop">
                                                         <br/>
-                                                        <label class="thingspeak">AC Status:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Ac_Status"])+'''" name="acStatus">
+                                                        <label class="thingspeak">AC Status:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Ac_Status"])+'''" name="acStatus">
                                                         <br/>
                                                         <br/>
                                                         <button class="btn btn-success btn-sm" id="bbroker" style="width:30%;"> Submit </button>
@@ -991,10 +991,10 @@ class MuseumsWP (object):
 
 
                                                 <div align="left">
-                                                  <form class="big" id="telegram" style="font-size:15px" action="/replytele1" method="POST">
-                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["telegram"]["Port"])+'''" name="telPort" >
+                                                  <form class="big" id="telegram" style="font-size:15px" action="/replytele" method="POST">
+                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["Port"])+'''" name="telPort" >
                                                         <br/>
-                                                        <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["telegram"]["chatID"])+'''" name="telchatid" >
+                                                        <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["chatID"])+'''" name="telchatid" >
                                                         <br/>
                                                         <button class="btn btn-success btn-sm" id="thingspeak" style="width:30%;"> Submit </button>
                                                         <!--input type="submit"-->
@@ -1020,10 +1020,10 @@ class MuseumsWP (object):
 
 
                                                 <div align="left">
-                                                  <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest1" method="POST">
-                                                        <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["dataToRest"]["Host_IP"])+'''" name="hostIP" >
+                                                  <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest" method="POST">
+                                                        <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["Host_IP"])+'''" name="hostIP" >
                                                         <br/>
-                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["dataToRest"]["port"])+'''" name="dtrport" >
+                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["port"])+'''" name="dtrport" >
                                                         <br/>
                                                         <button class="btn btn-success btn-sm" id="thingspeak" style="width:30%;"> Submit </button>
                                                         <!--input type="submit"-->
@@ -1423,18 +1423,18 @@ class MuseumsWP (object):
 
 
                                                 <div align="left">
-                                                  <form class="big" id="broker" style="font-size:15px" action="/replybroker1" method="POST">
-                                                        <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Broker_IP"])+'''" name="brokerIP" >
+                                                  <form class="big" id="broker" style="font-size:15px" action="/replybroker" method="POST">
+                                                        <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_IP"])+'''" name="brokerIP" >
                                                         <br/>
-                                                        <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Broker_port"])+'''" name="brokerPort">
+                                                        <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_port"])+'''" name="brokerPort">
                                                         <br/>
-                                                        <label class="thingspeak">DHT Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["DHT_Topic"])+'''" name="dhtTop">
+                                                        <label class="thingspeak">DHT Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["DHT_Topic"])+'''" name="dhtTop">
                                                         <br/>
-                                                        <label class="thingspeak">AC Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["AC_Topic"])+'''" name="acTop">
+                                                        <label class="thingspeak">AC Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["AC_Topic"])+'''" name="acTop">
                                                         <br/>
-                                                        <label class="thingspeak">Counter Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Counter_Topic"])+'''" name="counTop">
+                                                        <label class="thingspeak">Counter Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Counter_Topic"])+'''" name="counTop">
                                                         <br/>
-                                                        <label class="thingspeak">AC Status:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["broker"]["Ac_Status"])+'''" name="acStatus">
+                                                        <label class="thingspeak">AC Status:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Ac_Status"])+'''" name="acStatus">
                                                         <br/>
                                                         <br/>
                                                         <button class="btn btn-success btn-sm" id="bbroker" style="width:30%;"> Submit </button>
@@ -1462,10 +1462,10 @@ class MuseumsWP (object):
 
 
                                                 <div align="left">
-                                                  <form class="big" id="telegram" style="font-size:15px" action="/replytele1" method="POST">
-                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["telegram"]["Port"])+'''" name="telPort" >
+                                                  <form class="big" id="telegram" style="font-size:15px" action="/replytele" method="POST">
+                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["Port"])+'''" name="telPort" >
                                                         <br/>
-                                                        <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["telegram"]["chatID"])+'''" name="telchatid" >
+                                                        <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["chatID"])+'''" name="telchatid" >
                                                         <br/>
                                                         <button class="btn btn-success btn-sm" id="thingspeak" style="width:30%;"> Submit </button>
                                                         <!--input type="submit"-->
@@ -1491,10 +1491,10 @@ class MuseumsWP (object):
 
 
                                                 <div align="left">
-                                                  <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest1" method="POST">
-                                                        <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["dataToRest"]["Host_IP"])+'''" name="hostIP" >
+                                                  <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest" method="POST">
+                                                        <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["Host_IP"])+'''" name="hostIP" >
                                                         <br/>
-                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_1"]["dataToRest"]["port"])+'''" name="dtrport" >
+                                                        <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["port"])+'''" name="dtrport" >
                                                         <br/>
                                                         <button class="btn btn-success btn-sm" id="thingspeak" style="width:30%;"> Submit </button>
                                                         <!--input type="submit"-->
@@ -1895,18 +1895,18 @@ class MuseumsWP (object):
 
 
                                         <div align="left">
-                                          <form class="big" id="broker" style="font-size:15px" action="/replybroker2" method="POST">
-                                                <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["broker"]["Broker_IP"])+'''" name="brokerIP" >
+                                          <form class="big" id="broker" style="font-size:15px" action="/replybroker" method="POST">
+                                                <label class="thingspeak">Broker IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_IP"])+'''" name="brokerIP" >
                                                 <br/>
-                                                <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["broker"]["Broker_port"])+'''" name="brokerPort">
+                                                <label class="thingspeak">Broker Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Broker_port"])+'''" name="brokerPort">
                                                 <br/>
-                                                <label class="thingspeak">DHT Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["broker"]["DHT_Topic"])+'''" name="dhtTop">
+                                                <label class="thingspeak">DHT Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["DHT_Topic"])+'''" name="dhtTop">
                                                 <br/>
-                                                <label class="thingspeak">AC Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["broker"]["AC_Topic"])+'''" name="acTop">
+                                                <label class="thingspeak">AC Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["AC_Topic"])+'''" name="acTop">
                                                 <br/>
-                                                <label class="thingspeak">Counter Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["broker"]["Counter_Topic"])+'''" name="counTop">
+                                                <label class="thingspeak">Counter Topic:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Counter_Topic"])+'''" name="counTop">
                                                 <br/>
-                                                <label class="thingspeak">AC Status:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["broker"]["Ac_Status"])+'''" name="acStatus">
+                                                <label class="thingspeak">AC Status:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["broker"]["Ac_Status"])+'''" name="acStatus">
                                                 <br/>
                                                 <br/>
                                                 <button class="btn btn-success btn-sm" id="bbroker" style="width:30%;"> Submit </button>
@@ -1934,10 +1934,10 @@ class MuseumsWP (object):
 
 
                                         <div align="left">
-                                          <form class="big" id="telegram" style="font-size:15px" action="/replytele2" method="POST">
-                                                <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["telegram"]["Port"])+'''" name="telPort" >
+                                          <form class="big" id="telegram" style="font-size:15px" action="/replytele" method="POST">
+                                                <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["Port"])+'''" name="telPort" >
                                                 <br/>
-                                                <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["telegram"]["chatID"])+'''" name="telchatid" >
+                                                <label class="thingspeak">ChatID:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["telegram"]["chatID"])+'''" name="telchatid" >
                                                 <br/>
                                                 <button class="btn btn-success btn-sm" id="thingspeak" style="width:30%;"> Submit </button>
                                                 <!--input type="submit"-->
@@ -1963,10 +1963,10 @@ class MuseumsWP (object):
 
 
                                         <div align="left">
-                                          <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest2" method="POST">
-                                                <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["dataToRest"]["Host_IP"])+'''" name="hostIP" >
+                                          <form class="big" id="datatorest" style="font-size:15px" action="/replydatatorest" method="POST">
+                                                <label class="thingspeak">Host IP:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["Host_IP"])+'''" name="hostIP" >
                                                 <br/>
-                                                <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["room_2"]["dataToRest"]["port"])+'''" name="dtrport" >
+                                                <label class="thingspeak">Port:</label><input class="thingspeak normalheight" type="text" value="'''+ str(json_inidata["dataToRest"]["port"])+'''" name="dtrport" >
                                                 <br/>
                                                 <button class="btn btn-success btn-sm" id="thingspeak" style="width:30%;"> Submit </button>
                                                 <!--input type="submit"-->
@@ -2398,22 +2398,22 @@ class MuseumsWP (object):
                                      "mqttHost": str(params['mqttHost']),
                                      "THINGSPEAK_HOST": str(params['tkHost'])}}
                 result = requests.post(url, json=data)
-            elif uri[0] == "replybroker1":
+            elif uri[0] == "replybroker":
 
-                data = {'broker1': {"Broker_IP": str(params['brokerIP']),
+                data = {'broker': {"Broker_IP": str(params['brokerIP']),
                                  "AC_Topic": str(params['acTop']),
                                  "Broker_port": str(params['brokerPort']),
                                  "DHT_Topic": str(params['dhtTop']),
                                  "Counter_Topic": str(params['counTop']),
                                  "Ac_Status": str(params['acStatus'])}}
                 result = requests.post(url, json=data)
-            elif uri[0] == "replytele1":
+            elif uri[0] == "replytele":
 
-                data = {'telegram1' : {"Port": str(params['telPort']),
+                data = {'telegram' : {"Port": str(params['telPort']),
                                    "chatID": str(params['telchatid'])}}
                 result = requests.post(url, json=data)
-            elif uri[0] == "replydatatorest1":
-                data = {'dataToRest1': {"Host_IP": str(params['hostIP']),
+            elif uri[0] == "replydatatorest":
+                data = {'dataToRest': {"Host_IP": str(params['hostIP']),
                                     "port": str(params['dtrport'])}}
                 result = requests.post(url, json=data)
 
@@ -2435,26 +2435,9 @@ class MuseumsWP (object):
                                      "mqttHost": str(params['mqttHost']),
                                      "THINGSPEAK_HOST": str(params['tkHost'])}}
                 result = requests.post(url, json=data)
-            elif uri[0] == "replybroker2":
 
-                data = {'broker2': {"Broker_IP": str(params['brokerIP']),
-                                 "AC_Topic": str(params['acTop']),
-                                 "Broker_port": str(params['brokerPort']),
-                                 "DHT_Topic": str(params['dhtTop']),
-                                 "Counter_Topic": str(params['counTop']),
-                                 "Ac_Status": str(params['acStatus'])}}
-                result = requests.post(url, json=data)
 
-            elif uri[0] == "replytele2":
 
-                data = {'telegram2' : {"Port": str(params['telPort']),
-                                   "chatID": str(params['telchatid'])}}
-                result = requests.post(url, json=data)
-
-            elif uri[0] == "replydatatorest2":
-                data = {'dataToRest2': {"Host_IP": str(params['hostIP']),
-                                    "port": str(params['dtrport'])}}
-                result = requests.post(url, json=data)
 
 
 

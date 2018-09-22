@@ -41,8 +41,8 @@ class DataWithRest(object):
 if __name__ == '__main__':
 
     try:
-        file = open("config_file.json", "r") #Navid's Local IP address
-        #file = open("config_file_xime.json", "r") #Ximena's local IP address
+        #file = open("config_file.json", "r") #Navid's Local IP address
+        file = open("config_file_xime.json", "r") #Ximena's local IP address
         json_string = file.read()
         file.close()
     except:
