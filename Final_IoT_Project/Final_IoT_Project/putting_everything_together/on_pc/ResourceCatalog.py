@@ -21,7 +21,7 @@ class ResourceCatalog(object):
         elif(item=="all"):
             return json_string
         else:
-            return"NOTHING FOUNDED, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
+            return"NOTHING FOUND, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
     '''
     def POST(self, *uri, **params):
         try:
