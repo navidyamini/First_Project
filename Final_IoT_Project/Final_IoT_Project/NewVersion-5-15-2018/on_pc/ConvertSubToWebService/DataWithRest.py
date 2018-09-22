@@ -55,6 +55,7 @@ if __name__ == '__main__':
     json_format = json.loads(respond.text)
     Host_IP = json_format["Host_IP"]
     port = json_format["port"]
+    print("")
 
     conf = {
         '/': {
