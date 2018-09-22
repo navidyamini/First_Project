@@ -1,6 +1,6 @@
 {
 	"dataToRest": {
-			"Host_IP": "192.168.1.10",
+			"Host_IP": "localhost",
 			"port": "8082"
 		},
 	"broker": {
