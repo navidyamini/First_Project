@@ -52,15 +52,16 @@ class ResourceCatalog(object):
                     inidata["room_1"]['thingspeak']['tPort'] = newdata['thingspeak1']['tPort']
                     inidata["room_1"]['thingspeak']['mqttHost'] = newdata['thingspeak1']['mqttHost']
                     inidata["room_1"]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak1']['THINGSPEAK_HOST']
+                elif key == 'topic1':
+                    inidata["room_1"]['topic']['AC_Topic'] = newdata['topic1']['AC_Topic']
+                    inidata["room_1"]['topic']['DHT_Topic'] = newdata['topic1']['DHT_Topic']
+                    inidata["room_1"]['topic']['Ac_Status'] = newdata['topic1']['Ac_Status']
+                    inidata["room_1"]['topic']['Counter_Topic'] = newdata['topic1']['Counter_Topic']
 
                 #No specific room
                 elif key == 'broker':
                     inidata['broker']['Broker_IP'] = newdata['broker']['Broker_IP']
-                    inidata['broker']['DHT_Topic'] = newdata['broker']['DHT_Topic']
-                    inidata['broker']['AC_Topic'] = newdata['broker']['AC_Topic']
-                    inidata['broker']['Ac_Status'] = newdata['broker']['Ac_Status']
                     inidata['broker']['Broker_port'] = newdata['broker']['Broker_port']
-                    inidata['broker']['Counter_Topic'] = newdata['broker']['Counter_Topic']
                 elif key == 'telegram':
                     inidata['telegram']['Port'] = newdata['telegram']['Port']
                     inidata['telegram']['chatID'] = newdata['telegram']['chatID']
@@ -83,6 +84,12 @@ class ResourceCatalog(object):
                     inidata["room_2"]['thingspeak']['tPort'] = newdata['thingspeak2']['tPort']
                     inidata["room_2"]['thingspeak']['mqttHost'] = newdata['thingspeak2']['mqttHost']
                     inidata["room_2"]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak2']['THINGSPEAK_HOST']
+
+                elif key == 'topic2':
+                    inidata["room_2"]['topic']['AC_Topic'] = newdata['topic2']['AC_Topic']
+                    inidata["room_2"]['topic']['DHT_Topic'] = newdata['topic2']['DHT_Topic']
+                    inidata["room_2"]['topic']['Ac_Status'] = newdata['topic2']['Ac_Status']
+                    inidata["room_2"]['topic']['Counter_Topic'] = newdata['topic2']['Counter_Topic']
 
 
 
