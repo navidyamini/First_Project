@@ -65,6 +65,12 @@
                       <li><a href="dash1">Dashboard</a></li>
                     </ul>
                   </li>
+                  <li id="room2"><a><i class="fa fa-home"></i> Room 2 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" id="options2">
+                      <li><a href="thresholds2">Thresholds</a></li>
+                      <li><a href="dash2">Dashboard</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
               <div class="menu_section">
@@ -204,7 +210,7 @@
                   </div>
                   <div class="x_content">
                     <div align="center">
-                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/240810/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/583106/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
                     </div>
                   </div>
                 </div>
@@ -220,7 +226,7 @@
                   </div>
                   <div class="x_content">
                     <div align="center">
-                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/240810/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=20&type=line&xaxis=Time"></iframe>
+                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/583106/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=20&type=line&xaxis=Time"></iframe>
                     </div>
                   </div>
                 </div>
@@ -238,7 +244,7 @@
                   </div>
                   <div class="x_content">
                     <div align="center">
-                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/240810/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15%22"></iframe>
+                      <iframe width="450" height="260" frameborder="0" src="https://thingspeak.com/channels/583106/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15%22"></iframe>
                     </div>
                   </div>
                 </div>
@@ -325,7 +331,7 @@
           prevnpeople = npeople;
           prevac = ac;
 
-          $.getJSON('https://api.thingspeak.com/channels/240810/feeds.json?results=1', function thingGet(ourData) {
+          $.getJSON('https://api.thingspeak.com/channels/583106/feeds.json?results=1', function thingGet(ourData) {
 
               var data = ourData["feeds"];
 
@@ -391,10 +397,10 @@
 
           $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
 
-              mqtttemp = result["temperature"].value;
-              mqtthum = result["humidity"].value;
-              mqttnpeople = result["bluetoothCounter"].value;
-              mqttac = result["AcStatus"].value;
+              mqtttemp = result["room_2"]["temperature"].value;
+              mqtthum = result["room_2"]["humidity"].value;
+              mqttnpeople = result["room_2"]["bluetoothCounter"].value;
+              mqttac = result["room_2"]["AcStatus"].value;
 
 
               if (mqtttemp == null){

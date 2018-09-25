@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     cherrypy.tree.mount(DataWithRest(), '/', conf)
     cherrypy.config.update({
-        "server.socket_host": Host_IP,
+        "server.socket_host": str(Host_IP),
         "server.socket_port": int(port)})
     cherrypy.engine.start()
     cherrypy.engine.block()

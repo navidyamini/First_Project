@@ -391,10 +391,10 @@
 
           $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
 
-              mqtttemp = result["temperature"].value;
-              mqtthum = result["humidity"].value;
-              mqttnpeople = result["bluetoothCounter"].value;
-              mqttac = result["AcStatus"].value;
+              mqtttemp = result["room_1"]["temperature"].value;
+              mqtthum = result["room_1"]["humidity"].value;
+              mqttnpeople = result["room_1"]["bluetoothCounter"].value;
+              mqttac = result["room_1"]["AcStatus"].value;
 
 
               if (mqtttemp == null){
