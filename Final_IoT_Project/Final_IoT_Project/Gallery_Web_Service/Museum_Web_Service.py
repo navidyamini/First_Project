@@ -14,16 +14,6 @@ class MuseumWebService(object):
         except:
             raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
 
-        #json_dic = json.loads(json_str)
-        #if(uri[0] in json_dic):
-        #    result = json_dic[uri[0]]
-        #    json_string = json.dumps(result)
-        #    return json_string
-        #else:
-            #return"NOTHING FOUNDED, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
-
-
-
 if __name__ == '__main__':
     conf = {
         '/': {

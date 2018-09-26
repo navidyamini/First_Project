@@ -1,4 +1,14 @@
 {
+
+	"telegram": {
+			"Port": "371024597:AAGK5je2cAXhyf4oMMD5wcUj1SguoZC5ZOY",
+			"chatID": "94432957"
+		},
+		"broker": {
+			"topic": "Estimote/TelemetryPackets/motionState",
+			"Broker_IP": "192.168.1.254",
+			"Broker_port": "1883"
+		},
 	"roomArtworks": [{
 			"beacon_id": "b9c71e98bc32320b",
 			"beacon_name": "smartgallery6",
