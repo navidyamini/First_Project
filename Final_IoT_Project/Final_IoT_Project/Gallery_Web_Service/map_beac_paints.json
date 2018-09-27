@@ -6,7 +6,7 @@
 		},
 		"broker": {
 			"topic": "Estimote/TelemetryPackets/motionState",
-			"Broker_IP": "192.168.1.254",
+			"Broker_IP": "192.168.43.159",
 			"Broker_port": "1883"
 		},
 	"roomArtworks": [{
@@ -18,7 +18,7 @@
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		},
 		{
-			"beacon_id ": "dbc3ca355c21e192 ",
+			"beacon_id": "dbc3ca355c21e192",
 			"beacon_name": "smartgallery6",
 			"paint": "The huge(the Lovers)",
 			"painter": "Egon Schiele",
@@ -26,8 +26,7 @@
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		},
 		{
-
-			"beacon_id": "5 c47b10ea18fdc94",
+			"beacon_id": "5c47b10ea18fdc94",
 			"beacon_name": "smartgallery6",
 			"paint": "Almond Blossom",
 			"painter": "Vincent Van Gogh",
@@ -35,8 +34,7 @@
 			"artistInfo": "znnnnnnnnnnnnnnn"
 		},
 		{
-
-			"beacon_id": "79 b1c4d98adf4ed4",
+			"beacon_id": "79b1c4d98adf4ed4",
 			"beacon_name": "smartgallery6",
 			"paint": "Desnudo con Alcantrances",
 			"painter": "Diego Rivera",
