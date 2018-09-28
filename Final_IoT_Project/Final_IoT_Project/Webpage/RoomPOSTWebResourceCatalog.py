@@ -2476,7 +2476,7 @@ class MuseumsWP (object):
                                      "mqttHost": str(params['mqttHost']),
                                      "THINGSPEAK_HOST": str(params['tkHost'])}}
                 result = requests.post(url + "/room_1", json=data)
-            elif uri[0] == "replytopic":
+            elif uri[0] == "replytopic1":
 
                 data = {'topic': {"AC_Topic": str(params['acTop']),
                                   "DHT_Topic": str(params['dhtTop']),
@@ -2489,25 +2489,24 @@ class MuseumsWP (object):
 
                 data = {'broker': {"Broker_IP": str(params['brokerIP']),
                                  "Broker_port": str(params['brokerPort'])}}
-                result = requests.post(url, json=data)
+                result = requests.post(url + "/broker", json=data)
             elif uri[0] == "replytele":
 
                 data = {'telegram' : {"Port": str(params['telPort']),
                                    "chatID": str(params['telchatid'])}}
-                result = requests.post(url, json=data)
+                result = requests.post(url + "/telegram", json=data)
             elif uri[0] == "replydatatorest":
                 data = {'dataToRest': {"Host_IP": str(params['hostIP']),
                                     "port": str(params['dtrport'])}}
-                result = requests.post(url, json=data)
+                result = requests.post(url + "/dataToRest", json=data)
 
             elif uri[0]== "replytresh2":
 
-                data ={'thresholds2': {"max_temp": str(params['maxt']),
+                data ={'thresholds': {"max_temp": str(params['maxt']),
                                      "min_temp": str(params['mint']),
                                      "max_hum": str(params['maxh']),
                                      "min_hum": str(params['minh'])}}
-
-                result = requests.post(url, json = data)
+                result = requests.post(url + "/room_2", json=data)
             elif uri[0] == "replything2":
 
                 data = {'thingspeak2': {"READ_API_KEY": str(params['rApi']),
@@ -2517,7 +2516,7 @@ class MuseumsWP (object):
                                      "tPort": str(params['tPort']),
                                      "mqttHost": str(params['mqttHost']),
                                      "THINGSPEAK_HOST": str(params['tkHost'])}}
-                result = requests.post(url, json=data)
+                result = requests.post(url + "/room_2", json=data)
 
             elif uri[0] == "replytopic2":
 
@@ -2525,10 +2524,7 @@ class MuseumsWP (object):
                                   "DHT_Topic": str(params['dhtTop']),
                                   "Counter_Topic": str(params['counTop']),
                                   "Ac_Status": str(params['acStatus'])}}
-                result = requests.post(url, json=data)
-
-            print result
-
+                result = requests.post(url + "/room_2", json=data)
 
 
             '''Update WebPage with the new values'''
@@ -3518,6 +3514,12 @@ class MuseumsWP (object):
 
 
 if __name__ == "__main__":
+    file = open("config_file.json", "r")
+    json_string = file.read()
+    file.close()
+    data = json.loads(json_string)
+    ip = data["webPage"]["ip"]
+    port = data["webPage"]["port"]
     conf = {
         '/': {
             'request.dispatch': cherrypy.dispatch.MethodDispatcher ( ),
@@ -3531,7 +3533,8 @@ if __name__ == "__main__":
 
 
     cherrypy.tree.mount(MuseumsWP(1), '/', conf)
-    cherrypy.server.socket_host = 'localhost'
-    cherrypy.server.socket_port = 8083
+    cherrypy.config.update({
+        "server.socket_host": ip,
+        "server.socket_port": int(port)})
     cherrypy.engine.start ( )
     cherrypy.engine.block ( )
