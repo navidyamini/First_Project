@@ -1,0 +1,119 @@
+import cherrypy
+import json
+
+class ResourceCatalog(object):
+
+    exposed = True
+
+    def GET(self, *uri, **params):
+
+        try:
+            file = open("initial_data.json", "r") #Ximena's IP "localhost"
+            json_string = file.read()
+            file.close()
+            item = uri[0]
+        except:
+            raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
+        json_dic = json.loads(json_string)
+        if(item in json_dic):
+            result = json_dic[item]
+            requested_data = json.dumps(result)
+            return requested_data
+        elif(item=="all"):
+            return json_string
+        else:
+            return"NOTHING FOUNDED, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
+
+    def POST(self, *uri, **params):
+        try:
+            with open("initial_data.json", "r") as idata:
+                inidata = json.loads(idata.read())
+                data = cherrypy.request.body.read()
+                newdata = json.loads(data)
+
+                print data
+                print inidata
+                print newdata
+                key = list(newdata.keys())[0]
+
+                #Room1
+                if key =='thresholds1':
+
+                    inidata["room_1"]['thresholds']['min_hum'] = newdata['thresholds1']['min_hum']
+                    inidata["room_1"]['thresholds']['min_temp'] = newdata['thresholds1']['min_temp']
+                    inidata["room_1"]['thresholds']['max_temp'] = newdata['thresholds1']['max_temp']
+                    inidata["room_1"]['thresholds']['max_hum'] = newdata['thresholds1']['max_hum']
+                elif key=='thingspeak1':
+                    inidata["room_1"]['thingspeak']['READ_API_KEY'] = newdata['thingspeak1']['READ_API_KEY']
+                    inidata["room_1"]['thingspeak']['ACCESS_TOKEN'] = newdata['thingspeak1']['ACCESS_TOKEN']
+                    inidata["room_1"]['thingspeak']['tTransport'] = newdata['thingspeak1']['tTransport']
+                    inidata["room_1"]['thingspeak']['channelID'] = newdata['thingspeak1']['channelID']
+                    inidata["room_1"]['thingspeak']['tPort'] = newdata['thingspeak1']['tPort']
+                    inidata["room_1"]['thingspeak']['mqttHost'] = newdata['thingspeak1']['mqttHost']
+                    inidata["room_1"]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak1']['THINGSPEAK_HOST']
+                elif key == 'topic1':
+                    inidata["room_1"]['topic']['AC_Topic'] = newdata['topic1']['AC_Topic']
+                    inidata["room_1"]['topic']['DHT_Topic'] = newdata['topic1']['DHT_Topic']
+                    inidata["room_1"]['topic']['Ac_Status'] = newdata['topic1']['Ac_Status']
+                    inidata["room_1"]['topic']['Counter_Topic'] = newdata['topic1']['Counter_Topic']
+
+                #No specific room
+                elif key == 'broker':
+                    inidata['broker']['Broker_IP'] = newdata['broker']['Broker_IP']
+                    inidata['broker']['Broker_port'] = newdata['broker']['Broker_port']
+                elif key == 'telegram':
+                    inidata['telegram']['Port'] = newdata['telegram']['Port']
+                    inidata['telegram']['chatID'] = newdata['telegram']['chatID']
+                elif key == 'dataToRest':
+                    inidata['dataToRest']['Host_IP'] = newdata['dataToRest']['Host_IP']
+                    inidata['dataToRest']['port'] = newdata['dataToRest']['port']
+
+                #Room2
+                elif key =='thresholds2':
+
+                    inidata["room_2"]['thresholds']['min_hum'] = newdata['thresholds2']['min_hum']
+                    inidata["room_2"]['thresholds']['min_temp'] = newdata['thresholds2']['min_temp']
+                    inidata["room_2"]['thresholds']['max_temp'] = newdata['thresholds2']['max_temp']
+                    inidata["room_2"]['thresholds']['max_hum'] = newdata['thresholds2']['max_hum']
+                elif key=='thingspeak2':
+                    inidata["room_2"]['thingspeak']['READ_API_KEY'] = newdata['thingspeak2']['READ_API_KEY']
+                    inidata["room_2"]['thingspeak']['ACCESS_TOKEN'] = newdata['thingspeak2']['ACCESS_TOKEN']
+                    inidata["room_2"]['thingspeak']['tTransport'] = newdata['thingspeak2']['tTransport']
+                    inidata["room_2"]['thingspeak']['channelID'] = newdata['thingspeak2']['channelID']
+                    inidata["room_2"]['thingspeak']['tPort'] = newdata['thingspeak2']['tPort']
+                    inidata["room_2"]['thingspeak']['mqttHost'] = newdata['thingspeak2']['mqttHost']
+                    inidata["room_2"]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak2']['THINGSPEAK_HOST']
+
+                elif key == 'topic2':
+                    inidata["room_2"]['topic']['AC_Topic'] = newdata['topic2']['AC_Topic']
+                    inidata["room_2"]['topic']['DHT_Topic'] = newdata['topic2']['DHT_Topic']
+                    inidata["room_2"]['topic']['Ac_Status'] = newdata['topic2']['Ac_Status']
+                    inidata["room_2"]['topic']['Counter_Topic'] = newdata['topic2']['Counter_Topic']
+
+            with open("initial_data.json", "w") as file:
+                json.dump(inidata, file)
+                return "UPDATED"
+
+        except  Exception as e:
+            print ("error:",e)
+            return "Problem in updating file"
+
+if __name__ == '__main__':
+    file = open("config_file.json", "r")
+    json_string = file.read()
+    file.close()
+    data = json.loads(json_string)
+    ip = data["reSourceCatalog"]["ip"]
+    port = data["reSourceCatalog"]["port"]
+    conf = {
+        '/': {
+            'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
+            'tools.sessions.on': True,
+        }
+    }
+    cherrypy.tree.mount(ResourceCatalog(), '/', conf)
+    cherrypy.config.update({
+        "server.socket_host": ip,
+        "server.socket_port": int(port)})
+    cherrypy.engine.start()
+    cherrypy.engine.block()

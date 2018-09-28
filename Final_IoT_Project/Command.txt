@@ -1,3 +1,13 @@
 Runing program in background:
 
 python name.py > name.log &
+
+
+Xime Garzon, [26.09.18 18:02]
+Webpage/RoomPOSTWebResourceCatalog.py
+
+Xime Garzon, [26.09.18 18:02]
+that is the file to run
+
+Xime Garzon, [26.09.18 18:04]
+the resource catalog to run is -> POST_ResourceCatalog.py
