@@ -1,3 +1,5 @@
+# the web service for exposing the information related to beacons and the assigned artworks to them
+
 import cherrypy
 import json
 class MuseumWebService(object):
@@ -6,6 +8,7 @@ class MuseumWebService(object):
 
     def GET(self, *uri, **params):
 
+        #read the json file with the artworks info
         try:
             file = open("map_beac_paints.json", "r")
             json_str = file.read()
@@ -15,6 +18,8 @@ class MuseumWebService(object):
             raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
 
 if __name__ == '__main__':
+
+    # read the config file for setting the ip and port
     file = open("config_file.json", "r")
     json_string = file.read()
     file.close()
