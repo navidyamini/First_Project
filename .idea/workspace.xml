@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfed96e-712f-40c7-a5e0-6c9108bd0077" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/BrokerSetting.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/MovementDetection.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/SubscribeData.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBot.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/TelegramBotSetting.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ThingSpeakSetting.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/BluetoothCounter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/Carla/TelemetryDataReader.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/Carla/prova_actuator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/CheckingThreshold.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/LEDbyRelay.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/PublishAcStatus.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/PublishData.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ReadingDHT.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/ThingSpeak.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/run.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/DataWithRest.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/DataWithRest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/SubscribeData.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/SubscribeData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/LEDbyRelay.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/LEDbyRelay.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/ReadingDHT.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/ReadingDHT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/BluetoothCounter.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/BluetoothCounter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/PublishPeoPleNo.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/PublishPeoPleNo.py" />
     </list>
     <ignored path="First_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,120 +104,7 @@
     <favorites_list name="First_Project" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SubscribeDataTS.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckingThreshold.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LEDbyRelay.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/LEDbyRelay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublishAcStatus.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-550">
-              <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="POST_ResourceCatalog.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/POST_ResourceCatalog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="81" lean-forward="true" selection-start-line="68" selection-start-column="81" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublishTempHum.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-506">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding>
-                <element signature="e#271#304#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadingDHT.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/ReadingDHT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublishPeoPleNo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/PublishPeoPleNo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1094">
-              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding>
-                <element signature="e#271#303#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BluetoothCounter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/BluetoothCounter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-550">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubscribeAcOrder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
-              <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -419,34 +310,8 @@
               <option name="myItemId" value="Final_IoT_Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_raspberry" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publish_people_no" />
+              <option name="myItemId" value="putting_everything_together" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,224 +330,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_raspberry" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publish_hum_temp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_raspberry" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SubscribeAcOrder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_pc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check_threshold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_pc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebPage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_pc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThingsSpeakAdapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_pc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Telegram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_pc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ResourceCatalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewVersion-5-15-2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="on_pc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1309,7 +956,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538155373292</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="updating the code to work with two rooms&#10;">
+      <created>1538156848734</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1538156848734</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1323,9 +977,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27891654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27891654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30860534" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1561,22 +1215,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Gallery_Web_Service/MovementDetection/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="1595" column="0" lean-forward="false" selection-start-line="1595" selection-start-column="0" selection-end-line="1595" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Gallery_Web_Service/MovementDetection/testFindingInJson.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1759,14 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/initial_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1969,7 +1599,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
+        <state relative-caret-position="-499">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
             <element signature="e#271#304#0" expanded="true" />
@@ -1985,6 +1615,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-967">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/POST_ResourceCatalog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -1992,6 +1630,22 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/Carla/prova_actuator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_raspberry/Carla/TelemetryDataReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

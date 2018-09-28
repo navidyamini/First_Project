@@ -1,4 +1,0 @@
-run
-PublishData
-ThingSpeak
-CheckingThreshold
