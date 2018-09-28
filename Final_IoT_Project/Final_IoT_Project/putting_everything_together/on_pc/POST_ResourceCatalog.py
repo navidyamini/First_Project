@@ -31,65 +31,43 @@ class ResourceCatalog(object):
                 inidata = json.loads(idata.read())
                 data = cherrypy.request.body.read()
                 newdata = json.loads(data)
+                item = uri[0]
 
-                print data
-                print inidata
-                print newdata
-                key = list(newdata.keys())[0]
 
-                #Room1
-                if key =='thresholds1':
+                if (item in inidata):
 
-                    inidata["room_1"]['thresholds']['min_hum'] = newdata['thresholds1']['min_hum']
-                    inidata["room_1"]['thresholds']['min_temp'] = newdata['thresholds1']['min_temp']
-                    inidata["room_1"]['thresholds']['max_temp'] = newdata['thresholds1']['max_temp']
-                    inidata["room_1"]['thresholds']['max_hum'] = newdata['thresholds1']['max_hum']
-                elif key=='thingspeak1':
-                    inidata["room_1"]['thingspeak']['READ_API_KEY'] = newdata['thingspeak1']['READ_API_KEY']
-                    inidata["room_1"]['thingspeak']['ACCESS_TOKEN'] = newdata['thingspeak1']['ACCESS_TOKEN']
-                    inidata["room_1"]['thingspeak']['tTransport'] = newdata['thingspeak1']['tTransport']
-                    inidata["room_1"]['thingspeak']['channelID'] = newdata['thingspeak1']['channelID']
-                    inidata["room_1"]['thingspeak']['tPort'] = newdata['thingspeak1']['tPort']
-                    inidata["room_1"]['thingspeak']['mqttHost'] = newdata['thingspeak1']['mqttHost']
-                    inidata["room_1"]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak1']['THINGSPEAK_HOST']
-                elif key == 'topic1':
-                    inidata["room_1"]['topic']['AC_Topic'] = newdata['topic1']['AC_Topic']
-                    inidata["room_1"]['topic']['DHT_Topic'] = newdata['topic1']['DHT_Topic']
-                    inidata["room_1"]['topic']['Ac_Status'] = newdata['topic1']['Ac_Status']
-                    inidata["room_1"]['topic']['Counter_Topic'] = newdata['topic1']['Counter_Topic']
+                    key = list(newdata.keys())[0]
 
-                #No specific room
-                elif key == 'broker':
-                    inidata['broker']['Broker_IP'] = newdata['broker']['Broker_IP']
-                    inidata['broker']['Broker_port'] = newdata['broker']['Broker_port']
-                elif key == 'telegram':
-                    inidata['telegram']['Port'] = newdata['telegram']['Port']
-                    inidata['telegram']['chatID'] = newdata['telegram']['chatID']
-                elif key == 'dataToRest':
-                    inidata['dataToRest']['Host_IP'] = newdata['dataToRest']['Host_IP']
-                    inidata['dataToRest']['port'] = newdata['dataToRest']['port']
+                    if key =='thresholds':
+                        inidata[item]['thresholds']['min_hum'] = newdata['thresholds']['min_hum']
+                        inidata[item]['thresholds']['min_temp'] = newdata['thresholds']['min_temp']
+                        inidata[item]['thresholds']['max_temp'] = newdata['thresholds']['max_temp']
+                        inidata[item]['thresholds']['max_hum'] = newdata['thresholds']['max_hum']
+                    elif key=='thingspeak':
+                        inidata[item]['thingspeak']['READ_API_KEY'] = newdata['thingspeak']['READ_API_KEY']
+                        inidata[item]['thingspeak']['ACCESS_TOKEN'] = newdata['thingspeak']['ACCESS_TOKEN']
+                        inidata[item]['thingspeak']['tTransport'] = newdata['thingspeak']['tTransport']
+                        inidata[item]['thingspeak']['channelID'] = newdata['thingspeak']['channelID']
+                        inidata[item]['thingspeak']['tPort'] = newdata['thingspeak']['tPort']
+                        inidata[item]['thingspeak']['mqttHost'] = newdata['thingspeak']['mqttHost']
+                        inidata[item]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak']['THINGSPEAK_HOST']
+                    elif key == 'topic':
+                        inidata[item]['topic']['AC_Topic'] = newdata['topic']['AC_Topic']
+                        inidata[item]['topic']['DHT_Topic'] = newdata['topic']['DHT_Topic']
+                        inidata[item]['topic']['Ac_Status'] = newdata['topic']['Ac_Status']
+                        inidata[item]['topic']['Counter_Topic'] = newdata['topic']['Counter_Topic']
+                    elif key == 'broker':
+                        inidata['broker']['Broker_IP'] = newdata['broker']['Broker_IP']
+                        inidata['broker']['Broker_port'] = newdata['broker']['Broker_port']
+                    elif key == 'telegram':
+                        inidata['telegram']['Port'] = newdata['telegram']['Port']
+                        inidata['telegram']['chatID'] = newdata['telegram']['chatID']
+                    elif key == 'dataToRest':
+                        inidata['dataToRest']['Host_IP'] = newdata['dataToRest']['Host_IP']
+                        inidata['dataToRest']['port'] = newdata['dataToRest']['port']
+                else:
+                    return
 
-                #Room2
-                elif key =='thresholds2':
-
-                    inidata["room_2"]['thresholds']['min_hum'] = newdata['thresholds2']['min_hum']
-                    inidata["room_2"]['thresholds']['min_temp'] = newdata['thresholds2']['min_temp']
-                    inidata["room_2"]['thresholds']['max_temp'] = newdata['thresholds2']['max_temp']
-                    inidata["room_2"]['thresholds']['max_hum'] = newdata['thresholds2']['max_hum']
-                elif key=='thingspeak2':
-                    inidata["room_2"]['thingspeak']['READ_API_KEY'] = newdata['thingspeak2']['READ_API_KEY']
-                    inidata["room_2"]['thingspeak']['ACCESS_TOKEN'] = newdata['thingspeak2']['ACCESS_TOKEN']
-                    inidata["room_2"]['thingspeak']['tTransport'] = newdata['thingspeak2']['tTransport']
-                    inidata["room_2"]['thingspeak']['channelID'] = newdata['thingspeak2']['channelID']
-                    inidata["room_2"]['thingspeak']['tPort'] = newdata['thingspeak2']['tPort']
-                    inidata["room_2"]['thingspeak']['mqttHost'] = newdata['thingspeak2']['mqttHost']
-                    inidata["room_2"]['thingspeak']['THINGSPEAK_HOST'] = newdata['thingspeak2']['THINGSPEAK_HOST']
-
-                elif key == 'topic2':
-                    inidata["room_2"]['topic']['AC_Topic'] = newdata['topic2']['AC_Topic']
-                    inidata["room_2"]['topic']['DHT_Topic'] = newdata['topic2']['DHT_Topic']
-                    inidata["room_2"]['topic']['Ac_Status'] = newdata['topic2']['Ac_Status']
-                    inidata["room_2"]['topic']['Counter_Topic'] = newdata['topic2']['Counter_Topic']
 
 
 

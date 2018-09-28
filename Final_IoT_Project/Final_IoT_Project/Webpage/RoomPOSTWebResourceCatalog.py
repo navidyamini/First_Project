@@ -2460,29 +2460,29 @@ class MuseumsWP (object):
 
             if uri[0]== "replytresh1":
 
-                data ={'thresholds1': {"max_temp": str(params['maxt']),
+                data ={'thresholds': {"max_temp": str(params['maxt']),
                                      "min_temp": str(params['mint']),
                                      "max_hum": str(params['maxh']),
                                      "min_hum": str(params['minh'])}}
 
-                result = requests.post(url, json = data)
+                result = requests.post(url+"/room_1", json = data)
             elif uri[0] == "replything1":
 
-                data = {'thingspeak1': {"READ_API_KEY": str(params['rApi']),
+                data = {'thingspeak': {"READ_API_KEY": str(params['rApi']),
                                      "ACCESS_TOKEN": str(params['accTok']),
                                      "tTransport": str(params['tTrans']),
                                      "channelID": str(params['chanId']),
                                      "tPort": str(params['tPort']),
                                      "mqttHost": str(params['mqttHost']),
                                      "THINGSPEAK_HOST": str(params['tkHost'])}}
-                result = requests.post(url, json=data)
-            elif uri[0] == "replytopic1":
+                result = requests.post(url + "/room_1", json=data)
+            elif uri[0] == "replytopic":
 
-                data = {'topic1': {"AC_Topic": str(params['acTop']),
+                data = {'topic': {"AC_Topic": str(params['acTop']),
                                   "DHT_Topic": str(params['dhtTop']),
                                   "Counter_Topic": str(params['counTop']),
                                   "Ac_Status": str(params['acStatus'])}}
-                result = requests.post(url, json=data)
+                result = requests.post(url + "/room_1", json=data)
 
 
             elif uri[0] == "replybroker":
@@ -3522,15 +3522,13 @@ if __name__ == "__main__":
         '/': {
             'request.dispatch': cherrypy.dispatch.MethodDispatcher ( ),
             'tools.sessions.on': True,
-            # 'server.socket_host' : '0.0.0.0',
-            # 'tools.staticdir.root' : os.path.abspath(os.getcwd())
             'tools.staticdir.root': os.path.abspath(os.getcwd())
         },
         '/static': {
             'tools.staticdir.on': True,
             'tools.staticdir.dir': os.path.join (os.getcwd ( ), "gentelella-master")}
     }
-    # cherrypy.quickstart(MuseumsWP(), '/', conf)
+
 
     cherrypy.tree.mount(MuseumsWP(1), '/', conf)
     cherrypy.server.socket_host = 'localhost'
