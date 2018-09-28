@@ -8,8 +8,7 @@ class ResourceCatalog(object):
     def GET(self, *uri, **params):
 
         try:
-            #file = open("../RawWebpage/initial_data.json", "r") #Navid's IP
-            file = open("../RawWebpage/xime_initial_data.json", "r") #Ximena's IP "localhost"
+            file = open("../RawWebpage/initial_data.json", "r") #Navid's IP
             json_string = file.read()
             file.close()
             item = uri[0]
@@ -27,7 +26,7 @@ class ResourceCatalog(object):
 
     def POST(self, *uri, **params):
         try:
-            with open("../RawWebpage/xime_initial_data.json", "r") as idata:
+            with open("../RawWebpage/initial_data.json", "r") as idata:
                 inidata = json.loads(idata.read())
                 data = cherrypy.request.body.read()
                 newdata = json.loads(data)
@@ -71,7 +70,7 @@ class ResourceCatalog(object):
 
 
 
-            with open("../RawWebpage/xime_initial_data.json", "w") as file:
+            with open("../RawWebpage/initial_data.json", "w") as file:
                 json.dump(inidata, file)
                 return "UPDATED"
 
