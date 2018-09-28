@@ -65,8 +65,32 @@ class ResourceCatalog(object):
                     elif key == 'dataToRest':
                         inidata['dataToRest']['Host_IP'] = newdata['dataToRest']['Host_IP']
                         inidata['dataToRest']['port'] = newdata['dataToRest']['port']
+
                 else:
-                    return
+                    key = list(newdata.keys())[0]
+                    temporary_json = {}
+                    if key == 'thresholds':
+                        temporary_json["thresholds"] = {"min_hum": newdata['thresholds']['min_hum'],
+                                                        "min_temp": newdata['thresholds']['min_temp'],
+                                                        "max_temp": newdata['thresholds']['max_temp'],
+                                                        "max_hum": newdata['thresholds']['max_hum']}
+
+                    if key == 'thingspeak':
+                        temporary_json["thingspeak"] = {"READ_API_KEY": newdata['thingspeak']['READ_API_KEY'],
+                                                        "ACCESS_TOKEN": newdata['thingspeak']['ACCESS_TOKEN'],
+                                                        "tTransport": newdata['thingspeak']['tTransport'],
+                                                        "channelID": newdata['thingspeak']['channelID'],
+                                                        "tPort": newdata['thingspeak']['tPort'],
+                                                        "mqttHost": newdata['thingspeak']['mqttHost'],
+                                                        "THINGSPEAK_HOST": newdata['thingspeak']['THINGSPEAK_HOST']}
+
+                    if key == 'topic':
+                        temporary_json["topic"] = {"AC_Topic": newdata['topic']['AC_Topic'],
+                                                        "DHT_Topic": newdata['topic']['DHT_Topic'],
+                                                        "Ac_Status": newdata['topic']['Ac_Status'],
+                                                        "Counter_Topic": newdata['topic']['Counter_Topic']}
+                    inidata[item] = temporary_json
+
 
             with open("initial_data.json", "w") as file:
                 json.dump(inidata, file)

@@ -1,7 +1,6 @@
 {
 	"reSourceCatalog": {
-		"url": "http://localhost:8080",
-		"wildcards":"Gallery1/#"
+		"url": "http://localhost:8080"
 	},
 	"webPage":{
 		"ip": "localhost",
