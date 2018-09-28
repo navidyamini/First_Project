@@ -1,3 +1,5 @@
+#this web service will expose the live data coming from the sensors
+
 import cherrypy
 import json
 import requests
@@ -41,13 +43,13 @@ class DataWithRest(object):
 if __name__ == '__main__':
 
     try:
-        file = open("config_file.json", "r") #Navid's Local IP address
-        #file = open("config_file_xime.json", "r") #Ximena's local IP address
+        file = open("config_file.json", "r")
         json_string = file.read()
         file.close()
     except:
         raise KeyError("***** DataWithRest: ERROR IN READING CONFIG FILE *****")
 
+    # asking the ip and the port of this web service from resource catalog
     config_json = json.loads(json_string)
     url = config_json["reSourceCatalog"]["url"]
 

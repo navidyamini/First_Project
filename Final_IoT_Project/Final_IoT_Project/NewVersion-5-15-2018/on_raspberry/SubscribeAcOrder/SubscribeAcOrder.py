@@ -33,14 +33,14 @@ class SubscribeAcOrder(object):
             print "SubscribeAcOrder: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
     @staticmethod
-    def on_subscribe(client, userdata, mid, granted_qos):
+    def on_subscribe(mid, granted_qos):
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("Subscribed: " + str(mid) + " " + str(granted_qos))
         print ("at time: " + str(current_time))
 
     @classmethod
-    def on_message(cls,client, userdata, msg):
+    def on_message(cls, msg):
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))

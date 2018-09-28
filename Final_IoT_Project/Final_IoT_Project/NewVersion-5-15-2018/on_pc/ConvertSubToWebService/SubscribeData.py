@@ -17,14 +17,14 @@ class SubscribeData(object):
         client.on_message = self.on_message
 
     @staticmethod
-    def on_subscribe(client, userdata, mid, granted_qos):
+    def on_subscribe(mid, granted_qos):
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("Subscribed: " + str(mid) + " " + str(granted_qos))
         print ("at time: " + str(current_time))
 
     @classmethod
-    def on_message(self,client, userdata, msg):
+    def on_message(self,msg):
 
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -80,7 +80,6 @@ class SubscribeData(object):
                 temporary_json["AcStatus"]={"value":input["Status"]}
                 json_format_output[the_romm_id] = temporary_json
 
-
         try:
             with open("real_time_data.json", 'w') as json_data_file:
                 json.dump(json_format_output, json_data_file)
@@ -89,7 +88,6 @@ class SubscribeData(object):
             raise KeyError("*****SubscribeData ERROR IN WRITING THE JSON FILE*****")
 
 if __name__ == '__main__':
-    #url = 'http://192.168.1.65:8080/'
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
@@ -100,7 +98,6 @@ if __name__ == '__main__':
     config_json = json.loads(json_string)
     resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     wildcard_topic = config_json["reSourceCatalog"]["wildcards"]
-    #url= resourceCatalogIP
     client = paho.Client()
     sens = SubscribeData(client)
 
@@ -116,8 +113,6 @@ if __name__ == '__main__':
         try:
             client.connect(Broker_IP, int(Broker_Port))
             client.subscribe(str(wildcard_topic), qos=1)
-            #client.subscribe(str(sens.counter_topic), qos=1)
-            #client.subscribe(str(sens.AC_status), qos=1)
             client.loop_forever()
         except:
             print "SubscribeData: Problem in connecting to broker"

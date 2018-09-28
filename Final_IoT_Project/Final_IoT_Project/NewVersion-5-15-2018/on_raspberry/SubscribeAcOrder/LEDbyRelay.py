@@ -30,8 +30,6 @@ class LEDbyRelay(object):
             self.publish.stop()
         except:
             print("this is the problem")
-        #self.thingSpeak.setThingSpeakVariables()
-        #publish = PublishAcStatus()
         GPIO.output(self.relayPin,GPIO.LOW)
         self.publish.publish_data("It is ON")
         self.publish.start()
@@ -41,8 +39,6 @@ class LEDbyRelay(object):
     def disconnect(self):
         self.publish.load()
         self.publish.stop()
-        #publish = PublishAcStatus()
-        #self.thingSpeak.setThingSpeakVariables()
         GPIO.output(self.relayPin,GPIO.HIGH)
         self.publish.publish_data("It is OFF")
         self.publish.start()
@@ -52,10 +48,10 @@ class LEDbyRelay(object):
     def destroy(self):
         #turn off relay
         GPIO.output(self.relayPin,GPIO.HIGH)
-        #release resource
+
         GPIO.cleanup()
         return
-
+'''
 if __name__ == '__main__':
     
     pinNo = 17
@@ -75,5 +71,5 @@ if __name__ == '__main__':
     #when 'Ctrl+C' is pressed,child program destroy() will be executed.
     except KeyboardInterrupt:
         controling_LED.destroy()
-        
+'''
         

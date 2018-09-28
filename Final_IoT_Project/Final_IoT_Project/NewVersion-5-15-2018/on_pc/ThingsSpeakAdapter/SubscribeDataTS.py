@@ -54,18 +54,15 @@ class SubscribeDataTS(object):
     def check(self):
         if(self.payload != 'null'):
             self.thingSpeak.setThingSpeakVariables()
-            #print(payload)
             if(self.topic == self.DHT_topic ):
                 self.thingSpeak.sending_dht_data(self.payload)
                 time.sleep(10)
             elif(self.topic == self.counter_topic ):
                 self.thingSpeak.number_of_people(self.payload)
                 time.sleep(10)
-            #TODO send the ac status to thing speak
             elif(self.topic == self.AC_status ):
                 self.thingSpeak.ac_status(self.payload)
                 time.sleep(10)
-            #print ("from chek",payload,topic)
             payload='null'
         return
 

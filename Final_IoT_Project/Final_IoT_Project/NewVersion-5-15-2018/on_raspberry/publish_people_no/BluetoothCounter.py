@@ -1,11 +1,11 @@
 # this class is going to count the number of people
 
-import time
+
 import bluetooth
 
 class BluetoothCounter(object):
     def __init__(self):
-        #for countin the number of bluetooth devices
+        #for counting the number of bluetooth devices
         self.counter = 0
 
     def search(self):
@@ -38,9 +38,9 @@ class BluetoothCounter(object):
             print "BLUETOOTHCOUNTER: ERROR IN SENDING THE NUMBER OF BLUETOOTH DEVICES"
         print "number of bluetooth devise is:" + str(final_result)
         return final_result
-
+'''
 if __name__=="__main__":
     bluetooth_counter = BluetoothCounter()
     while True:
         bluetooth_counter.device_counter()
-
+'''

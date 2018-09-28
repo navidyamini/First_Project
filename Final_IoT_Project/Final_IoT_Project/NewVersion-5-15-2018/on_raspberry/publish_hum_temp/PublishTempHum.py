@@ -29,7 +29,7 @@ class PublishData(object):
             print "PublishData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
 
     @staticmethod
-    def on_connect(client, userdata, flags, rc):
+    def on_connect(rc):
         # get the current time
         get_time = datetime.datetime.now()
         current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -38,7 +38,7 @@ class PublishData(object):
         return str(rc)
 
     @classmethod
-    def on_publish(cls, client, userdata, mid):
+    def on_publish(cls, mid):
         # get the current time
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -69,7 +69,6 @@ class PublishData(object):
 
 if __name__ == '__main__':
 
-    #url = 'http://192.168.1.65:8080/'
     try:
         file = open("config_file.json", "r")
         json_string = file.read()

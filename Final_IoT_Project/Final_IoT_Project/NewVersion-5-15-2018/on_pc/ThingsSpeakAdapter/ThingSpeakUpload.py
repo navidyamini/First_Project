@@ -45,17 +45,17 @@ class ThingSpeak(object):
         # attempt to publish this data to the topic
         try:
             publish.single(self.topic, payload, hostname = self.mqttHost, transport = self.tTransport, port = self.tPort)
-            #time.sleep(10)
+
         except:
             print("ThingSpeak: ERROR IN PUBLISHING THE HUM AND TEMP TO THINGSPEAK")
-        #time.sleep(10)
+
         return
 
     def number_of_people(self,meesage):
 
         result = meesage["bluetooth_counter"]
         print result
-        #time.sleep(10)
+
         # build the payload string
         payload = "&field3=" + str(result)
         # attempt to publish this data to the topic
@@ -80,7 +80,7 @@ class ThingSpeak(object):
         except:
             print("ThingSpeak: ERROR IN PUBLISHING THE AIR CONDITION STATUS TO THINGSPEAK")
         return
-
+'''
 if __name__ == '__main__':
 
     thingspeak = ThingSpeak()
@@ -90,3 +90,4 @@ if __name__ == '__main__':
         time.sleep(40)
         thingspeak.number_of_people()
         time.sleep(20)
+'''
