@@ -20,7 +20,7 @@ class PublishAcStatus(object):
 
 
     @staticmethod
-    def on_connect(rc):
+    def on_connect(client, userdata, flags, rc):
         # get the current time
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -29,10 +29,10 @@ class PublishAcStatus(object):
         return str(rc)
 
     @classmethod
-    def on_publish(cls, mid):
+    def on_publish(cls, client, userdata, mid):
         # get the current time
         get_time = datetime.datetime.now()
-        current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
+        current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("mid: " + str(mid))
         print ("at time: " + str(current_time))
         return str(mid)

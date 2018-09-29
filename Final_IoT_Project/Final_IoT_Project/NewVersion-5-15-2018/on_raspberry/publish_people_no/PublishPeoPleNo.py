@@ -30,7 +30,7 @@ class PublishPeopleNo(object):
 
 
     @staticmethod
-    def on_connect(rc):
+    def on_connect(client, userdata, flags, rc):
         # get the current time
         get_time = datetime.datetime.now()
         current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -39,7 +39,7 @@ class PublishPeopleNo(object):
         return str(rc)
 
     @classmethod
-    def on_publish(cls, mid):
+    def on_publish(cls, client, userdata, mid):
         # get the current time
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -65,6 +65,9 @@ class PublishPeopleNo(object):
             print ("at time: " + str(current_time))
 
 if __name__ == '__main__':
+
+    #url = 'http://192.168.1.65:8080/'
+
     try:
         file = open("config_file.json", "r")
         json_string = file.read()

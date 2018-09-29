@@ -1,10 +1,10 @@
 {
 	"dataToRest": {
-			"Host_IP": "localhost",
+			"Host_IP": "192.168.43.91",
 			"port": "8082"
 		},
 	"broker": {
-			"Broker_IP": "192.168.1.254",
+			"Broker_IP": "192.168.43.159",
 			"Broker_port": "1883"
 		},
   "telegram": {
@@ -14,10 +14,10 @@
 	"room_1": {
 
 		"thresholds": {
-			"min_hum": 1.0,
-			"min_temp": 1.0,
-			"max_hum": 10.0,
-			"max_temp": 10.0
+			"min_hum": 0.0,
+			"min_temp": 0.0,
+			"max_hum": 100.0,
+			"max_temp": 100.0
 		},
 		"thingspeak": {
 			"READ_API_KEY": "PN6SHE0RIBDLGS85",

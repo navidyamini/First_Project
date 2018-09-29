@@ -20,20 +20,22 @@ class CheckingThreshold(object):
 
     def load_file(self):
         try:
-
+            #print(self.url_resource)
             respond = requests.get(self.url_resource+"/dataToRest")
+            #print(respond)
             json_format = json.loads(respond.text)
+
             self.restURL = json_format["Host_IP"]
-
+            #print(self.restURL)
             self.port = json_format["port"]
-
+            #print(self.port)
         except :
             print "CheckingThreshold: ERROR IN CONNECTING TO THE SERVER FOR GETTING WEB SERVICE IP"
 
         try:
-
+            # print(self.url_resource)
             respond = requests.get(self.url_resource+"/"+self.room_id)
-
+            # print(respond)
             json_format = json.loads(respond.text)
             self.AC_Topic = json_format["topic"]["AC_Topic"]
             self.max_temperature = json_format["thresholds"]["max_temp"]
@@ -104,7 +106,7 @@ class CheckingThreshold(object):
         return
 
 if __name__ == '__main__':
-
+    #url = 'http://192.168.1.65:8080/'
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
@@ -135,7 +137,7 @@ if __name__ == '__main__':
         try:
             client.on_connect = CheckingThreshold.on_connect
             client.on_publish = CheckingThreshold.on_publish
-            client.connect(ip, int(port))
+            client.connect(str(ip), int(port))
             client.loop_start()
         except:
             print "PublishData: ERROR IN CONNECTING TO THE BROKER"

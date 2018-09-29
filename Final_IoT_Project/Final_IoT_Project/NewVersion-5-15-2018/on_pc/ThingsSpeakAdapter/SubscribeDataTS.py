@@ -28,7 +28,7 @@ class SubscribeDataTS(object):
             json_format = json.loads(self.respond.text)
             self.DHT_topic = json_format["topic"]["DHT_Topic"]
             self.counter_topic = json_format["topic"]["Counter_Topic"]
-            self.AC_status = json_format["topic"]["AC_Topic"]
+            self.AC_status = json_format["topic"]["Ac_Status"]
             print "SubscribeDataTS:: TOPICS ARE READY"
         except:
             print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
@@ -54,15 +54,18 @@ class SubscribeDataTS(object):
     def check(self):
         if(self.payload != 'null'):
             self.thingSpeak.setThingSpeakVariables()
+            #print(payload)
             if(self.topic == self.DHT_topic ):
                 self.thingSpeak.sending_dht_data(self.payload)
                 time.sleep(10)
             elif(self.topic == self.counter_topic ):
                 self.thingSpeak.number_of_people(self.payload)
                 time.sleep(10)
+            #TODO send the ac status to thing speak
             elif(self.topic == self.AC_status ):
                 self.thingSpeak.ac_status(self.payload)
                 time.sleep(10)
+            #print ("from chek",payload,topic)
             payload='null'
         return
 

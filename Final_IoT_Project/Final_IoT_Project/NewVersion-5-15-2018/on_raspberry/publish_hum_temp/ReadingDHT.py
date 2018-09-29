@@ -28,10 +28,9 @@ class ReadingDHT(object):
         else:
             print 'ReadingDHT: ERROR IN SENDING JSON'
         return
-'''
+
 if __name__ == '__main__':
 
     data_of_DHT = ReadingDHT()
     while True:
         data_of_DHT.reading_sensor()
-'''
