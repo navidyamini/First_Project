@@ -44,6 +44,7 @@ class PublishData(object):
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("mid: " + str(mid))
         print ("at time: " + str(current_time))
+        print("--------------------------------------------------------------------")
         return str(mid)
 
     def publish_sensor_data(self):

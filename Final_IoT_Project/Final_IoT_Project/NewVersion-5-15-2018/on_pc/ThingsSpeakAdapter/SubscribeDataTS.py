@@ -46,6 +46,7 @@ class SubscribeDataTS(object):
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))
         print ("at time: " + str(current_time))
+        print("--------------------------------------------------------------------")
         message_body = str(msg.payload.decode("utf-8"))
         cls.payload = json.loads(message_body)
         cls.topic = msg.topic
@@ -61,7 +62,7 @@ class SubscribeDataTS(object):
             elif(self.topic == self.counter_topic ):
                 self.thingSpeak.number_of_people(self.payload)
                 time.sleep(10)
-            #TODO send the ac status to thing speak
+
             elif(self.topic == self.AC_status ):
                 self.thingSpeak.ac_status(self.payload)
                 time.sleep(10)

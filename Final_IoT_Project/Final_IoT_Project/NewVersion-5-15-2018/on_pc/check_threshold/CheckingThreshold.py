@@ -59,7 +59,7 @@ class CheckingThreshold(object):
     def check_thresholds(self):
         temperature =float(self.temperature)
         humidity= float(self.humidity)
-        if (temperature > self.max_temperature) or (temperature < self.min_temperature) or (humidity > self.max_humidity) or (humidity < self.min_humidity):
+        if (temperature > float(self.max_temperature)) or (temperature < float(self.min_temperature)) or (humidity > float(self.max_humidity)) or (humidity < float(self.min_humidity)):
             self.order = "Turn_on"
             try:
                 self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id,"Order": str(self.order)})
@@ -90,6 +90,7 @@ class CheckingThreshold(object):
         print("mid: " + str(mid))
         print("Published Message")
         print ("at time: " + str(current_time))
+        print("--------------------------------------------------------------------")
         return str(mid)
 
     def publish_order(self):
