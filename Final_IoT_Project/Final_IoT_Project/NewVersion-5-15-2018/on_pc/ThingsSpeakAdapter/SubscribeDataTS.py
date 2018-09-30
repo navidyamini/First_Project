@@ -29,9 +29,9 @@ class SubscribeDataTS(object):
             self.DHT_topic = json_format["topic"]["DHT_Topic"]
             self.counter_topic = json_format["topic"]["Counter_Topic"]
             self.AC_status = json_format["topic"]["Ac_Status"]
-            print "SubscribeDataTS:: TOPICS ARE READY"
+            print ("SubscribeDataTS:: TOPICS ARE READY")
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print ("SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
 
     @staticmethod
     def on_subscribe(client, userdata, mid, granted_qos):
@@ -93,9 +93,9 @@ if __name__ == '__main__':
             json_format = json.loads(respond.text)
             Broker_IP = json_format["Broker_IP"]
             Broker_Port = json_format["Broker_port"]
-            print "SubscribeDataTS:: BROKER VARIABLES ARE READY"
+            print ("SubscribeDataTS:: BROKER VARIABLES ARE READY")
         except:
-            print "SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print ("SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
         try:
             client.connect(Broker_IP, int(Broker_Port))
             client.subscribe(str(sens.DHT_topic), qos=1)
@@ -103,7 +103,7 @@ if __name__ == '__main__':
             client.subscribe(str(sens.AC_status), qos=1)
             client.loop_start()
         except:
-            print "SubscribeDataTS: Problem in connecting to broker"
+            print ("SubscribeDataTS: Problem in connecting to broker")
         while True:
             sens.check()
             time.sleep(10)
