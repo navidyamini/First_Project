@@ -18,7 +18,7 @@ class ThingSpeak(object):
         try:
             respond = requests.get(self.url)
         except:
-            print "ThingSpeak: ERROR IN CONNECTING TO THE SERVER FOR READING THINGSPEAKCONNECTIONINFO.JSON"
+            print ("ThingSpeak: ERROR IN CONNECTING TO THE SERVER FOR READING THINGSPEAKCONNECTIONINFO.JSON")
             return
         json_format = json.loads(respond.text)
         self.THINGSPEAK_HOST = json_format["thingspeak"]["THINGSPEAK_HOST"]
@@ -29,15 +29,15 @@ class ThingSpeak(object):
         self.mqttHost =json_format["thingspeak"]["mqttHost"]
         # Create the topic string
         self.topic = "channels/" + self.channelID + "/publish/" + self.ACCESS_TOKEN
-        print "ThingSpesk: THINGSPEAK VARIABLES ARE READY"
+        print ("ThingSpesk: THINGSPEAK VARIABLES ARE READY")
         return
 
     def sending_dht_data(self,meesage):
         temperature = meesage["temperature"]
         humidity= meesage["humidity"]
 
-        print "From thingspeak"
-        print 'Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity)
+        print ("From thingspeak")
+        print ('Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity))
 
         # build the payload string
         payload = "&field1=" + str(temperature) + "&field2=" + str(humidity)
@@ -54,7 +54,7 @@ class ThingSpeak(object):
     def number_of_people(self,meesage):
 
         result = meesage["bluetooth_counter"]
-        print result
+        print (result)
         #time.sleep(10)
         # build the payload string
         payload = "&field3=" + str(result)

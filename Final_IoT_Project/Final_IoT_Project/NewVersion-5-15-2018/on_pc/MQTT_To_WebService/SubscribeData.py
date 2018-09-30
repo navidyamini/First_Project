@@ -111,9 +111,9 @@ if __name__ == '__main__':
             json_format = json.loads(respond.text)
             Broker_IP = json_format["Broker_IP"]
             Broker_Port = json_format["Broker_port"]
-            print "SubscribeData:: BROKER VARIABLES ARE READY"
+            print ("SubscribeData:: BROKER VARIABLES ARE READY")
         except:
-            print "SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS"
+            print ("SubscribeData: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
         try:
             client.connect(Broker_IP, int(Broker_Port))
             client.subscribe(str(wildcard_topic), qos=1)
@@ -121,5 +121,5 @@ if __name__ == '__main__':
             #client.subscribe(str(sens.AC_status), qos=1)
             client.loop_forever()
         except:
-            print "SubscribeData: Problem in connecting to broker"
+            print ("SubscribeData: Problem in connecting to broker")
 
