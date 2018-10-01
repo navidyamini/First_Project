@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cfed96e-712f-40c7-a5e0-6c9108bd0077" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/real_time_data.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/real_time_data.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/DataWithRest.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/DataWithRest.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/SubscribeData.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/SubscribeData.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/config_file.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/initial_data.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/initial_data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/PublishPeoPleNo.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/PublishPeoPleNo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/map_beac_paints.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/map_beac_paints.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/config_file.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/config_file.json" afterPath="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/config_file.json" />
     </list>
     <ignored path="First_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,20 +26,20 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$DataWithRest.coverage" NAME="DataWithRest Coverage Results" MODIFIED="1538245996946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService" />
-    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$CheckingThreshold.coverage" NAME="CheckingThreshold Coverage Results" MODIFIED="1538245064092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold" />
+    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$CheckingThreshold.coverage" NAME="CheckingThreshold Coverage Results" MODIFIED="1538313586605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$POST_ResourceCatalog.coverage" NAME="POST_ResourceCatalog Coverage Results" MODIFIED="1538245767511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog" />
     <SUITE FILE_PATH="coverage/First_Project$ResourceCatalog.coverage" NAME="ResourceCatalog Coverage Results" MODIFIED="1537392225156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc" />
-    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$MovementDetection.coverage" NAME="MovementDetection Coverage Results" MODIFIED="1538154208794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection" />
+    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$MovementDetection.coverage" NAME="MovementDetection Coverage Results" MODIFIED="1538322646036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection" />
     <SUITE FILE_PATH="coverage/First_Project$POST_ResourceCatalog.coverage" NAME="POST_ResourceCatalog Coverage Results" MODIFIED="1537448760843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$Museum_Web_Service.coverage" NAME="Museum_Web_Service Coverage Results" MODIFIED="1538154195591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$new_POST_ResourceCatalog.coverage" NAME="new_POST_ResourceCatalog Coverage Results" MODIFIED="1538172119434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$POSTWebResourceCatalog__1_.coverage" NAME="POSTWebResourceCatalog (1) Coverage Results" MODIFIED="1538152419153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage" />
     <SUITE FILE_PATH="coverage/First_Project$TEST_POSTWebResourceCatalog.coverage" NAME="TEST_POSTWebResourceCatalog Coverage Results" MODIFIED="1535112556913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/WebPage" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$SubscribeData.coverage" NAME="SubscribeData Coverage Results" MODIFIED="1538238029368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService" />
-    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$TelegramBot.coverage" NAME="TelegramBot Coverage Results" MODIFIED="1538238165886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram" />
+    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$TelegramBot.coverage" NAME="TelegramBot Coverage Results" MODIFIED="1538313326847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram" />
     <SUITE FILE_PATH="coverage/First_Project$mqtt_dash_all_Prueba2_direc_change.coverage" NAME="mqtt_dash_all_Prueba2_direc_change Coverage Results" MODIFIED="1529774425145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage" />
     <SUITE FILE_PATH="coverage/First_Project$WebResourceCatalog.coverage" NAME="WebResourceCatalog Coverage Results" MODIFIED="1530398432361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage" />
-    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$SubscribeAcOrder.coverage" NAME="SubscribeAcOrder Coverage Results" MODIFIED="1537471450288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder" />
+    <SUITE FILE_PATH="coverage/First_Project_9_16_2018$SubscribeAcOrder.coverage" NAME="SubscribeAcOrder Coverage Results" MODIFIED="1538306517258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$testFindingInJson.coverage" NAME="testFindingInJson Coverage Results" MODIFIED="1538045334626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Gallery_Web_Service/MovementDetection" />
     <SUITE FILE_PATH="coverage/First_Project_9_16_2018$POSTWebResourceCatalog.coverage" NAME="POSTWebResourceCatalog Coverage Results" MODIFIED="1538152227791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/WebPage" />
     <SUITE FILE_PATH="coverage/First_Project$DataWithRest.coverage" NAME="DataWithRest Coverage Results" MODIFIED="1537449278352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService" />
@@ -101,43 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="static_dashboard_mqtt.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/static_dashboard_mqtt.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="391" column="37" lean-forward="false" selection-start-line="391" selection-start-column="28" selection-end-line="391" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubscribeData.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/SubscribeData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="32" column="85" lean-forward="false" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
-              <folding>
-                <element signature="e#225#240#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckingThreshold.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckingThreshold.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="645">
               <caret line="92" column="85" lean-forward="false" selection-start-line="92" selection-start-column="85" selection-end-line="92" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubscribeAcOrder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -146,28 +111,8 @@
       <file leaf-file-name="PublishAcStatus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="-339">
               <caret line="37" column="85" lean-forward="false" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublishTempHum.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="46" column="85" lean-forward="false" selection-start-line="46" selection-start-column="85" selection-end-line="46" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublishPeoPleNo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/PublishPeoPleNo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="47" column="85" lean-forward="false" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -176,8 +121,72 @@
       <file leaf-file-name="SubscribeDataTS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="-669">
               <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="85" selection-end-line="48" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThingSpeakUpload.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_file.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/config_file.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovementDetection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1581">
+              <caret line="93" column="53" lean-forward="true" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_file.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/config_file.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Museum_Web_Service.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/Museum_Web_Service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map_beac_paints.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/map_beac_paints.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -188,16 +197,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="746" lean-forward="false" selection-start-line="0" selection-start-column="746" selection-end-line="0" selection-end-column="746" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataWithRest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/DataWithRest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -231,20 +230,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/test.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/real_time_data.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/config_file.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/config_file.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/initial_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/real_time_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/xime_initial_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/xime_initial_data.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/config_file.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/config_file.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/config_file.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/config_file.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/config_file.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/RawWebpage/initial_data.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MoveMentDetection/MovementDetection.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MoveMentDetection/test.py" />
@@ -257,8 +248,6 @@
         <option value="$PROJECT_DIR$/Final_IoT_Project/Command.txt" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/config_file.json" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Gallery_Web_Service/MovementDetection/MovementDetection.py" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/config_file.json" />
-        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/Museum_Web_Service.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ResourceCatalog.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/initial_data.json" />
@@ -282,6 +271,16 @@
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/SubscribeData.py" />
         <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/config_file.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/map_beac_paints.json" />
+        <option value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py" />
       </list>
     </option>
   </component>
@@ -454,28 +453,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="First_Project_9_16_2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_IoT_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="NewVersion-5-15-2018" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -506,7 +483,157 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="on_raspberry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SubscribeAcOrder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewVersion-5-15-2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="on_pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="check_threshold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewVersion-5-15-2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="on_pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThingsSpeakAdapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewVersion-5-15-2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="on_pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewVersion-5-15-2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="on_pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResourceCatalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewVersion-5-15-2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="on_pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MQTT_To_WebService" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -558,6 +685,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First_Project_9_16_2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_IoT_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewVersion-5-15-2018" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gallery_Web_Service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovementDetection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -597,43 +754,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.RoomPOSTWebResourceCatalog">
-    <configuration default="false" name="CheckingThreshold" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="First_Project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SubscribeDataTS" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="First_Project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.MovementDetection">
     <configuration default="false" name="RoomPOSTWebResourceCatalog" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -652,38 +773,74 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="POST_ResourceCatalog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="SubscribeAcOrder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="First_Project" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/POST_ResourceCatalog.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/SubscribeAcOrder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="DataWithRest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="TelegramBot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="First_Project" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/DataWithRest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CheckingThreshold" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="First_Project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MovementDetection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="First_Project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -903,19 +1060,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.CheckingThreshold" />
-      <item index="1" class="java.lang.String" itemvalue="Python.SubscribeDataTS" />
-      <item index="2" class="java.lang.String" itemvalue="Python.RoomPOSTWebResourceCatalog" />
-      <item index="3" class="java.lang.String" itemvalue="Python.POST_ResourceCatalog" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DataWithRest" />
+      <item index="0" class="java.lang.String" itemvalue="Python.RoomPOSTWebResourceCatalog" />
+      <item index="1" class="java.lang.String" itemvalue="Python.SubscribeAcOrder" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TelegramBot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.CheckingThreshold" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MovementDetection" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.RoomPOSTWebResourceCatalog" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DataWithRest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.POST_ResourceCatalog" />
-        <item index="3" class="java.lang.String" itemvalue="Python.CheckingThreshold" />
-        <item index="4" class="java.lang.String" itemvalue="Python.SubscribeDataTS" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MovementDetection" />
+        <item index="1" class="java.lang.String" itemvalue="Python.CheckingThreshold" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TelegramBot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SubscribeAcOrder" />
+        <item index="4" class="java.lang.String" itemvalue="Python.RoomPOSTWebResourceCatalog" />
       </list>
     </recent_temporary>
   </component>
@@ -1185,7 +1342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538242578750</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="updating the code to work with two rooms&#10;">
+      <created>1538303780788</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1538303780788</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1201,17 +1365,17 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27891654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27891654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30860534" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31305638" sideWeight="0.45827234" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2908012" sideWeight="0.58711565" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45697328" sideWeight="0.58931184" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2908012" sideWeight="0.41288432" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45697328" sideWeight="0.41068813" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1419,31 +1583,6 @@
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="169" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>60</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>61</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py</url>
           <line>54</line>
           <option name="timeStamp" value="177" />
@@ -1469,75 +1608,16 @@
           <option name="timeStamp" value="181" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="182" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="183" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="184" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>66</line>
-          <option name="timeStamp" value="185" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="186" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
           <line>34</line>
           <option name="timeStamp" value="187" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="188" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="189" />
+      <option name="time" value="201" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/map_beac_paints.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/initial_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/RawWebpage/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/putting_everything_together/on_pc/ResourceCatalog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ConvertSubToWebService/config_file_xime.json" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/Prueba2_direc_change.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/WebResourceCatalog.py" />
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/thresholds1_python.html" />
@@ -1579,39 +1659,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/map_beac_paints.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/config_file.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1655,26 +1703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/Webpage/config_file.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1682,14 +1710,6 @@
           <folding>
             <marker date="1538242957463" expanded="true" signature="22:117" ph="{&quot;url&quot;: &quot;http://localhost:8080&quot;...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1701,37 +1721,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/real_time_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="213" lean-forward="false" selection-start-line="0" selection-start-column="213" selection-end-line="0" selection-end-column="213" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/POST_ResourceCatalog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="117" column="37" lean-forward="false" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/config_file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/initial_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="746" lean-forward="false" selection-start-line="0" selection-start-column="746" selection-end-line="0" selection-end-column="746" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,14 +1755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="37" column="85" lean-forward="false" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/PublishTempHum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -1783,14 +1771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="85" selection-end-line="48" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/SubscribeData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1801,11 +1781,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/Telegram/TelegramBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_hum_temp/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/publish_people_no/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/MQTT_To_WebService/real_time_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="213" lean-forward="false" selection-start-line="0" selection-start-column="213" selection-end-line="0" selection-end-column="213" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ResourceCatalog/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="746" lean-forward="false" selection-start-line="0" selection-start-column="746" selection-end-line="0" selection-end-column="746" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/check_threshold/CheckingThreshold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="645">
           <caret line="92" column="85" lean-forward="false" selection-start-line="92" selection-start-column="85" selection-end-line="92" selection-end-column="85" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_raspberry/SubscribeAcOrder/PublishAcStatus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-339">
+          <caret line="37" column="85" lean-forward="false" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/ThingSpeakUpload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/map_beac_paints.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/on_pc/ThingsSpeakAdapter/SubscribeDataTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-669">
+          <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="85" selection-end-line="48" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/config_file.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/Museum_Web_Service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_IoT_Project/Final_IoT_Project/NewVersion-5-15-2018/Gallery_Web_Service/MovementDetection/MovementDetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="53" lean-forward="true" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

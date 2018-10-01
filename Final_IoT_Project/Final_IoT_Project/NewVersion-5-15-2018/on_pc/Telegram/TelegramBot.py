@@ -40,7 +40,7 @@ class telegramBot(object):
             outputString = 'Temperature'+ str(temp) + "\n" + 'Humidity' + str(hum) +"\n"+"AcStatus"+staus+"\n"+"Number of people"+str(count)
 
         except:
-                return "Invalid command.\nPlease enter the correct room id\nex: Room_1"
+                return "Please enter the correct room id\nex: room_1"
 
         return str(outputString)
 
