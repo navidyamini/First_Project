@@ -395,7 +395,7 @@
           mqttprevnpeople = mqttnpeople;
           mqttprevac = mqttac;
 
-          $.getJSON('http://localhost:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
+          $.getJSON('http://192.168.1.125:8082/all',{dataType : 'json', jsonp : false,jsonpCallback : 'parseResponse'}, function (result) {
 
               mqtttemp = result["room_2"]["temperature"].value;
               mqtthum = result["room_2"]["humidity"].value;
