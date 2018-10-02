@@ -37,7 +37,7 @@ class telegramBot(object):
             hum=jsonformat['humidity']['value']
             staus=jsonformat['AcStatus']['value']
             count=jsonformat['bluetoothCounter']['value']
-            outputString = 'Temperature'+ str(temp) + "\n" + 'Humidity' + str(hum) +"\n"+"AcStatus"+staus+"\n"+"Number of people"+str(count)
+            outputString = 'Temperature: '+ str(temp) + "\n" + 'Humidity: ' + str(hum) +"\n"+"AcStatus: "+staus+"\n"+"Number of people: "+str(count)
 
         except:
                 return "Please enter the correct room id\nex: room_1"
