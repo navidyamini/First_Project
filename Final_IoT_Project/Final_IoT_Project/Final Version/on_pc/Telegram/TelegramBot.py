@@ -9,12 +9,13 @@ class telegramBot(object):
     def __init__(self,url,port):
         self.url = url
         bot = telepot.Bot(port)
-
+# ask the mqtt to web service url from the resource catalog
     def setWebServiceVariables(self):
         try:
             respond = requests.get(self.url+"/dataToRest")
         except:
             print "TelegramBot: ERROR IN CONNECTING TO THE SERVER FOR GETTING RESTFUL WEB SERVICE URL"
+        # set the url to ask for the real time data
         json_format = json.loads(respond.text)
         self.restURL = json_format["Host_IP"]
         self.port = json_format["port"]
@@ -28,8 +29,10 @@ class telegramBot(object):
         bot.sendMessage(chat_id, self.sendResult(command))
 
     def sendResult(self,command):
+        # sending back the result by asking the data related to the room_id received by the telegrom
         print'trying to send back the result'
         try:
+            # sending the request to the mqtt to web service
             result = requests.get("http://"+self.restURL+ ":" + self.port+ "/"+command+"/all").content
             time.sleep(5)
             jsonformat = json.loads(result)
@@ -44,10 +47,8 @@ class telegramBot(object):
 
         return str(outputString)
 
-
-
 if __name__ == '__main__':
-
+    # read the config file to find the resource catalog url
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
@@ -57,7 +58,7 @@ if __name__ == '__main__':
 
     config_json = json.loads(json_string)
     url = config_json["reSourceCatalog"]["url"]
-
+# sending request to the resource catolog to get the telegram bot port
     try:
         respond = requests.get(url+"/telegram")
         json_format = json.loads(respond.text)
@@ -65,9 +66,9 @@ if __name__ == '__main__':
         telegram_bot = telegramBot(url,port)
     except:
         print "ERROR IN CONNECTING TO SERVER FOR GETTING TELEGROM BOT PORT"
+    # set the port and start the loop
     try:
         def handle(msg):
-            # print msg
             telegram_bot.handler(msg)
         bot = telepot.Bot(port)
         bot.message_loop(handle)
