@@ -15,6 +15,8 @@ class ThingSpeak(object):
         self.mqttHost = ""
 
     def setThingSpeakVariables(self):
+        # request the thingspeak variables related
+        # the room_id, from the resource catalog
         try:
             respond = requests.get(self.url)
         except:
@@ -45,17 +47,17 @@ class ThingSpeak(object):
         # attempt to publish this data to the topic
         try:
             publish.single(self.topic, payload, hostname = self.mqttHost, transport = self.tTransport, port = self.tPort)
-            #time.sleep(10)
+
         except:
             print("ThingSpeak: ERROR IN PUBLISHING THE HUM AND TEMP TO THINGSPEAK")
-        #time.sleep(10)
+
         return
 
     def number_of_people(self,meesage):
 
         result = meesage["bluetooth_counter"]
         print (result)
-        #time.sleep(10)
+
         # build the payload string
         payload = "&field3=" + str(result)
         # attempt to publish this data to the topic
@@ -82,7 +84,9 @@ class ThingSpeak(object):
         return
 
 if __name__ == '__main__':
-
+    # this main part is for testing the class,
+    # we are not running this in the project
+    # we just use the ThingSpeak class in the SubscribeDtaTS
     thingspeak = ThingSpeak()
     while True:
         thingspeak.setThingSpeakVariables()

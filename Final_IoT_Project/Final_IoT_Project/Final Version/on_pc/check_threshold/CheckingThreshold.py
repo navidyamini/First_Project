@@ -20,22 +20,20 @@ class CheckingThreshold(object):
 
     def load_file(self):
         try:
-            #print(self.url_resource)
+            # sending the rquest to the resource
+            # catalog to get he MQTT To webService url
             respond = requests.get(self.url_resource+"/dataToRest")
-            #print(respond)
             json_format = json.loads(respond.text)
-
             self.restURL = json_format["Host_IP"]
-            #print(self.restURL)
             self.port = json_format["port"]
-            #print(self.port)
+
         except :
             print "CheckingThreshold: ERROR IN CONNECTING TO THE SERVER FOR GETTING WEB SERVICE IP"
 
         try:
-            # print(self.url_resource)
+          # sending the request to the resource catalog to
+          # get the threshold values for the specified room
             respond = requests.get(self.url_resource+"/"+self.room_id)
-            # print(respond)
             json_format = json.loads(respond.text)
             self.AC_Topic = json_format["topic"]["AC_Topic"]
             self.max_temperature = json_format["thresholds"]["max_temp"]
@@ -48,6 +46,8 @@ class CheckingThreshold(object):
         return
 
     def getting_temp_hum(self):
+        # sending request to the MQTT To WebService to get
+        # the current value for the temperature and humidity
         try:
             self.temperature = requests.get("http://" + self.restURL + ":" + self.port + "/" + self.room_id + "/temp").content
             self.humidity = requests.get("http://" + self.restURL + ":" + self.port + "/" + self.room_id + "/hum").content
@@ -57,15 +57,18 @@ class CheckingThreshold(object):
         return
 
     def check_thresholds(self):
+        # check the current values with the thresholds
         temperature =float(self.temperature)
         humidity= float(self.humidity)
         if (temperature > float(self.max_temperature)) or (temperature < float(self.min_temperature)) or (humidity > float(self.max_humidity)) or (humidity < float(self.min_humidity)):
+            #set the publisher message for turning on the A/C
             self.order = "Turn_on"
             try:
                 self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id,"Order": str(self.order)})
             except:
                 print "CheckingThreshold: ERROR IN SENDING TURN ON ORDER"
         else:
+            # set the publisher message for turning off the A/C
             self.order = "Turn_off"
             try:
                 self.order_msg = json.dumps({"subject": "AcOrder","roomId": self.room_id, "Order": str(self.order)})
@@ -107,7 +110,7 @@ class CheckingThreshold(object):
         return
 
 if __name__ == '__main__':
-    #url = 'http://192.168.1.65:8080/'
+    # reading the config file to set the room_id and the resource catalog url
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
@@ -126,7 +129,7 @@ if __name__ == '__main__':
         sens.load_file()
         sens.getting_temp_hum()
         sens.check_thresholds()
-
+    # sending request to resource catalog to het the broker ip
         try:
             respond = requests.get(resourceCatalogIp+"/broker")
             json_format = json.loads(respond.text)

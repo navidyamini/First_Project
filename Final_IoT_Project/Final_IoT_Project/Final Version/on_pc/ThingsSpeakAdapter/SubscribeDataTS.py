@@ -2,7 +2,7 @@
 ##   Third class that have to SUBSCRIBE data         ##
 ##   to be placed on PC                              ##
 #######################################################
-
+# this program subscribe the data coming from publishers and submit them on the thingSpkea
 import datetime
 import paho.mqtt.client as paho
 import requests
@@ -20,10 +20,12 @@ class SubscribeDataTS(object):
         self.client = client
         client.on_subscribe = self.on_subscribe
         client.on_message = self.on_message
+        # create an object from ThingSpeak class
         self.thingSpeak = ThingSpeak(self.url)
 
     def load_topics(self):
         try:
+            # request the topics from the resource catalog
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
             self.DHT_topic = json_format["topic"]["DHT_Topic"]
@@ -51,11 +53,12 @@ class SubscribeDataTS(object):
         cls.payload = json.loads(message_body)
         cls.topic = msg.topic
 
-    #@classmethod
+    # check the topic of the received message to call the relative method of the
+    # thingSpeak object and publish the data on that channel
     def check(self):
         if(self.payload != 'null'):
             self.thingSpeak.setThingSpeakVariables()
-            #print(payload)
+
             if(self.topic == self.DHT_topic ):
                 self.thingSpeak.sending_dht_data(self.payload)
                 time.sleep(10)
@@ -66,28 +69,31 @@ class SubscribeDataTS(object):
             elif(self.topic == self.AC_status ):
                 self.thingSpeak.ac_status(self.payload)
                 time.sleep(10)
-            #print ("from chek",payload,topic)
             payload='null'
         return
 
 if __name__ == '__main__':
-    #url = 'http://192.168.1.65:8080/'
+    # from config file it reads the resource catalog url and the
+    # room_id that it should listen to its publishers.
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
         file.close()
     except:
         raise KeyError("***** SubscribeDataTS: ERROR IN READING CONFIG FILE *****")
-
+    #set the url and the room id
     config_json = json.loads(json_string)
     resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     roomId = config_json["reSourceCatalog"]["roomId"]
+
     url= resourceCatalogIP + roomId
     client = paho.Client()
+    #create an object from SubscribeDataTS
     sens = SubscribeDataTS(url, client)
 
     while True:
         try:
+            # send the request to ge the broker ip
             sens.load_topics()
             respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
@@ -97,6 +103,7 @@ if __name__ == '__main__':
         except:
             print ("SubscribeDataTS: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
         try:
+            # set the topics by using the SubscribeDataTS
             client.connect(Broker_IP, int(Broker_Port))
             client.subscribe(str(sens.DHT_topic), qos=1)
             client.subscribe(str(sens.counter_topic), qos=1)
