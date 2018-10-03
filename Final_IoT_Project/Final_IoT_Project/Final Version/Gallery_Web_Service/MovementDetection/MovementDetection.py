@@ -19,8 +19,8 @@ class MovementDetection(object):
         self.brokerIp =  json_data["broker"]["Broker_IP"]
         self.brokerPort = json_data["broker"]["Broker_port"]
         self.topic = json_data["broker"]["topic"]
-    @staticmethod
 
+    @staticmethod
     def on_connect(client, userdata, flags, rc):
         print("\n I'm connected to the MQTT SERVER")
         print("\n- Connection received with code: ", str(rc))
@@ -43,10 +43,12 @@ class MovementDetection(object):
             file.close()
         except:
             raise KeyError("*****MovementDetection: ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
+        #load the json of the relative config_file
         config_json = json.loads(json_string)
         ip = config_json["GalleryWebService"]["url"]
         respond = requests.get(ip)
         json_data = json.loads(respond.text)
+        #after the creation of the request above, now we are interested in
         painting_json_format = json_data["roomArtworks"]
 
         for object in painting_json_format:
@@ -76,27 +78,30 @@ if __name__ == '__main__':
     client = paho.Client()
     while True:
         try:
+            #firstly we read the config file to extract the information that we need to reach the museum web service
             file = open("config_file.json", "r")
             json_string = file.read()
             file.close()
         except:
             raise KeyError("*****MovementDetection: ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
         config_json = json.loads(json_string)
+        #after the conversion from json we take the url
         ip = config_json["GalleryWebService"]["url"]
         respond = requests.get(ip)
         json_data = json.loads(respond.text)
+        #once we reach the museum web service we take the information related to the broker, IP, PORT and TOPIC
         brokerIp = json_data["broker"]["Broker_IP"]
         brokerPort = json_data["broker"]["Broker_port"]
         topic = json_data["broker"]["topic"]
-        #movementDetection=MovementDetection()
+
         while True:
             try:
-            #movementDetection.setTelegramVariables()
+                #Then we proceed with a subscribtion of the data published by the application
                 client.on_connect = MovementDetection.on_connect
                 client.on_subscribe = MovementDetection.on_subscribe
                 client.on_message = MovementDetection.on_message
                 client.connect(str(brokerIp), int(brokerPort), 60)
-                client.subscribe(str(topic), qos=0)
+                client.subscribe(str(topic), qos=1)
                 client.loop_forever()
             except:
                 print "MovementDetection: Problem in connecting to broker"
