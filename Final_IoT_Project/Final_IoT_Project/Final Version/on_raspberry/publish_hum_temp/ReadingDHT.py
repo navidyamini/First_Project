@@ -23,14 +23,14 @@ class ReadingDHT(object):
             get_time = datetime.datetime.now()
             current_time = get_time.strftime("%Y-%m-%d %H:%M:%S")
             json_format = json.dumps({"temperature": self.temperature, "humidity": self.humidity,"time":current_time})
-            # print json_format
+
             return json_format
         else:
             print 'ReadingDHT: ERROR IN SENDING JSON'
         return
 
 if __name__ == '__main__':
-
+# this is for testing we use this class in the PublishTempHum class
     data_of_DHT = ReadingDHT()
     while True:
         data_of_DHT.reading_sensor()

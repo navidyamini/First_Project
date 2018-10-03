@@ -57,6 +57,7 @@ class PublishAcStatus(object):
         self.client.loop_stop();
 
     def load(self):
+        # sending request to reaourse catalog to set hte broker ip and port
         try:
             respond = requests.get(self.url+"/broker")
             json_format = json.loads(respond.text)
@@ -67,6 +68,7 @@ class PublishAcStatus(object):
             print ("PublishAcStatus: ERROR IN CONNECTING TO THE SERVER FOR READING BROKER TOPICS")
 
         try:
+            # sending the room+id to the resource catalog to get the topic
             respond = requests.get(self.url + "/" + self.roomId)
             json_format = json.loads(respond.text)
             self.AC_Topic = json_format["topic"]["Ac_Status"]

@@ -12,6 +12,7 @@ class LEDbyRelay(object):
 
     def __init__(self, url, roomId):
         self.relayPin = 17
+        # create an object from PublishAcStatus class
         self.publish = PublishAcStatus(url, roomId)
 
     # setup function for some setup---custom function
@@ -32,9 +33,8 @@ class LEDbyRelay(object):
             self.publish.load()
             self.publish.stop()
         except:
-            print("this is the problem")
-        # self.thingSpeak.setThingSpeakVariables()
-        # publish = PublishAcStatus()
+            print("problem in publishing the A.C status")
+
         GPIO.output(self.relayPin, GPIO.LOW)
         self.publish.publish_data("It is ON")
         self.publish.start()
@@ -44,8 +44,6 @@ class LEDbyRelay(object):
     def disconnect(self):
         self.publish.load()
         self.publish.stop()
-        # publish = PublishAcStatus()
-        # self.thingSpeak.setThingSpeakVariables()
         GPIO.output(self.relayPin, GPIO.HIGH)
         self.publish.publish_data("It is OFF")
         self.publish.start()
@@ -61,7 +59,7 @@ class LEDbyRelay(object):
 
 
 if __name__ == '__main__':
-
+# this main part is for testing, this class will be used in the SubscribeAcOrder
     pinNo = 17
     try:
         controling_LED = LEDbyRelay(pinNo)
@@ -76,7 +74,6 @@ if __name__ == '__main__':
             # connect
             controling_LED.connect()
             time.sleep(20)
-    # when 'Ctrl+C' is pressed,child program destroy() will be executed.
     except KeyboardInterrupt:
         controling_LED.destroy()
 

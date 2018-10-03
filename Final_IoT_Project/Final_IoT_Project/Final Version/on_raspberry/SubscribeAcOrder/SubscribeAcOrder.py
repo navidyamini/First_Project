@@ -15,15 +15,18 @@ class SubscribeAcOrder(object):
     payload = "null"
     orders = 'null'
     def __init__(self, url, roomId, client):
+        # this flag is for checking the current status of the A/C
         self.flag = 0
         self.url =url
         self.room_Id = roomId
+        # create an object from LEDbyRlay class
         self.controling_LED = LEDbyRelay(url,roomId)
         self.client = client
         client.on_subscribe = self.on_subscribe
         client.on_message = self.on_message
 
     def load_topics(self):
+        #sending request to get the topic by sending the room_id to the resource catalog
         try:
             self.respond = requests.get(self.url + self.room_Id)
             json_format = json.loads(self.respond.text)
@@ -52,7 +55,7 @@ class SubscribeAcOrder(object):
         cls.orders = cls.payload["Order"]
 
     def order(self):
-
+ # here check the order, and apply it ine time by using the flag
         if(self.orders == "Turn_on" and self.flag == 0):
             print("Sending Turn on order")
 
@@ -75,6 +78,7 @@ class SubscribeAcOrder(object):
 if __name__ == '__main__':
     # RUN THE SUBSCRIBE FOR GETTING THE TEMPERATURE AND HUMIDITY DATA
     try:
+        # read the comfig file to set hte resource catalog url and the room_id
         file = open("config_file.json", "r")
         json_string = file.read()
         file.close()
@@ -89,6 +93,7 @@ if __name__ == '__main__':
 
     while True:
         try:
+            # sending reuest to resource catalog to get the broker info
             sens.load_topics()
             respond = requests.get(resourceCatalogip+"/broker")
             json_format = json.loads(respond.text)

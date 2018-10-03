@@ -9,6 +9,7 @@ class BluetoothCounter(object):
         self.counter = 0
 
     def search(self):
+        # searching for the bluetooth devices
         try:
             devices = bluetooth.discover_devices(duration=20, lookup_names = True)
         except:
@@ -40,6 +41,7 @@ class BluetoothCounter(object):
         return final_result
 
 if __name__=="__main__":
+    # this is for testing we call this class in PublishPeopleNo class
     bluetooth_counter = BluetoothCounter()
     while True:
         bluetooth_counter.device_counter()

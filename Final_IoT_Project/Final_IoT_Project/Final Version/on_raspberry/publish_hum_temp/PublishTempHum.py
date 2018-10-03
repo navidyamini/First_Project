@@ -20,6 +20,7 @@ class PublishData(object):
         self.roomId=roomId
 
     def load_topics(self):
+        # sending request to the resource catalog to get the topics related to the room id
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
@@ -70,8 +71,8 @@ class PublishData(object):
 
 if __name__ == '__main__':
 
-    #url = 'http://192.168.1.65:8080/'
     try:
+        # reading the config file to set the resource catalog url and the room id
         file = open("config_file.json", "r")
         json_string = file.read()
         file.close()
@@ -83,6 +84,7 @@ if __name__ == '__main__':
     roomId = config_json["reSourceCatalog"]["roomId"]
     url = resourceCatalogIP + roomId
     try:
+        # create an object from ReadingDHT class
         sensor_data = ReadingDHT()
     except:
         print "PublishData: ERROR IN GETTING DATA FROM SENSOR "
@@ -93,6 +95,7 @@ if __name__ == '__main__':
     while True:
         sens.load_topics()
         try:
+            #requesting the vroker info from resource catalog
             respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
             broker_ip = json_format["Broker_IP"]

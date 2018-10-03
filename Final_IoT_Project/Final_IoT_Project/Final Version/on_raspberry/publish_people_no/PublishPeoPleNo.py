@@ -20,6 +20,8 @@ class PublishPeopleNo(object):
         self.roomId=roomId
 
     def load_topics(self):
+        # sending the request to the resource catalog
+        # to get the topic related to the specified room id
         try:
             self.respond = requests.get(self.url)
             json_format = json.loads(self.respond.text)
@@ -66,9 +68,7 @@ class PublishPeopleNo(object):
             print ("at time: " + str(current_time))
 
 if __name__ == '__main__':
-
-    #url = 'http://192.168.1.65:8080/'
-
+# reading the config file to set the resource catalog urk and the room id
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
@@ -82,6 +82,7 @@ if __name__ == '__main__':
     url = resourceCatalogIP + roomId
 
     try:
+        # create an object from the BluetoothCounter class
         bCounter = BluetoothCounter()
     except:
         print "PublishPeopleNo: ERROR IN GETTING DATA FROM SENSOR "
@@ -91,6 +92,7 @@ if __name__ == '__main__':
 
     while True:
         sens.load_topics()
+        # requesting the broker info from resource catalog
         try:
             respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
