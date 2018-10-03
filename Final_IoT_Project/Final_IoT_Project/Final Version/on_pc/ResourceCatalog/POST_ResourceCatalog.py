@@ -1,3 +1,5 @@
+# this is the resource catalog web service it will expose the data to others by GET
+# and the web page can update it by POST method
 import cherrypy
 import json
 
@@ -6,15 +8,16 @@ class ResourceCatalog(object):
     exposed = True
 
     def GET(self, *uri, **params):
-
+    # first read the initial data file
         try:
-            file = open("initial_data.json", "r") #Ximena's IP "localhost"
+            file = open("initial_data.json", "r")
             json_string = file.read()
             file.close()
             item = uri[0]
         except:
             raise KeyError("***** ERROR IN READING JSON FILE RELATED TO RESOURCES *****")
         json_dic = json.loads(json_string)
+    # if the requested item exist in file it will send it back other wise it will send the message that it can not find
         if(item in json_dic):
             result = json_dic[item]
             requested_data = json.dumps(result)
@@ -25,7 +28,7 @@ class ResourceCatalog(object):
             return"NOTHING FOUNDED, MAKE SURE THAT YOU ARE SENDING THE RIGHT VALUE IN THE URL"
 
     def POST(self, *uri, **params):
-
+    # read the initial file and update it by using the data coming from the web page
         try:
             with open("initial_data.json", "r") as idata:
                 inidata = json.loads(idata.read())
@@ -67,6 +70,7 @@ class ResourceCatalog(object):
                         inidata['dataToRest']['port'] = newdata['dataToRest']['port']
 
                 else:
+                    # insert the new room to the json file in case of creation of the new room by the user
                     key = list(newdata.keys())[0]
                     temporary_json = {}
                     if key == 'thresholds':
@@ -91,7 +95,7 @@ class ResourceCatalog(object):
                                                         "Counter_Topic": newdata['topic']['Counter_Topic']}
                     inidata[item] = temporary_json
 
-
+    # update the json file
             with open("initial_data.json", "w") as file:
                 json.dump(inidata, file)
                 return "UPDATED"
@@ -101,6 +105,7 @@ class ResourceCatalog(object):
             return "Problem in updating file"
 
 if __name__ == '__main__':
+    # read the config file to set the url and the port to expose the data on it
     file = open("config_file.json", "r")
     json_string = file.read()
     file.close()
