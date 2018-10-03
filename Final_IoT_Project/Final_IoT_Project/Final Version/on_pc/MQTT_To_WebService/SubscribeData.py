@@ -2,7 +2,7 @@
 ##   Third class that have to SUBSCRIBE data         ##
 ##   to be placed on PC                              ##
 #######################################################
-
+# this will subscribe the data from all publishers, and write the received data into real time data json file
 import datetime
 import paho.mqtt.client as paho
 import requests
@@ -25,7 +25,7 @@ class SubscribeData(object):
 
     @classmethod
     def on_message(self,client, userdata, msg):
-
+        # the received message is in json format,
         get_time = datetime.datetime.now()
         current_time =  get_time.strftime("%Y-%m-%d %H:%M:%S")
         print("message received ", str(msg.payload.decode("utf-8")))
@@ -33,6 +33,7 @@ class SubscribeData(object):
         print("--------------------------------------------------------------------")
         message_body = str(msg.payload.decode("utf-8"))
 
+        #first it will read the real time data file
         try:
             file = open("real_time_data.json", "r")
             json_string = file.read()
@@ -41,7 +42,10 @@ class SubscribeData(object):
             raise KeyError("*****SubscribeData: ERROR IN READING JSON FILE RELATED TO REAL TIME DATA *****")
         input = json.loads(message_body)
         json_format_output = json.loads(json_string)
-
+        # it will extract the room id from the received message and it will
+        # check that it is exist in the real time data file or not,
+        # if exist, it will uodate the values
+        # if it is not exist it will inser the new room into the file
         the_romm_id = input["roomId"]
         subject = input["subject"]
         print(the_romm_id)
@@ -81,7 +85,7 @@ class SubscribeData(object):
                 temporary_json["AcStatus"]={"value":input["Status"]}
                 json_format_output[the_romm_id] = temporary_json
 
-
+        # write the data into the file
         try:
             with open("real_time_data.json", 'w') as json_data_file:
                 json.dump(json_format_output, json_data_file)
@@ -90,7 +94,7 @@ class SubscribeData(object):
             raise KeyError("*****SubscribeData ERROR IN WRITING THE JSON FILE*****")
 
 if __name__ == '__main__':
-    #url = 'http://192.168.1.65:8080/'
+    #  reading the resource catalog url from the config file
     try:
         file = open("config_file.json", "r")
         json_string = file.read()
@@ -101,11 +105,12 @@ if __name__ == '__main__':
     config_json = json.loads(json_string)
     resourceCatalogIP = config_json["reSourceCatalog"]["url"]
     wildcard_topic = config_json["reSourceCatalog"]["wildcards"]
-    #url= resourceCatalogIP
+
     client = paho.Client()
     sens = SubscribeData(client)
 
     while True:
+        # sending the request to the resource catolog to set the broker ip and topics
         try:
             respond = requests.get(resourceCatalogIP+"/broker")
             json_format = json.loads(respond.text)
@@ -117,8 +122,6 @@ if __name__ == '__main__':
         try:
             client.connect(Broker_IP, int(Broker_Port))
             client.subscribe(str(wildcard_topic), qos=1)
-            #client.subscribe(str(sens.counter_topic), qos=1)
-            #client.subscribe(str(sens.AC_status), qos=1)
             client.loop_forever()
         except:
             print ("SubscribeData: Problem in connecting to broker")
