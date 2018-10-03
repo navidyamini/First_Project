@@ -1,1 +1,0 @@
-{u'from': {u'username': u'SadeghBibak', u'first_name': u'Sadegh', u'last_name': u'Bibak', u'id': 22597914}, u'text': u'/on', u'entities': [{u'length': 3, u'type': u'bot_command', u'offset': 0}], u'chat': {u'username': u'SadeghBibak', u'first_name': u'Sadegh', u'last_name': u'Bibak', u'type': u'private', u'id': 22597914}, u'date': 1491328446, u'message_id': 50}
