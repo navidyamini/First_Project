@@ -55,7 +55,7 @@ namespace DataEntry
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            
+            comboBoxItems.Items.Clear();
             string json = File.ReadAllText(@"map_beac_paints.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             foreach (var item in jsonObj["roomArtworks"])
