@@ -10,7 +10,7 @@ class MuseumWebService(object):
 
         #read the json file with the artworks info
         try:
-            file = open("map_beac_paints.json", "r")
+            file = open("../Gallery_Web_Service/DataEntry/DataEntry/bin/Debug/map_beac_paints.json", "r")
             json_str = file.read()
             file.close()
             return json_str

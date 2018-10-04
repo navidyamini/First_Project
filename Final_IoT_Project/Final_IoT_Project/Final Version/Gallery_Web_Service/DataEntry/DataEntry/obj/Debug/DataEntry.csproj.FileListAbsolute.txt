@@ -1,0 +1,29 @@
+E:\C#Training\DataEntry\DataEntry\bin\Debug\DataEntry.exe.config
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.csprojResolveAssemblyReference.cache
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.DataEntryForm.resources
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.Properties.Resources.resources
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.csproj.GenerateResource.Cache
+E:\C#Training\DataEntry\DataEntry\bin\Debug\DataEntry.exe
+E:\C#Training\DataEntry\DataEntry\bin\Debug\DataEntry.pdb
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.exe
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.pdb
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.Art_Work_Info.resources
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.Broker_Topic_Form.resources
+E:\C#Training\DataEntry\DataEntry\obj\Debug\DataEntry.Telegram_Form.resources
+E:\C#Training\DataEntry\DataEntry\bin\Debug\Newtonsoft.Json.dll
+E:\C#Training\DataEntry\DataEntry\bin\Debug\Newtonsoft.Json.xml
+E:\C#Training\DataEntry\DataEntry\bin\Debug\map_beac_paints.json
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\bin\Debug\DataEntry.exe.config
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.exe
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.pdb
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\bin\Debug\DataEntry.exe
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\bin\Debug\DataEntry.pdb
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.csprojResolveAssemblyReference.cache
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.Art_Work_Info.resources
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.Broker_Topic_Form.resources
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.DataEntryForm.resources
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.Properties.Resources.resources
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.Telegram_Form.resources
+C:\Users\Asus\PycharmProjects\First_Project_9_16_2018\Final_IoT_Project\Final_IoT_Project\Final Version\Gallery_Web_Service\DataEntry\DataEntry\obj\Debug\DataEntry.csproj.GenerateResource.Cache
